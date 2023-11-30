@@ -1,0 +1,39 @@
+---
+title: "Testimonials from 2022 workshop"
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+test23 <- as.data.frame(read_excel(paste(path, "/data/2023/testimonials.xlsx", sep = ""), col_types = NULL))
+test23[is.na(test23[, 2]), 2] <- ""
+```
+
+```{r, include=TRUE, echo=FALSE}
+tab <- cbind(test23[, 1:2], paste("[video](", test23[, "Link"], ")", sep = ""))[1:4, ]
+colnames(tab) <- c("Name", "Function", "Link to video")
+kable(tab)
+```
+
+Slidedeck with `r paste("[", test23[5, 1], "](", test23[5, 3], ")", sep = "")`.
+
+# Questions?
+
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+
+
+

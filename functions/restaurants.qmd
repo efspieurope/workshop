@@ -1,0 +1,13 @@
+```{r echo = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
+tab1 <- rest
+```
+
+```{r echo = FALSE}
+tab1[, "Link"] <- paste("[Webpage](", tab1[, "Link"], ")", sep = "")
+
+rownames(tab1) <- NULL
+kable(tab1, col.names = c("Name", "Link", "Comment"), row.names = NA)
+```
+

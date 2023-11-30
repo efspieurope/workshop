@@ -1,0 +1,87 @@
+---
+title: "5th EFSPI regulatory statistics workshop: summary of feedback"
+author: "Kaspar Rufibach"
+date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`'
+output:
+  html_document:
+    keep_md: false
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+path <- paste(getwd(), "/", sep = "")
+
+## =================================================================
+## input uebu data
+## =================================================================
+suppressWarnings(feedback <- as.data.frame(read_excel(paste(path, "EFSPI regulatory statistic webinars 2020 - feedback.xlsx", sep = ""), 
+                     col_types = c(rep("text", 6)
+                     ))))
+
+like1  <- select(feedback, "How do you rate the overall quality of the two webinars? [DMCs]")
+like1  <- factor(like1[, 1], levels = c("3.0", "4.0", "5 (worldclass)", "5.0", "Did not attend"), 
+                 labels = c(3, 4, 5, 5, NA))
+like1  <- as.numeric(as.character(like1))
+like2  <- select(feedback, "How do you rate the overall quality of the two webinars? [Estimands]")
+like2  <- factor(like2[, 1], levels = c("3.0", "4.0", "5 (worldclass)", "5.0", "Did not attend"), 
+                 labels = c(3, 4, 5, 5, NA))
+like2  <- as.numeric(as.character(like2))
+topic1 <- select(feedback, "What would be the top topic you would you like to see discussed next year?")
+topic2 <- select(feedback, "What would be the 2nd most important topic you would you like to see discussed next year?")
+add    <- select(feedback, "Additional feedback")
+```
+
+# Introduction
+
+This short document summarizes the feedback provided by attendees of the 5th EFSPI regulatory statistics workshop in Basel 12/13th October 2020. 
+
+## Response
+
+We had `r nrow(feedback)` attendees complete the feedback questionnaire. The difference in responses in the tables below refers to "Did not attend".
+
+## Overall rating
+
+Questionnaire question: _How do you rate the overall quality of the iDMC webinar (0 = useless, 5 = world class)?_
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- t(as.data.frame(addmargins(table(like1))))
+rownames(t1) <- c("rating", "frequency")
+pander(t1)
+```
+
+The median rating was `r median(like1, na.rm = TRUE)`.
+
+Questionnaire question: _How do you rate the overall quality of the estimand webinar (0 = useless, 5 = world class)?_
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- t(as.data.frame(addmargins(table(like2))))
+rownames(t1) <- c("rating", "frequency")
+pander(t1)
+```
+
+The median rating was `r median(like2, na.rm = TRUE)`.
+
+## Most important topic for next year?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- as.data.frame(topic1[is.na(topic1) == FALSE])
+names(t1) <- "Most important"
+pander(t1)
+```
+
+## 2nd most important topic for next year?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- as.data.frame(topic2[is.na(topic2) == FALSE])
+names(t1) <- "2nd most important"
+pander(t1)
+```

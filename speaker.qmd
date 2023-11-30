@@ -1,0 +1,155 @@
+---
+title: "Frequently asked questions for speakers and panelists"
+date: last-modified
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+sci22 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
+waived <- as.data.frame(read_excel(paste(path, "/data/waived.xlsx", sep = ""), col_types = NULL))
+reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
+
+# last issue 
+last <- 2022
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# Introduction
+
+You have agreed to contribute to the `r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`. Many thanks for that!
+
+# Scope and contact
+
+This document provides necessary information for contributors to the workshop. For any further questions please do not hesitate to reach out to one of the [local organizing committee members](local.html).
+
+# Program
+
+`r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
+
+# Registration
+
+Please register yourself using `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
+
+# Benefits 
+
+As a premise note that [EFSPI](https://efspi.org/) is non-profit making and as a principle does not pay an honorarium. 
+
+## For participants
+
+The registration fee is waived for participating students and members of regulatory agencies. When registering simply chose the _virtual_ or _face-to-face_ option but do not pay the registration fee.
+
+## For contributors
+
+For 
+
+- contributing academics (incl. students), 
+- members of the Scientific Program Committee, 
+- session chairs, presenters, and 
+- invited panelists 
+
+we are able to offer the following benefits, depending on your affiliation:
+
+```{r, include=TRUE, echo=FALSE}
+waived[is.na(waived)] <- ""
+kable(waived, align = "llccccc")
+```
+
+However, if the registration fee is waived for you please still register using `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
+
+For reimbursement please complete [this form](data/2023/20230913_EFSPI_workshop_reimbursement.docx) and send it to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com).
+
+Registration fee is not waived for poster and short topic session presenters.
+
+# Hotels
+
+We ask you to book your travel and accommodation yourself. We have reserved rooms at the following hotels:
+
+- [Hotel Spalentor 4*](http://www.hotelspalentor.ch).
+  - 8 min walk from venue.
+  - Rate = 164 CHF incl breakfast.
+  - Book directly via email to info@hotelspalentor.ch or call (+41 61 262 26 26) with keyword "EFSPI 2023".
+  
+- [Hotel Odelya 3*](http://www.odelya.ch) (this is the Bildungszentrum where we used to stay before the pandemic).
+  - 9 min walk from venue.
+  - Rate = 173 CHF incl breakfast.
+  - Book directly via email hotel@odelya.ch or call (+41 61 260 21 21) with keyword "EFSPI 2023".
+
+- [Hotel D 4*](https://www.hoteld-basel.ch/en/).
+  - 11 min walk from venue.
+  - Rate = 167 CHF incl breakfast.
+  - Book directly via email basel@hoteld.ch with keyword "EFSPI 2023".
+
+- [Motel One 3*](https://www.motel-one.com/en/hotels/basel/hotel-basel/)
+  - 15 min by tram to venue.
+  - Rate = CHF 143 per night in THE ONE Queen (excluding breakfast).
+  - Book directly via e-mail to res.basel@motel-one.com with reference to booking no. 865.117.980 and with keyword “EFSPI 2023”.
+
+We invite everyone to book these rooms themselves. The offers end at beginning of August or when all blocked rooms have been booked.
+
+# Posting of presentations on EFSPI webpage
+
+After the workshop, we would like to post presentation slide decks and recordings of the webinars to the EFSPI webpage (see `r paste("[here](", past[past["Year"] == last, "Slidedecks"], ")", sep = "")` for the `r last` issue). Please let us know in case you would prefer NOT to post your slides and/or the recording to the EFSPI webpage.
+
+# Recording
+
+If possible we would like to record the session and post it on the EFSPI webpage (see `r paste("[EFSPI regulatory statistics workshop ", last, "](", past[past[, "Year"] == last, "Slidedecks"], ")", sep = "")` for the `r last` issue). Please do let us know in case you would prefer NOT to be recorded. If $\ge 1$ contributor opts out of recording we will not record the entire session.
+
+# Slidedecks and short bio
+
+We would be very grateful to receive a stable draft of your presentation slidedeck by `r colFmt("4th September 2023", "red")`. This, in order to be flexible and to potentially run the slides from our end in case of issues with the internet connection.
+
+We would also appreciate if you could share with us a short paragraph that the session chairs will use to introduce you during the session.
+
+Please send all these materials to [Helle Lynggaard](mailto:hlyn@novonordisk.com) and cc: your respective session chairs.
+
+# Session chairs
+
+For session we propose the following preparatory actions:
+
+- Call for at least one teleconference prior to workshop (early enough as the workshop is rather shortly after typical summer vacation dates).
+- Align talks to avoid duplication.
+- Remind speakers to rather focus on principles and regulatory actions than technical (statistical) details.
+- Remind speakers to send slides to [Helle Lynggaard](mailto:hlyn@novonordisk.com) with cc: the session chairs.
+
+# Technical setup and how we plan to run the sessions
+
+- The conference will run as hybrid, i.e. with participants in the room and online.
+- The webinar tool that we will most likely use is Zoom. The dial-in details will be added to the invite (which is already in your calendar) in due time.
+- We will open the Zoom session at least 30min prior to the scheduled starting date and invite everyone to dial in early.
+- Preference is to run the slides centrally by the chairs. However, speakers can opt to drive the slides themselves. If you prefer to do so please familiarize yourself with Zoom and your own setup such that transitions from one speaker to the next can be made efficiently.
+- We will invite attendees to ask questions in the Zoom chat. Every attendee can see them. The chairs will structure them and ask them in the panel discussion.
+- Chairs will decide whether to ask questions directly after the presentations or to hold them until the panel discussion.
+
+# Dial-in instructions
+
+See [here](dialin.html).
+
+# Poster presentations
+
+Panels for poster presenters will be available. Poster should be the usual standard format (there is no template available or required), portrait format (we can cater up to A0, but no landscape format). Pins will be available. The idea is that at least during the official lunch & poster session (13th September) that you would be near your poster and discuss and answer questions of participants.
+
+Registration fee for poster presenters is not waived.
+
+# Questions?
+
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+
+
+

@@ -1,0 +1,171 @@
+---
+title: "EFSPI regulatory statistics workshop 2023: feedback from participants and contributors"
+author: "Kaspar Rufibach"
+date: "Last change: `r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+now <- as.POSIXlt(Sys.time())
+now <- paste(substr(now, 1, 10), " at ", substr(now, 12, 19), sep = "")
+
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+packs <- c("readxl", "dplyr", "rnaturalearth", "rnaturalearthdata", "ggplot2", "RColorBrewer", "filesstrings", "reporttools") 
+for (i in 1:length(packs)){library(packs[i], character.only = TRUE)}
+
+# load functions
+source("../../functions/colFmt.r")
+source("move_files.r")
+
+# input feedback
+nam1 <- "EFSPI Regulatory Statistics Workshop 2023 feedback participants (Responses).xlsx"
+parti <- as.data.frame(read_excel(nam1, col_types = rep("text", 16)))
+nam2 <- "EFSPI Regulatory Statistics Workshop 2023 feedback contributors (Responses).xlsx"
+contr <- as.data.frame(read_excel(nam2, col_types = rep("text", 6)))
+
+# rename columns
+parti <- parti %>% rename(Timestamp = "Timestamp", mode = "I attended...", 
+                      made = "For those who attended exclusively virtually: What would have made you attend on site?", 
+                      reason = "For those who attended exclusively virtually: What is the primary reason you did not attend on site?",
+                      background = "Background", overall = "How do you rate the overall quality of the workshop?",
+                      session1 = "How do you rate the overall quality of each individual session? [Regulatory and HTA update]",
+                      session2 = "How do you rate the overall quality of each individual session? [Synthetic and other baseline covariates]",
+                      session3 = "How do you rate the overall quality of each individual session? [Complex innovative trials for regulatory decision-making]",
+                      session4 = "How do you rate the overall quality of each individual session? [How to get most out of Scientific Advice]",
+                      session5 = "How do you rate the overall quality of each individual session? [Use of non-RCT studies in regulatory decision-making]",
+                      short = "How do you rate the overall quality of each individual session? [Short topics]",
+                      like = "What did you like most about the workshop (including scientific and logistical aspects) ?",
+                      dislike = "What did you dislike most about the workshop  (including scientific and logistical aspects)?",
+                      important = "What would be the most important topic you would you like to see discussed next year?",
+                      add = "Additional feedback")
+ratings <- select(parti, session1, session2, session3, session4, session5, short, overall)
+ratings[ratings == "1 (useless)"] <- 1
+ratings[ratings == "5 (worldclass)"] <- 5
+ratings[ratings == "Did not attend"] <- NA
+ratings <- apply(ratings, 1:2, as.numeric)
+
+# session names
+nams <- c("Regulatory and HTA update", "Synthetic baseline covariates", "Complex innovative trials", 
+          "How to get most out of Scientific Advice", "Use of non-RCT studies", "Short topic session", "Overall")
+
+# contributors
+contr <- contr %>% rename(Timestamp = "Timestamp", mode = "I contributed...", type = "Type of contribution(s):", 
+                          improve = "Where can we improve next year?", stay = "What worked really well and should stay?")
+```
+
+# Data status
+
+Data as of `r now`.
+
+# Feedback from participants
+
+In total, `r nrow(parti)` participants have completed the feedback form until the above cutoff date.
+
+<!-- ## Average session rating by overall rating -->
+
+<!-- ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6} -->
+<!-- plot(apply(ratings[, 1:6], 1, mean, na.rm = TRUE), ratings[, "overall"], xlim = c(1, 5), ylim = c(1, 5), xlab = "mean over six sessions of available ratings (1 = useless, 5 = worldclass)", ylab = "given overall rating (1 = useless, 5 = worldclass)") -->
+<!-- segments(1, 1, 5, 5, lwd = 2, col = 2) -->
+<!-- ``` -->
+
+## Rating per session
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+mat <- matrix(NA, ncol = 5, nrow = 7)
+for (i in 1:5){
+  mi <- (ratings == i)
+  mat[, i] <- apply(mi, 2, sum, na.rm = TRUE)
+}
+colnames(mat) <- paste("Rating = ", 1:5, sep = "")
+rownames(mat) <- paste(c(paste("Session ", 1:5, ": ", nams[1:5], sep = ""), "short topics", "overall"), " (",
+                       disp(apply(ratings, 2, mean, na.rm = TRUE), 2), ")", sep = "")
+par(las = 1)
+barplot(mat, beside = TRUE, col = 1:7, ylab = "number of ratings", ylim = c(0, max(mat) * 1.4), yaxt = "n")
+axis(2, at = seq(0, max(mat), by = 5))
+legend(0, max(mat) * 1.4, rownames(mat), lwd = 10, col = 1:7, bty = "n", title = "Ratings per session, with average rating in parentheses")
+```
+
+## Feedback from virtual participants
+
+### What was the primary reason you did not attend on site?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+library(arsenal)
+tab1 <- tableby(background ~ reason, data = parti, subset = (mode == "...exclusively virtually"), total = FALSE, test = FALSE)
+summary(tab1)
+```
+
+### What would have made you attend on site?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- select(filter(parti, mode == "...exclusively virtually"), made)
+t1 <- as.data.frame(t1[is.na(t1) == FALSE])
+names(t1) <- "What would have made you attend on site?"
+kable(t1)
+```
+
+## What did you most like about the workshop?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- select(filter(parti, is.na(like) == FALSE), like)
+names(t1) <- "What did you most like about the workshop?"
+kable(t1)
+```
+
+## What did you most dislike about the workshop?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- select(filter(parti, is.na(dislike) == FALSE), dislike)
+names(t1) <- "What did you most dislike about the workshop?"
+kable(t1)
+```
+
+## What would be the most important topic you would you like to see discussed next year?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- select(filter(parti, is.na(important) == FALSE), important)
+names(t1) <- "What would be the most important topic you would you like to see discussed next year?"
+kable(t1)
+```
+
+## Additional feedback
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- select(filter(parti, is.na(add) == FALSE), add)
+names(t1) <- "Additional feedback"
+kable(t1)
+```
+
+# Feedback from contributors
+
+In total, `r nrow(contr)` contributors (presenters, chairs, short topic presenters, poster presenters, chat observers) have completed the feedback form until the above cutoff date.
+
+Contributors were invited to optionally give their name. Some did - reach out to me if you are interested.
+
+## Where can we improve next year?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- select(filter(contr, is.na(improve) == FALSE), improve)
+names(t1) <- "Where can we improve next year?"
+kable(t1)
+```
+
+## What should stay?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- select(filter(contr, is.na(stay) == FALSE), stay)
+names(t1) <- "What should stay?"
+kable(t1)
+```

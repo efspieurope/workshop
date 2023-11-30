@@ -1,0 +1,62 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - data/2023
+    - feedback.qmd        
+    - index.qmd           
+    - next.qmd            
+    - past.qmd            
+    - past_scicom.qmd     
+    - registration_faq.qmd
+    - scicom.qmd  
+    - local.qmd
+    - speaker.qmd   
+    - updates.qmd  
+    - testimonials.qmd
+    - dialin.qmd
+    - dialin_participants.qmd
+    - chat.qmd
+    - restaurants.qmd
+    - 2024.qmd
+
+website:
+  title: "EFSPI regulatory statistics workshop"
+  navbar:
+    background: info
+    left:
+    - text: "2024 workshop"
+      href: 2024.html
+      menu:
+        - text: "FAQ registration"  
+          href: registration_faq.html
+        - text: "Restaurants in Basel"  
+          href: restaurants.html
+    - text: "2023 workshop"
+      menu:
+        - text: "Slides, recordings, and posters from 2023 workshop"  
+          href: data/2023/slides.html
+    - text: "Testimonials"
+      menu:
+        - text: "Testimonials from 2022 workshop"  
+          href: testimonials.html
+    - text: "Past workshops: programs, slidedecks, recordings"
+      href: past.html
+    - text: "Committees"
+      menu:
+        - text: "Local organizing committee"
+          href: local.html
+        - text: "Scientific committee"
+          href: scicom.html
+    - text: "Updates"
+      href: updates.html
+          
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: source
+
+

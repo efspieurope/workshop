@@ -1,0 +1,55 @@
+---
+title: "Local organizing Committee"
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+sci22 <- as.data.frame(read_excel(paste(path, "/data/2022/scicom2022.xlsx", sep = ""), col_types = NULL))
+sci22 <- arrange(sci22, desc(Type), Gender)
+
+sci23 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
+sci23 <- arrange(sci23, desc(Type), Gender)
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# 2023
+
+The members of the local organizing committee in 2023 are:
+
+```{r, include=TRUE, echo=FALSE}
+sci23[, "Name"] <- paste("[", sci23[, "First"], " ", sci23[, "Last"], "](mailto:", sci23[, "email"], ")", sep = "")
+sci23[, "email"] <- paste("[", sci23[, "First"], " ", sci23[, "Last"], "](mailto:", sci23[, "email"], ")", sep = "")
+kable(filter(sci23, Local == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
+```
+
+# 2022
+
+The members of the local organizing committee in 2022 were:
+
+```{r, include=TRUE, echo=FALSE}
+kable(select(filter(sci22, Local == 1), -Local, -SciCom, -email, -Gender), align = "llccl")
+```
+
+# Questions?
+
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+
+
+

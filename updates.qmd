@@ -1,0 +1,26 @@
+---
+title: "Updates on this page"
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+* 2023/09/29: Added [recordings](data/2023/slides.html) of some sessions and [NextGen poster](data/2023/slides.html).
+* 2023/09/20: [Posters of 2023](data/2023/slides.html) have been added.
+* 2023/09/18: [Slides of 2023](data/2023/slides.html) have been added.
+* 2023/08/30: Added [restaurants in Basel](restaurants.html) and first announcement of [2024 workshop](2024.html).
+* 2023/06/07: Program updated and added [testimonials](testimonials.html) from 2022 workshop.
+* 2023/06/06: Pre-final version of program and registration online.
+* 2023/05/30: Added details of registration. Registration fees have been moderately adjusted.
+* 2023/05/10: Added FAQs for [registration](registration_faq.html) and [speakers](speaker.html).
+* 2023/01/09: Added rosters of local organizing and scientific committees.
+
+
+
+
+

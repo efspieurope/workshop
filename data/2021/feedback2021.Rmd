@@ -1,0 +1,100 @@
+---
+title: "6th EFSPI regulatory statistics workshop: analysis"
+author: "Kaspar Rufibach"
+date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`'
+output:
+  html_document:
+    keep_md: false
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl", "tidyverse")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+path <- paste(getwd(), "/", sep = "")
+
+# number of days
+d <- 3
+
+res <- NULL
+
+for (i in 1:d){
+  dialin <- as.data.frame(read_excel(paste(path, "dialin_session", i, ".xlsx", sep = "")))
+  dialin$time <- as.numeric(dialin[, "Time in Session (minutes)"])
+  
+  # sum time in session per participant
+  res[[i]] <- dialin %>% group_by(Email) %>% summarise(sum_time = sum(time, na.rm = TRUE)) %>% arrange(desc(sum_time))
+}
+
+# print(as_tibble(res[[1]]), n = 100)
+trafo <- function(x, dur = 180){return(pmin(pull(x, 2) / dur, 1, na.rm = TRUE))}
+
+cs <- c(0, 60, 120, 150, Inf)
+labs <- paste("stayed > ", cs[1:(length(cs) - 1)], " minutes", sep = "")
+labs[1] <- "stayed <= 60 minutes"
+stay <- pull(res[[1]], 2)
+for (j in 2:d){stay <- c(stay, pull(res[[j]], 2))}
+dat <- data.frame("session" = paste("Webinar ", rep(1:d, times = unlist(lapply(lapply(res, pull, 2), length))), sep = ""), "stay" = stay, 
+                        "stay_cut" = cut(stay, breaks = cs, labels = labs, 
+                                         include.lowest = TRUE, ordered.result = TRUE))
+```
+
+# Introduction
+
+This short document summarizes some analyses of the 6th EFSPI regulatory statistics workshop 13-15th September 2021. 
+
+# Proportion of participants dialing in for a given proportion of entire webinar
+
+```{r, echo = FALSE, fig.cap = "Proportion of participants dialing in for a given proportion of entire webinar.", fig.align = "center", fig.width = 9, fig.height = 5}
+par(las = 1, mar = c(4.5, 5, 1, 1))
+boxplot(list(trafo(res[[1]]), trafo(res[[2]]), trafo(res[[3]], 240)), names = paste("Session ", 1:d, sep = ""), ylab = "length of stay as proportion of total webinar duration\n(180 or 240 minutes)")
+```
+
+As an illustrative reading example in Webinar 1 quite precisely half of participants stayed for at least 80\% of the 180 minutes that the webinar lasted.
+
+# Number of participants dialing in for an at least proportion of the webinar
+
+```{r, echo = FALSE, fig.cap = "Number of participants dialing in for an at least proportion of the webinar.", fig.align = "center", fig.width = 9, fig.height = 8}
+par(las = 1)
+barplot(table(dat[, 3], dat[, 1])[, 1:2], beside = TRUE, ylab = "number of participants", legend.text = levels(dat[, 3]), main = "Webinar 1 & 2: duration 180 minutes")
+
+cs2 <- c(0, 60, 120, 150, 180, Inf)
+labs2 <- paste("stayed > ", cs2[1:(length(cs2) - 1)], " minutes", sep = "")
+labs2[1] <- "stayed <= 60 minutes"
+cut2 <- cut(pull(res[[3]], 2), breaks = cs2, labels = labs2, include.lowest = TRUE, ordered.result = TRUE)
+par(las = 2, mar = c(10, 3, 1, 1))
+barplot(table(cut2), beside = TRUE, ylab = "number of participants", names = levels(cut2))
+title("Webinar 3: duration 240 minutes")
+```
+
+# Number of participants dialing in for an at least proportion of the webinar
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+dat2 <- dat[dat$session != "Webinar 3", ]
+#dat2 <- as.character(dat2$stay_cut)
+dat3 <- data.frame(dat[dat$session == "Webinar 3", 1:2], "stay_cut" = cut2)
+#dat3 <- as.character(dat3$stay_cut)
+dat4 <- data.frame(rbind(dat2, dat3))
+dat4$stay_cut <- factor(dat4$stay_cut, levels = c("stayed <= 60 minutes", "stayed > 60 minutes", "stayed > 120 minutes", "stayed > 150 minutes", "stayed > 180 minutes"), ordered = TRUE)
+t1 <- table(dat4[, 3], dat4[, 1])
+
+#library(gmodels)
+#CrossTable(dat4[, 3], dat4[, 1], prop.r = FALSE, prop.t = FALSE, prop.chisq = FALSE)
+
+library(arsenal)
+tab1 <- tableby(session ~ stay_cut, data = dat4, total = FALSE, test = FALSE)
+summary(tab1)
+```
+
+In summary, we can say that about 40-50% of participants stayed for the entire duration.
+
+
+
+

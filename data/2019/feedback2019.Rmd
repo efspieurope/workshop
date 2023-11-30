@@ -1,0 +1,195 @@
+---
+title: "4th EFSPI regulatory statistics workshop: summary of feedback"
+author: "Kaspar Rufibach"
+date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`'
+output:
+  html_document:
+    keep_md: false
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+path <- paste(getwd(), "/", sep = "")
+
+## =================================================================
+## input uebu data
+## =================================================================
+suppressWarnings(feedback <- as.data.frame(read_excel(paste(path, "efspi_feedback_completed.xlsx", sep = ""), 
+                     col_types = c("numeric", "text", "numeric",
+                                     rep("text", 14)
+                     ))))
+nr                <- select(feedback, nr)
+name              <- select(feedback, name)
+quality           <- select(feedback, quality)[, 1]
+
+like              <- select(feedback, "What do you like most about this workshop?")
+like1             <- select(feedback, "like_curated1")
+like2             <- select(feedback, "like_curated2")
+
+dislike           <- select(feedback, "What do you dislike most about this workshop?")
+dislike1          <- select(feedback, "dislike_curated1")
+dislike2          <- select(feedback, "dislike_curated2")
+
+themes            <- as.numeric(select(feedback, "How to you rate the quality of session themes?")[, 1])
+themes            <- factor(themes, levels = 0:3, labels = c("Poor", "Fair", "Good", "Very Good"))
+
+talks             <- as.numeric(select(feedback, "How to you rate the quality of the presentations?")[, 1])
+talks             <- factor(talks, levels = 0:3, labels = c("Poor", "Fair", "Good", "Very Good"))
+
+location          <- as.numeric(select(feedback, "How do you rate the location and the food?")[, 1])
+location          <- factor(location, levels = 0:3, labels = c("Poor", "Fair", "Good", "Very Good"))
+
+topics20          <- select(feedback, "What topics would you like to see discussed next year?")
+topics20_curated1 <- select(feedback, "topics20_curated1")
+topics20_curated2 <- select(feedback, "topics20_curated2")
+topics20_curated3 <- select(feedback, "topics20_curated3")
+
+comments          <- select(feedback, "Any other comments?")
+```
+
+# Introduction
+
+This short document summarizes the feedback provided by attendees of the 4th EFSPI regulatory statistics workshop in Basel 23/24th September 2019. The first few paragraphs are a curated summary of the free text fields, followed by a display of the raw data. For curation, I extracted the two main themes from every free text field (so the total frequency in curated tables can be up to $2 \cdot `r max(nr)` = `r 2 * max(nr)`$).
+
+The form that was used to gather feedback is available [here](data/2019/2019_EFSPI_RegStats_feedback.docx).
+
+# Management summary
+
+* Median rating was `r median(quality, na.rm = TRUE)`/10.
+* Most liked:
+  * Presence of regulators.
+  * Relevance of topics.
+  * Panel discussions.
+* Most disliked:
+  * RWD sessions, the were perceived to lack focus (also feedback from personal communications).
+  * The location is maybe less liked than we think, especially the chairs!
+  * Quality of talks: not adjusted for time, busy slides, two presenters for one talk, ...
+* Topics for 2020:
+  * Estimands (in the barchart, more estimand entries with comments are also found with lower frequencies).
+  * Safety.
+  * Involvement of HTA.
+
+Please also have a look at the very last bullet point: "Comments (raw data)". These, I did not curate. Some key comments:
+
+* Better prepare panel discussions.
+* Share questions of Session 6 with panel before, and have them prepare better.
+* Gender distribution (chairs, speakers).
+
+# External feedback
+
+[Summary article by two participants](https://4pharma.com/impressions-from-2019-efspi-regulatory-statistics-workshop/)
+
+# Curated summary 
+
+## Response
+
+We had `r max(nr)` attendees complete the feedback questionnaire.
+
+## Overall rating
+
+Questionnaire question: _How do you rate the overall quality of the workshop (0 = useless, 10 = world class)?_
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- t(as.data.frame(addmargins(table(quality))))
+rownames(t1) <- c("rating", "frequency")
+pander(t1)
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 3}
+par(mfrow = c(1, 1), las = 1)
+plot(0, 0, xlim = c(0, 10), ylim = c(0.75, 1.25), yaxt = "n", xlab = "quality score (0 - 10)", ylab = "")
+boxplot(quality, horizontal = TRUE, add = TRUE)
+```
+
+The median rating was `r median(quality, na.rm = TRUE)`.
+
+## What did you like most about this workshop (curated)?
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+t2 <- table(c(like1[, 1], like2[, 1]))
+t2 <- t(as.matrix(t2[rev(order(t2))]))
+par(las = 2, mar = c(12, 4.5, 3, 1))
+barplot(t2, ylab = "frequency", main = "most liked, curated")
+```
+
+## What did you dislike most about this workshop (curated)?
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+t2 <- table(c(dislike1[, 1], dislike2[, 1]))
+t2 <- t(as.matrix(t2[rev(order(t2))]))
+par(las = 2, mar = c(15, 4.5, 3, 1))
+barplot(t2, ylab = "frequency", main = "most disliked, curated")
+```
+
+## Quality of session themes?
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(las = 1)
+barplot(table(themes), main = "Quality of session themes", ylab = "frequency")
+```
+
+## Quality of talks?
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(las = 1)
+barplot(table(talks), main = "Quality of talks", ylab = "frequency")
+```
+
+## Quality of location?
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(las = 1)
+barplot(table(location), main = "Quality of location", ylab = "frequency")
+```
+
+# Topics for 2020
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+t2 <- table(c(topics20_curated1[, 1], topics20_curated2[, 1], topics20_curated3[, 1]))
+t2 <- t(as.matrix(t2[rev(order(t2, rev(names(t2))))]))
+par(las = 2, mar = c(15, 4.5, 3, 1))
+barplot(t2, ylab = "frequency", main = "Topics for 2020 (sorted by frequency, then alphabetically)")
+```
+
+# Display of raw data
+
+## Question: What did you like most about this workshop (raw data)?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- as.data.frame(like[is.na(like) == FALSE])
+names(t1) <- "Like the most"
+pander(t1)
+```
+
+## Question: What did you dislike most about this workshop (raw data)?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- as.data.frame(dislike[is.na(dislike) == FALSE])
+names(t1) <- "Dislike the most"
+pander(t1)
+```
+
+## Question: Topics for 2020 (raw data)?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- as.data.frame(topics20[is.na(topics20) == FALSE])
+names(t1) <- "Topics for 2020"
+pander(t1)
+```
+
+## Question: Comments (raw data)?
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+t1 <- as.data.frame(comments[is.na(comments) == FALSE])
+names(t1) <- "Additional comments"
+pander(t1)
+```

@@ -1,0 +1,61 @@
+---
+title: "Session Q&A Zoom chat observers"
+date: last-modified
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+
+# last issue 
+last <- 2022
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# Introduction
+
+On this page we summarize instructions for industry session chairs and chat observers with respect to the inclusion of questions from the virtual attendees for each session.
+
+# Chat observer
+
+You have registered for face-to-face participation to the `r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")` as a Roche or Novartis colleagues with statistics background. 
+
+The [local organizing committee members](local.html) thanks you for agreeing to be a **chat observer**! The ask for this task would be:
+
+- Identify your industry session chair from the `r paste("[program](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")` and make yourself known to her/him ahead of the session.
+- Sit in the front row, as close as possible to the industry session chair.
+- Bring your laptop, dial in to the zoom TC.
+- Monitor the Q&A part of zoom (that is where virtual attendees are supposed to ask questions) and 
+  - continuously collate questions into themes, 
+  - prioritize them, 
+  - identify how they relate to the ongoing discussion in the room, 
+  - wave at the industry session chair to inform her/him that there are questions from the chat,
+  - to be ready to share them when appropriate.
+- Upon being invited to by the industry session chair share them with the room.
+
+# Industry session chair
+
+As an industry session chair co-moderating the session and the discussion afterwards, we invite you to frequently ask the chat observer for further questions from the online audience.
+
+# Questions?
+
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+
+
+

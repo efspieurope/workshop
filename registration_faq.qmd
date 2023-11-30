@@ -1,0 +1,51 @@
+---
+title: "Registration for EFSPI regulatory statistics workshop: Frequently asked questions"
+date: last-modified
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
+
+# last issue 
+last <- 2023
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# Introduction
+
+Thanks for your interest in the `r paste("EFSPI regulatory statistics workshop ", last + 1, sep = "")`! This site provides FAQs around registration. 
+
+# Venue
+
+The event will take place at the [Biozentrum Basel](https://www.biozentrum.unibas.ch/). The exact address is Spitalstrasse 41, Basel and directions are [here](https://www.biozentrum.unibas.ch/directions).
+
+The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your mobile phone number for confirmation.
+
+# Program and registration
+
+Registration for the `r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")` workshop is not open yet.
+
+# You still have questions after going through this entire document?
+
+Send an email [Helle Lynggaard](mailto:hlyn@novonordisk.com).
+
+
+

@@ -1,0 +1,65 @@
+---
+title: " "
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: no
+    self_contained: yes
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
+
+# last issue 
+last <- 2022
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+
+<br><br>
+
+<center>![](efspi_logo.jpg)</center>
+
+<br><br>
+
+# EFSPI regulatory statistics workshop
+
+Each year, a small team of volunteers organizes the [EFSPI Regulatory Statistics Workshop](www.efspiworkshop.org) on behalf of [EFSPI](www.efspi.org). The goal of the workshop is to bring together statisticians and partner functions from pharmaceutical industry, regulatory agencies, and academia to discuss topics of common interest.
+
+The unique feature of the workshop is an atmosphere of collaboration and open discussion of statistical and regulatory science in general. Over the years the workshop has sharpened its profile and with regular participation of speakers from regulatory agencies such as EMA, many European regulatory agencies, FDA, PMDA, MHRA, and many more has become a voice in the global dialogue on regulatory statistics. Furthermore, with HTA considerations becoming ever more important in Europe and beyond topics pertinent to HTA are also increasingly discussed.
+
+Since its inception in 2016 the workshop has always taken place in Basel, Switzerland. Details about the 2023 issue are available [here](next.html).
+
+# Parallel workshop in the US
+
+The ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop is organized by the ASA and FDA and takes place from 27.-29. September 2023 in Rockville, MD.
+
+Both these workshops aspire to build a statistical community across regulatory agencies and industry. Both events provide a forum to discuss topics of common interest for industry and regulators and offer many opportunities for everyone to participate in these discussions and impact alignment.
+
+[ASA workshop](https://ww2.amstat.org/meetings/biop/2023/)
+
+[Registration](https://ww2.amstat.org/meetings/biop/2023/registration.cfm)
+
+# What you find here
+
+On this webpage you find links and materials for the yearly EFSPI regulatory statistics workshop in Basel. 
+
+The workshop is organized by [EFSPI](www.efspi.org).
+
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+
+
+
