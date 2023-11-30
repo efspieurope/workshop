@@ -10,6 +10,9 @@ output:
     toc_float: yes
 ---
 
+* 2023/11/30: 
+  * Finally got permission to add [recording](data/2023/slides.html) of Session 5.
+  * Added [slidedeck](data/EFSPI_Workshop_Principles_SciCom.pdf) outlining principles for joining the Scientific Committee.
 * 2023/09/29: Added [recordings](data/2023/slides.html) of some sessions and [NextGen poster](data/2023/slides.html).
 * 2023/09/20: [Posters of 2023](data/2023/slides.html) have been added.
 * 2023/09/18: [Slides of 2023](data/2023/slides.html) have been added.

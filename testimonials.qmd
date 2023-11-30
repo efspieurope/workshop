@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## read in data
 path <- getwd()
-test23 <- as.data.frame(read_excel(paste(path, "/data/2023/testimonials.xlsx", sep = ""), col_types = NULL))
+test23 <- as.data.frame(read_excel(paste(path, "/data/2022/testimonials2022.xlsx", sep = ""), col_types = NULL))
 test23[is.na(test23[, 2]), 2] <- ""
 ```
 

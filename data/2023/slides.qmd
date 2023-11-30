@@ -23,10 +23,10 @@ path <- getwd()
 sessions <- c("", ": Regulatory and HTA update", "", ": Synthetic and other baseline covariates: The promise of smaller and faster clinical trials through prognostic digital twins", ": Complex innovative trials for regulatory decision-making", ": How to get most out of Scientific Advice", ": Use of non-RCT studies in regulatory decision-making", "")
 
 ## read in data for recordings
-rec <- as.data.frame(read_excel(paste(path, "/recordings.xlsx", sep = ""), col_types = NULL))
+rec <- as.data.frame(read_excel(paste(path, "/recordings2023.xlsx", sep = ""), col_types = NULL))
 
 ## read in data for slides
-slid <- as.data.frame(read_excel(paste(path, "/slides.xlsx", sep = ""), col_types = NULL))
+slid <- as.data.frame(read_excel(paste(path, "/slides2023.xlsx", sep = ""), col_types = NULL))
 ```
 
 # Recordings

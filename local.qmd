@@ -26,7 +26,20 @@ sci22 <- arrange(sci22, desc(Type), Gender)
 sci23 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
 sci23 <- arrange(sci23, desc(Type), Gender)
 
+sci24 <- as.data.frame(read_excel(paste(path, "/data/2024/scicom2024.xlsx", sep = ""), col_types = NULL))
+sci24 <- arrange(sci24, desc(Type), Gender)
+
 source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# 2024
+
+The members of the local organizing committee in 2024 are:
+
+```{r, include=TRUE, echo=FALSE}
+sci24[, "Name"] <- paste("[", sci24[, "First"], " ", sci24[, "Last"], "](mailto:", sci24[, "email"], ")", sep = "")
+sci24[, "email"] <- paste("[", sci24[, "First"], " ", sci24[, "Last"], "](mailto:", sci24[, "email"], ")", sep = "")
+kable(filter(sci24, Local == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
 ```
 
 # 2023
@@ -35,8 +48,7 @@ The members of the local organizing committee in 2023 are:
 
 ```{r, include=TRUE, echo=FALSE}
 sci23[, "Name"] <- paste("[", sci23[, "First"], " ", sci23[, "Last"], "](mailto:", sci23[, "email"], ")", sep = "")
-sci23[, "email"] <- paste("[", sci23[, "First"], " ", sci23[, "Last"], "](mailto:", sci23[, "email"], ")", sep = "")
-kable(filter(sci23, Local == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
+kable(filter(sci23, Local == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
 ```
 
 # 2022

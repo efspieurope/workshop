@@ -27,6 +27,14 @@ sci23 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep 
 sci23 <- arrange(sci23, desc(Type), Gender)
 ```
 
+# How to get on the scientific committee
+
+Principles for joining the Scientific Committee have been outlined by EFSPI workshop leadership in this [slidedeck](data/EFSPI_Workshop_Principles_SciCom.pdf).
+
+# Members
+
+::: {.panel-tabset .nav-pills}
+
 # 2023
 
 In 2023 the members of the scientific committee are (for regulators countries in parentheses):
@@ -44,6 +52,8 @@ kable(select(sci22, -Local, -SciCom, -email), align = "llccl")
 ```
 
 See also the `r paste("[program of ", 2022, "](", past[past[, "Year"] == 2022, "Program"], ")", sep = "")`.
+
+:::
 
 # Questions?
 
