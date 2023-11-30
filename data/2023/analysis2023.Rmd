@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 path <- paste(getwd(), "/", sep = "")
 
-source(paste("C:/rufibach/70_Service/EFSPI/webpages/20_workshop/efspiworkshop/functions/colFmt.r", sep = ""))
+source(paste("C:/rufibach/70_Service/EFSPI/webpages/20_workshop/workshop/functions/colFmt.r", sep = ""))
 
 packs <- c("readxl", "dplyr", "rnaturalearth", "rnaturalearthdata", "ggplot2", "RColorBrewer", "filesstrings", "reporttools") 
 for (i in 1:length(packs)){library(packs[i], character.only = TRUE)}

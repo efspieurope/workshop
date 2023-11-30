@@ -56,7 +56,7 @@ You have registered for the `r paste("[EFSPI regulatory statistics workshop ", l
 - `r colFmt("Day 1")`: Use this [zoom link](https://roche.zoom.us/j/92502410017) to dial in, with passcode 130923.
 - `r colFmt("Day 2")`: Use this [zoom link](https://roche.zoom.us/j/94065878061) to dial in, with passcode 140923
 - Attendees are invited to ask questions through zoom's Q&A functionality.
-- Status of registrations: Find this [here](https://efspiworkshop.github.io/efspiworkshop/docs/data/2023/analysis2023.html). We have `r nrow(reg2)` registrations from `r length(unique(reg2$country2))` countries as of now, with `r table(reg2$mode)[1]` face-to-face. `r sum(dat)` colleagues from regulatory agencies registered so far.
+- Status of registrations: Find this [here](https://efspieurope.github.io/workshop/data/2023/analysis2023.html). We have `r nrow(reg2)` registrations from `r length(unique(reg2$country2))` countries as of now, with `r table(reg2$mode)[1]` face-to-face. `r sum(dat)` colleagues from regulatory agencies registered so far.
 
 # Face-to-face attendance
 
