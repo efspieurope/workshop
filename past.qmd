@@ -1,5 +1,5 @@
 ---
-title: "Past workshops: programs, slidedecks, and recordings"
+title: "Past workshops"
 output: 
   rmarkdown::html_document:
     highlight: pygments
@@ -20,16 +20,219 @@ knitr::opts_chunk$set(echo = TRUE)
 ## past
 path <- getwd()
 past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+past_c <- as.data.frame(read_excel(paste(path, "/data/roster_past.xlsx", sep = ""), col_types = NULL))
+
+ut <- unique(past_c$Type)
+ut <- ut[c(4, 2, 3, 1, 7, 6, 5)]
 ```
 
-# Programs, slidedecks, and recordings of past events
+# Programs, slidedecks, and recordings
 
 If a recording has been made this can be found on the page with the slidedecks.
 
-```{r, include=TRUE, echo=FALSE}
+```{r programs, include=TRUE, echo=FALSE}
 past <- select(past, -Feedbacks, -Registrations)
 for (i in 2:ncol(past)){past[, i] <- ifelse(past[, i] != "[X](NA)", paste("[X](", past[, i], ")", sep = ""), "")}
 past[is.na(past)] <- ""
 kable(past, align = "ccc")
 ```
 
+# Contributors to past workshops: by year
+
+::: {.panel-tabset .nav-pills}
+
+```{r out0, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+uy <- unique(past_c$Year)
+
+for (j in 1:length(uy)){
+    out1 <- c(out1, knit_expand('tools/pastContributorsYear.qmd'))
+}
+
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
+
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
+
+```{r conferences0, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
+
+:::
+
+# Contributors to past workshops: by affiliation
+
+## `r ut[1]`
+
+::: {.panel-tabset .nav-pills}
+
+```{r out1, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+dat1 <- filter(past_c, Type == ut[1])
+uy <- unique(dat1$Year)
+w <- c("Name", "Affiliation")
+
+for (i in 1:length(uy)){
+    out1 <- c(out1, knit_expand('tools/pastContributorsType.qmd'))
+}
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
+
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
+
+```{r conferences1, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
+
+:::
+
+## `r ut[2]`
+
+::: {.panel-tabset .nav-pills}
+
+```{r out2, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+dat1 <- filter(past_c, Type == ut[2])
+uy <- unique(dat1$Year)
+
+for (i in 1:length(uy)){
+    out1 <- c(out1, knit_expand('tools/pastContributorsType.qmd'))
+}
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
+
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
+
+```{r conferences2, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
+
+:::
+
+## `r ut[3]`
+
+::: {.panel-tabset .nav-pills}
+
+```{r out3, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+dat1 <- filter(past_c, Type == ut[3])
+uy <- unique(dat1$Year)
+w <- "Name"
+
+for (i in 1:length(uy)){
+    out1 <- c(out1, knit_expand('tools/pastContributorsType.qmd'))
+}
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
+
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
+
+```{r conferences3, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
+
+:::
+
+## `r ut[4]`
+
+::: {.panel-tabset .nav-pills}
+
+```{r out4, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+dat1 <- filter(past_c, Type == ut[4])
+uy <- unique(dat1$Year)
+w <- "Name"
+
+for (i in 1:length(uy)){
+    out1 <- c(out1, knit_expand('tools/pastContributorsType.qmd'))
+}
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
+
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
+
+```{r conferences4, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
+
+:::
+
+## `r ut[5]`
+
+::: {.panel-tabset .nav-pills}
+
+```{r out5, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+dat1 <- filter(past_c, Type == ut[5])
+uy <- unique(dat1$Year)
+w <- "Name"
+
+for (i in 1:length(uy)){
+    out1 <- c(out1, knit_expand('tools/pastContributorsType.qmd'))
+}
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
+
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
+
+```{r conferences5, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
+
+:::
+
+## `r ut[6]`
+
+::: {.panel-tabset .nav-pills}
+
+```{r out6, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+dat1 <- filter(past_c, Type == ut[6])
+uy <- unique(dat1$Year)
+w <- c("Name", "Affiliation")
+
+for (i in 1:length(uy)){
+    out1 <- c(out1, knit_expand('tools/pastContributorsType.qmd'))
+}
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
+
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
+
+```{r conferences6, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
+
+:::
+
+## `r ut[7]`
+
+::: {.panel-tabset .nav-pills}
+
+```{r out7, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+dat1 <- filter(past_c, Type == ut[7])
+uy <- unique(dat1$Year)
+w <- c("Name", "Affiliation")
+
+for (i in 1:length(uy)){
+    out1 <- c(out1, knit_expand('tools/pastContributorsType.qmd'))
+}
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
+
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
+
+```{r conferences7, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
+
+:::

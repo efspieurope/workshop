@@ -1,0 +1,24 @@
+```{r echo = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
+j <- as.numeric('{{j}}')
+tab <- filter(past_c, Year == uy[j])
+tab$Nr <- 1:nrow(tab)
+
+tab <- tab[, (colnames(tab) %in% c("Affiliation", "Year")) == FALSE]
+tab <- reshape(tab, idvar = "Nr", timevar = "Type", direction = "wide")
+colnames(tab) <- substr(colnames(tab), 6, 100)
+
+for (i in 1:ncol(tab)){tab[, i] <- sort(tab[, i], na.last = TRUE)}
+
+tab <- tab[1:sum(apply(apply(tab, 2, is.na), 1, sum) < (ncol(tab) - 1)), ]
+tab[is.na(tab)] <- ""
+tab <- tab[, -1]
+```
+
+# `r paste(uy[j], sep = "")` {-} 
+
+```{r echo = FALSE}
+kable(tab)
+```
+

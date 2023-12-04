@@ -1,0 +1,14 @@
+```{r echo = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
+i <- as.numeric('{{i}}')
+tab <- filter(dat1, Year == uy[i])
+tab <- tab[, w]
+```
+
+# `r paste(uy[i], sep = "")` {-} 
+
+```{r echo = FALSE}
+knitr::kable(tab, col.names = w)
+```
+
