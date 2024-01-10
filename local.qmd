@@ -26,7 +26,7 @@ sci22 <- arrange(sci22, desc(Type), Gender)
 sci23 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
 sci23 <- arrange(sci23, desc(Type), Gender)
 
-sci24 <- as.data.frame(read_excel(paste(path, "/data/2024/scicom2024.xlsx", sep = ""), col_types = NULL))
+sci24 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
 sci24 <- arrange(sci24, desc(Type), Gender)
 
 source(paste(path, "/functions/colFmt.r", sep = ""))
