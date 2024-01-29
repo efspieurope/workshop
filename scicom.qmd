@@ -28,7 +28,7 @@ sci23 <- arrange(sci23, desc(Type), Gender)
 
 sci24 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
 sci24 <- dplyr::filter(sci24, (is.na(SciCom) == FALSE) & (SciCom == 1))
-sci24 <- arrange(sci24, desc(Local), desc(SciCom), Gender)
+sci24 <- arrange(sci24, desc(Local), desc(SciCom), Gender, Last)
 ```
 
 # How to get on the scientific committee
