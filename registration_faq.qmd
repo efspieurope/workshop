@@ -95,6 +95,7 @@ Our offer for a block booking for companies is as follows:
 
 - Block booking for face-to-face attendance: 8400 Euro, i.e. you break-even with 30 face-to-face participants. If you chose this option an arbitrary number of virtual attendees is included as well.
 - Block booking for virtual attendance: 2800 Euro, i.e. you reach break-even with this option if at least 40 colleagues from your company register for virtual attendance to the workshop.
+- `r colFmt("The conference organizers reserve the right to cap the number of registered face-to-face attendees for a company with block booking, in order to keep catering costs under control. This never happened so far though.")`
 
 Please reach out to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com) if your company is interested in one of these options.
 
