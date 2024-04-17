@@ -26,7 +26,7 @@ waived <- as.data.frame(read_excel(paste(path, "/data/waived.xlsx", sep = ""), c
 reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
 
 # last issue 
-last <- 2022
+last <- 2023
 
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
@@ -113,7 +113,7 @@ If possible we would like to record the session and post it on the EFSPI webpage
 
 # Slidedecks and short bio
 
-We would be very grateful to receive a stable draft of your presentation slidedeck by `r colFmt("4th September 2023", "red")`. This, in order to be flexible and to potentially run the slides from our end in case of issues with the internet connection.
+We would be very grateful to receive a stable draft of your presentation slidedeck by `r colFmt("2nd September 2024", "red")`. This, in order to be flexible and to potentially run the slides from our end in case of issues with the internet connection.
 
 We would also appreciate if you could share with us a short paragraph that the session chairs will use to introduce you during the session.
 

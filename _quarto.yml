@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   render:
-    - data/2023
+    - data/2024
     - feedback.qmd        
     - index.qmd           
     - next.qmd            
@@ -18,7 +18,6 @@ project:
     - dialin_participants.qmd
     - chat.qmd
     - restaurants.qmd
-    - 2024.qmd
 
 website:
   title: "EFSPI regulatory statistics workshop"
@@ -26,16 +25,15 @@ website:
     background: info
     left:
     - text: "2024 workshop"
-      href: 2024.html
       menu:
+        - text: "Program and registration"  
+          href: next.html
         - text: "FAQ registration"  
           href: registration_faq.html
+        - text: "FAQ speakers"  
+          href: speaker.html
         - text: "Restaurants in Basel"  
           href: restaurants.html
-    - text: "2023 workshop"
-      menu:
-        - text: "Slides, recordings, and posters from 2023 workshop"  
-          href: data/2023/slides.html
     - text: "Testimonials"
       menu:
         - text: "Testimonials from 2022 workshop"  

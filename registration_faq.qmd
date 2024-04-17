@@ -1,6 +1,8 @@
 ---
 title: "Registration for EFSPI regulatory statistics workshop: Frequently asked questions"
 date: last-modified
+execute:   
+  freeze: auto  # re-render only when source changes
 output: 
   rmarkdown::html_document:
     highlight: pygments
@@ -31,7 +33,11 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 
 # Introduction
 
-Thanks for your interest in the `r paste("EFSPI regulatory statistics workshop ", last + 1, sep = "")`! This site provides FAQs around registration. 
+Thanks for your interest in the `r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`! This site provides FAQs around registration. 
+
+# Is virtual participation possible?
+
+Yes, the workshop is hybrid. 
 
 # Venue
 
@@ -41,11 +47,104 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 # Program and registration
 
-Registration for the `r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")` workshop is not open yet.
+Link to `r paste("[program](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`  and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
+
+# Registration fees
+
+280 Euro for face-to-face and 70 Euros for virtual attendance. To register please pay of 280 / 70 Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the 8th EFSPI Regulatory Statistics Workshop. 
+
+Bank details: European Fed Stat Pharm Ind<br>
+Bank: HSBC<br>
+IBAN: GB53HBUK40127677385084<br>
+BIC: HBUKGB4B<br>
+Reference: Regulatory 23<br>
+
+Due to this informal registration process we can keep the price low. Therefore we can not accept credit card transfer and we cannot provide you with a formal invoice after the payment. In case you have any question on your payment, please contact [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com).
+
+# Registration deadline
+
+For face-to-face attendance: **`r colFmt("2nd September 2024 EOB")`**
+
+For virtual attendance: **`r colFmt("9th September 2024 EOB")`**.
+
+Registration platform will be turned off for the respective option after the deadline.
+
+# Confirmation of registration
+
+After registration you will receive calendar invites for the two days within about a week. Please watch out for these invites, this is your confirmation of registration. If you did not receive them there is a high probability you entered your email address with a typo. If that is the case please re-register with the correct email address.
+
+# Will the event be recorded?
+
+Yes. Recordings will be posted [here](data/2024/slides.html), `r colFmt("pending speaker approval")`.
+
+# Will slidedecks be shared after the event?
+
+Yes. Slidedecks will be posted [here](data/2024/slides.html), `r colFmt("pending speaker approval")`.
+
+<!-- # Dial-in instructions -->
+
+<!-- See [here](dialin_participants.html). -->
+
+<!-- # Covid -->
+
+<!-- No measures are in effect in Switzerland. All events (including wine tasting) are planned indoors.  -->
+
+# What block booking options are available for companies?
+
+Our offer for a block booking for companies is as follows:
+
+- Block booking for face-to-face attendance: 8400 Euro, i.e. you break-even with 30 face-to-face participants. If you chose this option an arbitrary number of virtual attendees is included as well.
+- Block booking for virtual attendance: 2800 Euro, i.e. you reach break-even with this option if at least 40 colleagues from your company register for virtual attendance to the workshop.
+
+Please reach out to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com) if your company is interested in one of these options.
+
+# Which companies have block bookings for face-to-face participation?
+
+None yet. 
+
+<!-- Roche and Novartis have a comprehensive block booking agreement with the workshop, i.e. all colleagues working at these companies do not need to pay a registration fee for face-to-face or virtual participation. -->
+
+# My company (none yet) has a block booking for face-to-face AND virtual participation. How do I register?
+
+These companies have a block booking for face-to-face and virtual attendance. You simply register via `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
+
+To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes.
+
+# My company (none yet) has a block booking for virtual participation only. How do I register?
+
+You simply register via `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
+
+# My company (none yet) has a block booking for virtual attendance only. I still want to attend face-to-face. How much do I need to pay?
+
+The full registration fee, 280 Euro.
+
+# I will not attend the full workshop and/or not all lunches. Do I get a deducation for the face-to-face registration fee?
+
+No.
+
+# I have registered for face-to-face attendance but have changed my mind and will attend only virtually. Will my registration fee be reimbursed?
+
+No. We would still very much appreciate you letting us know, for the planning of the catering.
+
+# For whom is the registration fee waived?
+
+See [here](speaker.html).
+
+# I only want to attend parts of the workshop (e.g. only the HTA session on Friday). Do I get a reduced fee?
+
+No.
+
+# I present a poster. Is my registration fee waived?
+
+No.
+
+# I present in the short topic session. Is my registration fee waived?
+
+No.
 
 # You still have questions after going through this entire document?
 
-Send an email [Helle Lynggaard](mailto:hlyn@novonordisk.com).
+Send an email to [Helle Lynggaard](mailto:hlyn@novonordisk.com).
 
 
 

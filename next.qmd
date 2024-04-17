@@ -1,5 +1,8 @@
 ---
-title: "2023 EFSPI regulatory statistics workshop"
+title: "2024 EFSPI regulatory statistics workshop"
+date: last-modified
+execute:   
+  freeze: auto  # re-render only when source changes
 output: 
   rmarkdown::html_document:
     highlight: pygments
@@ -10,9 +13,10 @@ output:
     toc_float: yes
 ---
 
-# Date and venue of 2023 workshop
 
-The workshop will take place on 13/14th September 2023 again in the beautiful [Biozentrum](https://www.biozentrum.unibas.ch/) in [Basel](https://www.basel.com/en).
+# Date and venue of 2024 workshop
+
+The workshop will take place 11-13th September 2024 again in the beautiful [Biozentrum](https://www.biozentrum.unibas.ch/) in [Basel](https://www.basel.com/en). 
 
 <center>![](biozentrum.jpg)</center>
 
@@ -26,19 +30,10 @@ Members of [local organizing committee](local.html).
 
 Members of [scientific committee](scicom.html).
 
-Updates to program:
+# Call for short topics
 
-* 29/08/2023: Added short topics.
-* 28/08/2023: Updates to posters.
-* 23/08/2023: Updates to posters.
-* 13/08/2023: Added name of speaker of Talk 2 in Session 2.
-* 11/08/2023: Flipped order of Talks 3 & 4 in Session 5.
-* 18/07/2023: Launch & lifecycle poster added.
-* 17/07/2023: Speakers for Talk 1 in Session 3 and Talk 4 in Session 5 added.
-* 04/07/2023: Historical data ESIG has confirmed that they will present a poster.
-* 30/06/2023: Session 1: Information on HTA presentation updated. Poster session: Poster from the Biomarker ESIG confirmed.
-* 26/06/2023: Title of Talk 2 in Session 5 added.
-* 23/06/2023: David McConnell, Roisin Adams, Gergo Meresz confirmed as speakers. Title of Talk 2 in Session 3 added. FDA Accelerated approval guidance removed from scope of Talk 2 in Session 5.
-* 22/06/2023: Kristin Karlsson and Stefan Lange confirmed as speaker, title of Andreas Brandt's talk added.
-* 07/06/2023: Added title of Dan Rubin's talk.
-* 06/06/2023: initial version put online.
+See [linkedin post](). Deadline for submissions is 15th August 2024.
+
+# Updates to program:
+
+* 17/04/2024: initial version put online.
