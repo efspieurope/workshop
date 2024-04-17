@@ -63,7 +63,7 @@ Due to this informal registration process we can keep the price low. Therefore w
 
 # Registration deadline
 
-For face-to-face attendance: **`r colFmt("2nd September 2024 EOB")`**
+For face-to-face attendance: **`r colFmt("30th August 2024 EOB")`**
 
 For virtual attendance: **`r colFmt("9th September 2024 EOB")`**.
 

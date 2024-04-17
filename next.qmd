@@ -13,6 +13,23 @@ output:
     toc_float: yes
 ---
 
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
+
+# last issue 
+last <- 2023
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
 
 # Date and venue of 2024 workshop
 
@@ -22,9 +39,9 @@ The workshop will take place 11-13th September 2024 again in the beautiful [Bioz
 
 <br>
 
-[Workshop program (status: 8th September 2023)](data/2023/8th EFSPI RegStat Workshop program.pdf).
+`r paste("[Workshop program (status: 17th April 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`
 
-[Registration](https://forms.gle/uEkPC2AFL9r4GBpx5).
+`r paste("[Registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`
 
 Members of [local organizing committee](local.html).
 
@@ -34,6 +51,9 @@ Members of [scientific committee](scicom.html).
 
 See [linkedin post](). Deadline for submissions is 15th August 2024.
 
-# Updates to program:
+# Updates to program
 
-* 17/04/2024: initial version put online.
+See [here](updates.html).
+
+
+
