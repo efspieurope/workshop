@@ -57,7 +57,7 @@ Both these workshops aspire to build a statistical community across regulatory a
 
 On this webpage you find links and materials for the yearly EFSPI regulatory statistics workshop in Basel. 
 
-The workshop is organized by [EFSPI](www.efspi.org).
+The workshop is organized by [EFSPI](http://www.efspi.org).
 
 For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
 

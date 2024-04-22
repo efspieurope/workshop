@@ -47,7 +47,7 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 # Program and registration
 
-Link to `r paste("[program](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`  and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
+Link to `r paste("[draft program (status: 17th April 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`  and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
 
 # Registration fees
 

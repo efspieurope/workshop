@@ -34,18 +34,18 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 # What's new for the 2024 workshop?
 
 - Not new is that we keep the **`r colFmt("registration fees at the same decent level")`**. This eventhough we extend the workshop by half a day, see next item.
-- We will have a dedicated HTA session on the Friday morning, see [program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf). 
+- We will have a dedicated HTA session on the Friday morning, see [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf). 
 - For the first time we will have a patient talking.
 
 # Date and venue of 2024 workshop
 
-The workshop will take place 11-13th September 2024 again in the beautiful [Biozentrum](https://www.biozentrum.unibas.ch/) in [Basel](https://www.basel.com/en). 
+The workshop will take place 11-13th September 2024 again at [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en). 
 
 <center>![](biozentrum.jpg)</center>
 
 <br>
 
-`r paste("[Workshop program (status: 17th April 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`
+`r paste("[Draft program (status: 17th April 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`
 
 `r paste("[Registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`
 
@@ -55,9 +55,9 @@ Members of [scientific committee](scicom.html).
 
 # Call for short topics
 
-See [linkedin post](). Deadline for submissions is 15th August 2024.
+Like previous years, it is possible to submit a short topic for discussion with a panel of regulators. Submit your proposal to the Chair, Helle Lynggaard, by sending an e-mail to hlyn@novonordisk.com. Deadline for submissions is 15th August 2024.
 
-# Updates to program
+# Updates to this page and the draft program
 
 See [here](updates.html).
 

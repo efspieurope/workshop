@@ -13,22 +13,9 @@ output:
     toc_float: yes
 ---
 
-* 2024/04/17: First version of [program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf) for 2024 workshop online.
+* 2024/04/17: First version of [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf) for 2024 workshop online.
 * 2024/01/29: We welcome two new members to the Scientific Committee: Welcome Bergrun Tina	Magnusdottir from Iceland and Heidi	Mestl from Norway!
 * 2024/01/10: The Scientific Committee for this year's workshop is complete! Find the roster [here](scicom.html).
-* 2023/12/04: Added contributors of past workshops [here](past.html#contributors-to-past-workshops-by-year).
-* 2023/11/30: 
-  * Finally got permission to add [recording](data/2023/slides.html) of Session 5.
-  * Added [slidedeck](data/EFSPI_Workshop_Principles_SciCom.pdf) outlining principles for joining the Scientific Committee.
-* 2023/09/29: Added [recordings](data/2023/slides.html) of some sessions and [NextGen poster](data/2023/slides.html).
-* 2023/09/20: [Posters of 2023](data/2023/slides.html) have been added.
-* 2023/09/18: [Slides of 2023](data/2023/slides.html) have been added.
-* 2023/08/30: Added [restaurants in Basel](restaurants.html) and first announcement of [2024 workshop](2024.html).
-* 2023/06/07: Program updated and added [testimonials](testimonials.html) from 2022 workshop.
-* 2023/06/06: Pre-final version of program and registration online.
-* 2023/05/30: Added details of registration. Registration fees have been moderately adjusted.
-* 2023/05/10: Added FAQs for [registration](registration_faq.html) and [speakers](speaker.html).
-* 2023/01/09: Added rosters of local organizing and scientific committees.
 
 
 
