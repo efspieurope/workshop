@@ -101,11 +101,9 @@ Please reach out to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com) if
 
 # Which companies have block bookings for face-to-face participation?
 
-None yet. 
+So far, Roche and Novartis have a comprehensive block booking agreement with the workshop, i.e. all colleagues working at these companies do not need to pay a registration fee for face-to-face or virtual participation.
 
-<!-- Roche and Novartis have a comprehensive block booking agreement with the workshop, i.e. all colleagues working at these companies do not need to pay a registration fee for face-to-face or virtual participation. -->
-
-# My company (none yet) has a block booking for face-to-face AND virtual participation. How do I register?
+# My company (so far Roche and Novartis) has a block booking for face-to-face AND virtual participation. How do I register?
 
 These companies have a block booking for face-to-face and virtual attendance. You simply register via `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
 
