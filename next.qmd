@@ -45,7 +45,7 @@ The workshop will take place 11-13th September 2024 again at [Biozentrum](https:
 
 <br>
 
-`r paste("[Draft program (status: 17th April 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`
+`r paste("[Draft program (status: 3rd May 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`
 
 `r paste("[Registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`
 

@@ -13,6 +13,7 @@ output:
     toc_float: yes
 ---
 
+* 2024/05/03: Updated [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf).
 * 2024/04/30: Roche and Novartis again have a comprehensive block booking agreement with the workshop, see [registration FAQ](registration_faq.html#which-companies-have-block-bookings-for-face-to-face-participation).
 * 2024/04/17: First version of [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf) for 2024 workshop online.
 * 2024/01/29: We welcome two new members to the Scientific Committee: Welcome Bergrun Tina	Magnusdottir from Iceland and Heidi	Mestl from Norway!

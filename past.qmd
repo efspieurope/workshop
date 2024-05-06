@@ -17,6 +17,9 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
 
+path <- getwd()
+source(paste(path, "/functions/colFmt.r", sep = ""))
+
 ## past
 path <- getwd()
 past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
@@ -29,6 +32,8 @@ ut <- ut[c(4, 2, 3, 1, 7, 6, 5)]
 # Programs, slidedecks, and recordings
 
 If a recording has been made this can be found on the page with the slidedecks.
+
+`r colFmt("Any views expressed in any of the slidedecks or recordings are personal and do not necessarily represent the speaker's company or organisation's view.")`
 
 ```{r programs, include=TRUE, echo=FALSE}
 past <- select(past, -Feedbacks, -Registrations)

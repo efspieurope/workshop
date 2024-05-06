@@ -73,7 +73,7 @@ kable(waived, align = "llccccc")
 
 However, if the registration fee is waived for you please still register using `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
 
-For reimbursement please complete [this form](data/2023/20230913_EFSPI_workshop_reimbursement.docx) and send it to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com).
+For reimbursement please complete [this form](data/2024/20240911_EFSPI_workshop_reimbursement.docx) and send it to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com).
 
 Registration fee is not waived for poster and short topic session presenters.
 
@@ -124,6 +124,7 @@ For session we propose the following preparatory actions:
 - Align talks to avoid duplication.
 - Remind speakers to rather focus on principles and regulatory actions than technical (statistical) details.
 - Remind speakers to send slides to [Helle Lynggaard](mailto:hlyn@novonordisk.com) with cc: the session chairs.
+- Clarify with speakers `r colFmt("prior to the workshop")` whether they are ok to post their slides and / or the recording of their session on the workshop webpage.
 
 # Technical setup and how we plan to run the sessions
 
