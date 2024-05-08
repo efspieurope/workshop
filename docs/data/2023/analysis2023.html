@@ -8,7 +8,7 @@
 
 <meta name="author" content="Kaspar Rufibach">
 
-<title>EFSPI regulatory statistics workshop - EFSPI regulatory statistics workshop 2024: analysis of registrations</title>
+<title>EFSPI regulatory statistics workshop - EFSPI regulatory statistics workshop 2023: analysis of registrations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -159,6 +159,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#registrations-by-type-of-institution" id="toc-registrations-by-type-of-institution" class="nav-link" data-scroll-target="#registrations-by-type-of-institution">Registrations by type of institution</a></li>
   <li><a href="#registrations-by-background" id="toc-registrations-by-background" class="nav-link" data-scroll-target="#registrations-by-background">Registrations by background</a></li>
   <li><a href="#registrations-by-institution" id="toc-registrations-by-institution" class="nav-link" data-scroll-target="#registrations-by-institution">Registrations by institution</a></li>
+  <li><a href="#registrations-of-regulatory-and-hta-colleagues" id="toc-registrations-of-regulatory-and-hta-colleagues" class="nav-link" data-scroll-target="#registrations-of-regulatory-and-hta-colleagues">Registrations of regulatory and HTA colleagues</a></li>
   <li><a href="#registrations-by-countries" id="toc-registrations-by-countries" class="nav-link" data-scroll-target="#registrations-by-countries">Registrations by countries</a></li>
   <li><a href="#registrations-by-countries---map" id="toc-registrations-by-countries---map" class="nav-link" data-scroll-target="#registrations-by-countries---map">Registrations by countries - map</a></li>
   <li><a href="#registrations-by-mode-of-attendance" id="toc-registrations-by-mode-of-attendance" class="nav-link" data-scroll-target="#registrations-by-mode-of-attendance">Registrations by mode of attendance</a></li>
@@ -172,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">EFSPI regulatory statistics workshop 2024: analysis of registrations</h1>
+<h1 class="title">EFSPI regulatory statistics workshop 2023: analysis of registrations</h1>
 </div>
 
 
@@ -201,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="data-status" class="level1">
 <h1>Data status</h1>
-<p>Data as of 2024-05-08 at 09:28:58.</p>
+<p>Data as of 2024-05-08 at 09:28:28.</p>
 </section>
 <section id="registrations-by-type-of-institution" class="level1">
 <h1>Registrations by type of institution</h1>
@@ -209,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2024_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2023_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -221,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2024_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2023_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -233,27 +234,23 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2024_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2023_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<!-- # Registrations of regulatory and HTA colleagues -->
-<!-- ```{r, echo = FALSE, eval = TRUE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6} -->
-
-<!-- dat <- with(filter(reg2, type %in% c("HTA", "Regulator")), table(inst2, mode)) -->
-<!-- ha <- rownames(dat) -->
-<!-- i1 <- (substr(ha, 1, 2) == "HT") -->
-<!-- ha[i1] <- substr(rownames(dat)[i1], 5, 1000) -->
-<!-- ha[!i1] <- substr(rownames(dat)[!i1], 11, 1000) -->
-<!-- t2 <- data.frame("ha" = ha, "freq" = as.vector(dat[, 1] + dat[, 2]), "face-to-face" = dat[, "Face-to-face (280 Euro)"], "virtual" = dat[, "Virtual (70 Euro)"]) -->
-<!-- t2 <- t2[order(t2$freq), ] -->
-<!-- par(las = 1, mar = c(4.5, 13, 3, 1)) -->
-<!-- xx <- barplot(height = t(as.matrix(t2[, c("face.to.face", "virtual")])), names.arg = t2$ha, xlim = c(0, max(t2$freq) + 1), horiz = TRUE, xlab = "number of registrations", main = paste("Total number of registrations: ", sum(t2$freq), "\n regulatory colleagues", sep = ""), col = c(2, 4), xaxt = "n") -->
-<!-- axis(1, at = 0:100, labels = 0:100) -->
-<!-- segments(seq(0, 100, by = 2), 0, seq(0, 100, by = 2), length(t2$ha) + 3, lty = 2, col = grey(0.5)) -->
-<!-- legend("bottomright", colnames(t2)[3:4], col = c(2, 4), bty = "n", lty = 1, lwd = 10) -->
-<!-- ``` -->
+</section>
+<section id="registrations-of-regulatory-and-hta-colleagues" class="level1">
+<h1>Registrations of regulatory and HTA colleagues</h1>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="analysis2023_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="registrations-by-countries" class="level1">
 <h1>Registrations by countries</h1>
@@ -261,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2024_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2023_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -273,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2024_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1440"></p>
+<p><img src="analysis2023_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1440"></p>
 </figure>
 </div>
 </div>
@@ -285,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2024_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2023_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -295,17 +292,17 @@ ul.task-list li input[type="checkbox"] {
 <h1>Registrations by mode of attendance and F2F block booking status</h1>
 <table class="table">
 <colgroup>
-<col style="width: 48%">
-<col style="width: 18%">
-<col style="width: 16%">
+<col style="width: 47%">
+<col style="width: 20%">
+<col style="width: 15%">
 <col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
-<th style="text-align: center;">Novartis (N=5)</th>
-<th style="text-align: center;">Roche (N=35)</th>
-<th style="text-align: center;">Total (N=40)</th>
+<th style="text-align: center;">Novartis (N=313)</th>
+<th style="text-align: center;">Roche (N=97)</th>
+<th style="text-align: center;">Total (N=410)</th>
 </tr>
 </thead>
 <tbody>
@@ -317,15 +314,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td style="text-align: left;">&nbsp;&nbsp;&nbsp;Face-to-face (280 Euro)</td>
-<td style="text-align: center;">5 (100.0%)</td>
-<td style="text-align: center;">27 (77.1%)</td>
-<td style="text-align: center;">32 (80.0%)</td>
+<td style="text-align: center;">118 (37.7%)</td>
+<td style="text-align: center;">51 (52.6%)</td>
+<td style="text-align: center;">169 (41.2%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">&nbsp;&nbsp;&nbsp;Virtual (70 Euro)</td>
-<td style="text-align: center;">0 (0.0%)</td>
-<td style="text-align: center;">8 (22.9%)</td>
-<td style="text-align: center;">8 (20.0%)</td>
+<td style="text-align: center;">195 (62.3%)</td>
+<td style="text-align: center;">46 (47.4%)</td>
+<td style="text-align: center;">241 (58.8%)</td>
 </tr>
 </tbody>
 </table>
@@ -336,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2024_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2023_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
