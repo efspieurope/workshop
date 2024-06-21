@@ -45,7 +45,7 @@ The workshop will take place 11-13th September 2024 (start morning of 11th and e
 
 <br>
 
-`r paste("[Draft program (status: 10th June 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`
+`r paste("[Draft program (status: 21st June 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`
 
 `r paste("[Registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`
 
