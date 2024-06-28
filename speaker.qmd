@@ -24,6 +24,7 @@ past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_t
 sci22 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
 waived <- as.data.frame(read_excel(paste(path, "/data/waived.xlsx", sep = ""), col_types = NULL))
 reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
+prog <- as.data.frame(read_excel(paste(path, "/data/program_update.xlsx", sep = ""), col_types = NULL))
 
 # last issue 
 last <- 2023
@@ -41,7 +42,7 @@ This document provides necessary information for contributors to the workshop. F
 
 # Program
 
-`r paste("[Draft program (status: 21st June 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
+`r paste("[Draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
 
 # Registration
 

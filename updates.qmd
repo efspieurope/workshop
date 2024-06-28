@@ -13,6 +13,7 @@ output:
     toc_float: yes
 ---
 
+* 2024/06/28: Updated [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf), further speakers now confirmed.
 * 2024/06/10: Updated [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf), further speakers now confirmed.
 * 2024/06/05: Updated [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf), further speakers now confirmed.
 * 2024/05/31: Updated [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf), many speakers now confirmed.

@@ -24,6 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 path <- getwd()
 past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
 reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
+prog <- as.data.frame(read_excel(paste(path, "/data/program_update.xlsx", sep = ""), col_types = NULL))
 
 # last issue 
 last <- 2023
@@ -45,7 +46,7 @@ The workshop will take place 11-13th September 2024 (start morning of 11th and e
 
 <br>
 
-`r paste("[Draft program (status: 21st June 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`
+`r paste("[Draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
 
 `r paste("[Registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`
 

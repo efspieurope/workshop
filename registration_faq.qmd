@@ -24,6 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 path <- getwd()
 past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
 reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
+prog <- as.data.frame(read_excel(paste(path, "/data/program_update.xlsx", sep = ""), col_types = NULL))
 
 # last issue 
 last <- 2023
@@ -47,7 +48,7 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 # Program and registration
 
-Link to `r paste("[draft program (status: 21st June 2024)](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`  and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
+Link to `r paste("[draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")` and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
 
 # Registration fees
 
