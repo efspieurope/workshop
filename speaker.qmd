@@ -125,11 +125,14 @@ For session we propose the following preparatory actions:
 - Align talks to avoid duplication.
 - Remind speakers to rather focus on principles and regulatory actions than technical (statistical) details.
 - Remind speakers to send slides to [Helle Lynggaard](mailto:hlyn@novonordisk.com) with cc: the session chairs.
+- Remind speakers to the allocated time.
 - Clarify with speakers `r colFmt("prior to the workshop")` whether they are ok to post their slides and / or the recording of their session on the workshop webpage.
 - Remind speakers to use a headphone (not speak to their computers).
 
 When chairing the session:
-  - Call out those on the phone so that they can contribute to the discussion as well.
+
+- Call out those on the phone so that they can contribute to the discussion as well.
+- Stick to the allocated time and end on time.
   
 
 # Technical setup and how we plan to run the sessions
