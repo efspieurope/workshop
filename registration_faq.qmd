@@ -72,7 +72,7 @@ Registration platform will be turned off for the respective option after the dea
 
 # Confirmation of registration
 
-After registration you will receive calendar invites for the two days within about a week. Please watch out for these invites, this is your confirmation of registration. If you did not receive them there is a high probability you entered your email address with a typo. If that is the case please re-register with the correct email address.
+Some time after registration (it may take 1-2 weeks) you will receive calendar invites for the two and a half days. Please watch out for these invites, this is your confirmation of registration. If you did not receive them there is a high probability you entered your email address with a typo. If that is the case please re-register with the correct email address.
 
 # Will the event be recorded?
 
