@@ -111,7 +111,7 @@ If possible we would like to record the session and post it on the EFSPI webpage
 
 # Slidedecks and short bio
 
-We would be very grateful to receive a stable draft of your presentation slidedeck by `r colFmt("2nd September 2024", "red")`. This, in order to be flexible and to potentially run the slides from our end in case of issues with the internet connection.
+We would be very grateful to receive the final version of your presentation slidedeck by `r colFmt("2nd September 2024", "red")`. This, in order to be flexible and to potentially run the slides from our end in case of issues with the internet connection.
 
 We would also appreciate if you could share with us a short paragraph that the session chairs will use to introduce you during the session.
 
@@ -119,21 +119,28 @@ Please send all these materials to [Helle Lynggaard](mailto:hlyn@novonordisk.com
 
 # Session chairs
 
-For session we propose the following preparatory actions:
+Some preliminaries for chairing:
+
+- The unique feature of the workshop is an atmosphere of collaboration and open discussion of statistical and regulatory science in general.
+- As chairs you should set directions for the session and promote high-quality discussions.
+
+In order to meet these goals we therefore propose the following preparatory actions:
 
 - Call for at least one teleconference prior to workshop (early enough as the workshop is rather shortly after typical summer vacation dates).
 - Align talks to avoid duplication.
 - Remind speakers to rather focus on principles and regulatory actions than technical (statistical) details.
-- Remind speakers to send slides to [Helle Lynggaard](mailto:hlyn@novonordisk.com) with cc: the session chairs.
-- Remind speakers to the allocated time.
+- Remind speakers to send slides to [Helle Lynggaard](mailto:hlyn@novonordisk.com) by `r colFmt("2nd September 2024", "red")` with cc: the session chairs.
+- Timing: keep allocated time for each presentation and for the session overall. Remind speakers of their allocated time.
 - Clarify with speakers `r colFmt("prior to the workshop")` whether they are ok to post their slides and / or the recording of their session on the workshop webpage.
 - Remind speakers to use a headphone (not speak to their computers).
 
 When chairing the session:
 
 - Call out those on the phone so that they can contribute to the discussion as well.
+- Prioritise discussions at the end of the session and only take clarifying questions in-between presentations. Exception: sessions on regulatory updates.
 - Stick to the allocated time and end on time.
-  
+- Presenters in the room: do not use hand-held mic, but head mics.
+- Be aware of the chat monitors and mic runners.
 
 # Technical setup and how we plan to run the sessions
 

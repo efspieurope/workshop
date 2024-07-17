@@ -1,8 +1,6 @@
 ---
 title: "Registration for EFSPI regulatory statistics workshop: Frequently asked questions"
 date: last-modified
-execute:   
-  freeze: auto  # re-render only when source changes
 output: 
   rmarkdown::html_document:
     highlight: pygments
