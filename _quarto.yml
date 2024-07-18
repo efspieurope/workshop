@@ -2,6 +2,8 @@ project:
   type: website
   output-dir: docs
   render:
+    - data/2023
+    - data/2024
     - feedback.qmd        
     - index.qmd           
     - next.qmd            
