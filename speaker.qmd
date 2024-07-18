@@ -103,7 +103,7 @@ No pre-reservation is possible at Hotel Odelya 3* (9 min walk from venue). Book 
 
 # Posting of presentations on EFSPI webpage
 
-After the workshop, we would like to post presentation slide decks and recordings of the webinars to the EFSPI webpage (see `r paste("[here](", past[past["Year"] == last, "Slidedecks"], ")", sep = "")` for the `r last` issue). Please let us know in case you would prefer NOT to post your slides and/or the recording to the EFSPI webpage.
+After the workshop, we would like to post presentation slide decks and recordings of the webinars to the EFSPI webpage (see `r paste("[here](", past[past["Year"] == last, "Slidedecks"], ")", sep = "")` for the `r last` issue). Please let us know in case you would prefer NOT to post your slides and/or the recording to the EFSPI webpage by sending an email to [Helle Lynggaard](mailto:hlyn@novonordisk.com).
 
 # Recording
 
@@ -149,7 +149,6 @@ When chairing the session:
 - We will open the Zoom session at least 30min prior to the scheduled starting date and invite everyone to dial in early.
 - Preference is to run the slides centrally by the chairs. However, speakers can opt to drive the slides themselves. If you prefer to do so please familiarize yourself with Zoom and your own setup such that transitions from one speaker to the next can be made efficiently.
 - We will invite attendees to ask questions in the Zoom chat. Every attendee can see them. The chairs will structure them and ask them in the panel discussion.
-- Chairs will decide whether to ask questions directly after the presentations or to hold them until the panel discussion.
 
 # Dial-in instructions
 
