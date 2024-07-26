@@ -19,6 +19,7 @@ project:
     - dialin_participants.qmd
     - chat.qmd
     - restaurants.qmd
+    - submission.qmd
 
 website:
   title: "EFSPI regulatory statistics workshop"
@@ -33,6 +34,8 @@ website:
           href: registration_faq.html
         - text: "FAQ speakers"  
           href: speaker.html
+        - text: "FAQ submissions of contributions"  
+          href: submission.html
         - text: "Restaurants in Basel"  
           href: restaurants.html
     - text: "Testimonials"

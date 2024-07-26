@@ -1,0 +1,42 @@
+---
+title: "Frequently asked questions for submissions of contributions"
+date: last-modified
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+path <- getwd()
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# Primary goal of the EFSPI regulatory statistics workshop
+
+See [here](index.html).
+
+# Talks
+
+The [scientific committee](scicom.html), with equal representation of industry and European regulatory members, regularly meets and puts together a program structured in several sessions. In order to have a focused and fit-for-purpose program `r colFmt("talks are by invitation only")`. There is no option to submit talks for presentation in one of the sessions.
+
+Wonder how you can get involved with the scientific committee? See [here](scicom.html).
+
+# Short topics
+
+The short topics session is a hallmark of each year's workshop. Anyone can submit proposals for discussion until 15th August to [Helle Lynggaard](mailto:hlyn@novonordisk.com). Accepted proposals can be presented in five minutes using two slides to the audience, with the intention to ask `r colFmt("one or more clear questions")` to a panel of regulators. They will then comment on these questions. For past topics that were discussed in this session see [here](past.html#programs-slidedecks-and-recordings).
+
+# Posters
+
+The primary purpose of the poster session is to give [EFSPI / PSI eSIGs](https://www.efspi.org/EFSPI/SIGS/EFSPI/Special_Interest_Groups/Special_Interest_Groups.aspx) the opportunity to present their progress. As for talks, `r colFmt("there is no option to submit posters")` other than from said eSIGs.
+
+# Questions?
+
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+
+
+
