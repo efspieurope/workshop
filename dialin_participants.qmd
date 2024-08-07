@@ -27,7 +27,7 @@ last <- 2022
 
 source(paste(path, "/functions/colFmt.r", sep = ""))
 
-path <- "C:/rufibach/70_Service/EFSPI/workshop/20230913_8th_EFSPI_RegStat_Basel/30 registrations/"
+path <- "C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/30_registrations/"
 
 path.data     <- paste(path, "data/", sep = "")
 path.code     <- paste(path, "code/", sep = "")
