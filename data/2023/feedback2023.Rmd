@@ -1,6 +1,8 @@
 ---
 title: "EFSPI regulatory statistics workshop 2023: feedback from participants and contributors"
 author: "Kaspar Rufibach"
+execute:   
+  freeze: auto  # re-render only when source changes
 date: "Last change: `r format(Sys.time(), '%d %B, %Y')`"
 output: 
   rmarkdown::html_document:
