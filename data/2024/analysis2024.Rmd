@@ -89,10 +89,10 @@ xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number o
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90)
 ```
  
-# Registrations of regulatory and HTA colleagues
+# Registrations of regulatory colleagues
 
 ```{r, echo = FALSE, eval = TRUE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
-dat <- with(filter(reg2, type %in% c("HTA", "Regulator")), table(inst2, mode))
+dat <- with(filter(reg2, type %in% c("HTA", "Regulator")[2]), table(inst2, mode))
 ha <- rownames(dat)
 i1 <- (substr(ha, 1, 2) == "HT")
 ha[i1] <- substr(rownames(dat)[i1], 5, 1000)
@@ -103,6 +103,25 @@ t2 <- t2[order(t2$freq), ]
 par(las = 1, mar = c(4.5, 13, 3, 1))
 
 xx <- barplot(height = t(as.matrix(t2[, c("face.to.face", "virtual")])), names.arg = t2$ha, xlim = c(0, max(t2$freq) + 1), horiz = TRUE, xlab = "number of registrations", main = paste("Total number of registrations: ", sum(t2$freq), "\n regulatory colleagues", sep = ""), col = c(2, 4), xaxt = "n")
+axis(1, at = 0:100, labels = 0:100)
+segments(seq(0, 100, by = 2), 0, seq(0, 100, by = 2), length(t2$ha) + 3, lty = 2, col = grey(0.5))
+legend("bottomright", colnames(t2)[3:4], col = c(2, 4), bty = "n", lty = 1, lwd = 10)
+```
+
+# Registrations of HTA colleagues
+
+```{r, echo = FALSE, eval = TRUE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+dat <- with(filter(reg2, type %in% c("HTA", "Regulator")[1]), table(inst2, mode))
+ha <- rownames(dat)
+i1 <- (substr(ha, 1, 2) == "HT")
+ha[i1] <- substr(rownames(dat)[i1], 5, 1000)
+ha[!i1] <- substr(rownames(dat)[!i1], 11, 1000)
+t2 <- data.frame("ha" = ha, "freq" = as.vector(dat[, 1] + dat[, 2]), "face-to-face" = dat[, "Face-to-face (280 Euro)"], "virtual" = dat[, "Virtual (70 Euro)"])
+t2 <- t2[order(t2$freq), ]
+
+par(las = 1, mar = c(4.5, 13, 3, 1))
+
+xx <- barplot(height = t(as.matrix(t2[, c("face.to.face", "virtual")])), names.arg = t2$ha, xlim = c(0, max(t2$freq) + 1), horiz = TRUE, xlab = "number of registrations", main = paste("Total number of registrations: ", sum(t2$freq), "\n HTA colleagues", sep = ""), col = c(2, 4), xaxt = "n")
 axis(1, at = 0:100, labels = 0:100)
 segments(seq(0, 100, by = 2), 0, seq(0, 100, by = 2), length(t2$ha) + 3, lty = 2, col = grey(0.5))
 legend("bottomright", colnames(t2)[3:4], col = c(2, 4), bty = "n", lty = 1, lwd = 10)
