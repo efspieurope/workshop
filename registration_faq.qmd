@@ -104,7 +104,7 @@ For 2024, Roche, Novartis, and Boehringer Ingelheim have a comprehensive block b
 
 # Which companies have block bookings for virtual participation?
 
-For 2024, Novo Nordisk has a a block booking for virtual participation, i.e. all colleagues working at Novo Nordisk do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
+For 2024, Novo Nordisk and Bayer have a a block booking for virtual participation, i.e. all colleagues working at Novo Nordisk or Bayer do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
 
 # My company (Roche, Novartis, and Boehringer Ingelheim) has a block booking for face-to-face AND virtual participation. How do I register?
 
@@ -112,11 +112,11 @@ These companies have a block booking for face-to-face and virtual attendance. Yo
 
 To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes.
 
-# My company (Novo Nordisk) has a block booking for virtual participation only. How do I register?
+# My company (Novo Nordisk, Bayer) has a block booking for virtual participation only. How do I register?
 
 You simply register via `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
 
-# My company (Novo Nordisk) has a block booking for virtual attendance only. I still want to attend face-to-face. How much do I need to pay?
+# My company (Novo Nordisk, Bayer) has a block booking for virtual attendance only. I still want to attend face-to-face. How much do I need to pay?
 
 The full registration fee, 280 Euro.
 
