@@ -30,6 +30,8 @@ Wonder how you can get involved with the scientific committee? See [here](scicom
 
 The short topics session is a hallmark of each year's workshop. Anyone can submit proposals for discussion until 15th August to [Helle Lynggaard](mailto:hlyn@novonordisk.com). Accepted proposals can be presented in five minutes using two slides to the audience, with the intention to ask `r colFmt("one or more clear questions")` to a panel of regulators. They will then comment on these questions. For past topics that were discussed in this session see [here](past.html#programs-slidedecks-and-recordings).
 
+For instructions on how to present in the short topic session if your questions were accepted see [here](shorttopic.html).
+
 # Posters
 
 The primary purpose of the poster session is to give [EFSPI / PSI eSIGs](https://www.efspi.org/EFSPI/SIGS/EFSPI/Special_Interest_Groups/Special_Interest_Groups.aspx) the opportunity to present their progress. As for talks, `r colFmt("there is no option to submit posters")` other than from said eSIGs.

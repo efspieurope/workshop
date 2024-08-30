@@ -1,0 +1,45 @@
+---
+title: "Instructions for presenters in the short topic session"
+date: last-modified
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# Format of the short topic session
+
+To guarantee the success of the session we would like to re-iterate the format:
+
+- We have six topics distributed over two hours, which leaves each topic with 20min total time.
+- You can present for five minutes using maximum two slides.
+- `r colFmt("Presentation must be in person. There will be no virtual presentations in this session.")`
+- Please make sure your presentation of the issue is generic enough so that everyone in the room can follow.
+- Please ask one or more very explicit questions to the panel of regulators.
+- Do not ask regulators for “recipes” in the sense of “if we do that then you guarantee to do that”.
+- When formulating your questions ask yourself: “What would I answer if I were a regulator?” This may help to be precise and specific.
+
+# Questions?
+
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+
+
+

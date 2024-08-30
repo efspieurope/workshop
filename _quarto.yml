@@ -20,6 +20,7 @@ project:
     - chat.qmd
     - restaurants.qmd
     - submission.qmd
+    - shorttopic.qmd
 
 website:
   title: "EFSPI regulatory statistics workshop"
