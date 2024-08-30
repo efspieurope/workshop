@@ -37,6 +37,10 @@ To guarantee the success of the session we would like to re-iterate the format:
 - Do not ask regulators for “recipes” in the sense of “if we do that then you guarantee to do that”.
 - When formulating your questions ask yourself: “What would I answer if I were a regulator?” This may help to be precise and specific.
 
+# Deadline
+
+Please send us your slides until `r colFmt("Friday, 6th September")`.
+
 # Questions?
 
 For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
