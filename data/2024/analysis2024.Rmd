@@ -19,28 +19,30 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
 
-path <- paste(getwd(), "/", sep = "")
+path0 <- paste(getwd(), "/", sep = "")
 
 source(paste("C:/rufibach/70_Service/EFSPI/webpages/20_workshop/workshop/functions/colFmt.r", sep = ""))
 
 packs <- c("readxl", "dplyr", "rnaturalearth", "rnaturalearthdata", "ggplot2", "RColorBrewer", "filesstrings", "reporttools") 
 for (i in 1:length(packs)){library(packs[i], character.only = TRUE)}
 
-path <- "C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/30_registrations/"
+path0 <- "C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/30_registrations/"
 
-path.data     <- paste(path, "data/", sep = "")
-path.code     <- paste(path, "code/", sep = "")
+path.data     <- paste(path0, "data/", sep = "")
+path.code     <- paste(path0, "code/", sep = "")
 path.depot    <- "C:/rufibach/05_Depot/"
 path.map      <- paste(path.depot, "mapping/", sep = "")
 
 source(paste(path.code, "prepTable.r", sep = ""), echo = FALSE)
 
 ## input and prepare registration data
-source(paste(path.code, "input_prepare_data.r", sep = ""), echo = FALSE)
 source(paste(path.code, "isValidEmail.r", sep = ""), echo = FALSE)
 
-source(paste(path, "p0_initialize.r", sep = ""))
-source(paste(path, "code/input_prepare_data.r", sep = ""), echo = FALSE)
+source(paste(path0, "p00_initialize.r", sep = ""))
+source(paste(path0, "p05_input_data.r", sep = ""), echo = FALSE)
+source(paste(path0, "p07_prepare_data.r", sep = ""), echo = FALSE)
+source(paste(path0, "p10_mapping.r", sep = ""), echo = FALSE)
+source(paste(path0, "p20_changes_in_registration.r", sep = ""), echo = FALSE)
 
 # categories with frequencies below cut will be lumped together
 cut <- 3
@@ -208,6 +210,32 @@ summary(tab1)
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% virtualblock))
 summary(tab1)
+```
+
+# Registration waived yes / no
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+t2 <- with(reg2, table(waived_reason))
+
+prepTable2 <- 
+function(t2, cut = 10){
+  #t2 <- t(as.matrix(t2[rev(order(t2, rev(names(t2))))]))
+  
+  if (min(t2) < cut){
+    i0 <- min(which(t2 <= cut))
+    t2[1, i0] <- sum(t2[t2 <= cut])
+    t2 <- t2[1, 1:i0]
+    names(t2)[i0] <- "other"
+  }
+  return(t2)
+}
+
+t2 <- prepTable2(t2 = t2, cut = cut)
+
+par(las = 1, mar = c(4.5, 4.5, 3, 1))
+ylim <- c(0, 1.1 * max(t2))
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n Reason for registrations fee waived", sep = ""), col = 2, ylim = ylim)
+text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
 
 # Registrations by meals and wine tasting
