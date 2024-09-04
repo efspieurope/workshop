@@ -47,7 +47,7 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 # Program and registration
 
 Link to `r paste("[draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")` and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
-
+   
 # Registration fees
 
 280 Euro for face-to-face and 70 Euros for virtual attendance. To register please pay of 280 / 70 Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the 8th EFSPI Regulatory Statistics Workshop. 

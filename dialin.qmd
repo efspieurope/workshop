@@ -60,7 +60,7 @@ We would like to inform you about how to join the zoom TC, in case you dial in r
 - **Venue**: The event takes place in the Biozentrum in Basel ([directions](next.html)), in the Maurice Müller Lecture hall in the basement.
 - **WLAN in the Biozentrum**: Connect to Unibas visitor. It will ask for your mobile phone number for confirmation.
 - Upon arrival we ask you to register at the conference desk and to pick up your badge.
-
+   
 # Questions?
 
 For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).

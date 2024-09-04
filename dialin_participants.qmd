@@ -54,7 +54,7 @@ You have registered for the `r paste("[EFSPI regulatory statistics workshop ", l
 As soon as we get approval from speakers links to slidedecks and recordings will be posted [here](past.html). This may take a few days or even weeks, depending on the responsiveness of contributors. `r colFmt("Please do not send emails to us asking about postings. They will happen for those contributors who agree.")`
 
 # Questions?
-
+   
 For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
 
 
