@@ -18,32 +18,14 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
 
-## read in data
+## read in data and functions
 path <- getwd()
 past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+source(paste(path, "/functions/colFmt.r", sep = ""))
+source(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/30_registrations/p00_initialize.r", sep = ""))
 
 # last issue 
-last <- 2022
-
-source(paste(path, "/functions/colFmt.r", sep = ""))
-
-path0 <- "C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/30_registrations/"
-
-path.data     <- paste(path0, "data/", sep = "")
-path.code     <- paste(path0, "code/", sep = "")
-path.depot    <- "C:/rufibach/05_Depot/"
-path.map      <- paste(path.depot, "mapping/", sep = "")
-
-source(paste(path.code, "prepTable.r", sep = ""), echo = FALSE)
-
-## input and prepare registration data
-source(paste(path.code, "isValidEmail.r", sep = ""), echo = FALSE)
-
-source(paste(path0, "p00_initialize.r", sep = ""))
-source(paste(path0, "p05_input_data.r", sep = ""), echo = FALSE)
-source(paste(path0, "p07_prepare_data.r", sep = ""), echo = FALSE)
-source(paste(path0, "p10_mapping.r", sep = ""), echo = FALSE)
-source(paste(path0, "p20_changes_in_registration.r", sep = ""), echo = FALSE)
+last <- 2023
 
 dat <- with(filter(reg2, type %in% c("HTA", "Regulator")), table(inst2, mode))
 ```
