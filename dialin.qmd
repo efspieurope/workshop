@@ -48,7 +48,7 @@ We would like to inform you about how to join the zoom TC, in case you dial in r
 
 ## Zoom
 
-- All of you have been set up as **Zoom Panelist** for both days. You should have received a personal email with your own personalized link to join the webinar. The email is from Laurence Guillier from the email address <no-reply@zoom.us> with subject line _Webinar host invited you to be panelist for 8th EFSPI Regulatory Statistics Workshop_Day 1/2_.
+- All of you have been set up as **Zoom Panelist** for both days. You should have received a personal email with your own personalized link to join the webinar. The email is from Laurence Guillier from the email address <no-reply@zoom.us> with subject line _Webinar host invited you to be panelist for 9th EFSPI Regulatory Statistics Workshop_Day 1/2_.
 - `r colFmt("Please exclusively use the link in the above email and do not join as an attendee - otherwise you will not be in the practice session prior to the TC")`. 
 - We would appreciate if you could dial in about 20min early into the practice session, for us to check that everything works. Attendees can dial in but will not be in the webinar before we let them in. You will not need to log out from this session and can just stay in.
 - Only panelists will have the option to turn on their camera and microphon. Attendees can only speak when we unmute them (which we do not plan for, we will invite them to ask questions through the chat).
