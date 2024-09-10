@@ -44,9 +44,9 @@ This document provides necessary information for contributors to the workshop. F
 
 `r paste("[Draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
 
-# Registration
+<!-- # Registration -->
 
-Please register yourself using `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
+<!-- Please register yourself using `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`. -->
 
 # Benefits 
 

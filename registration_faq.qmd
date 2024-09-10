@@ -46,7 +46,11 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 # Program and registration
 
-Link to `r paste("[draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")` and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
+Link to `r paste("[draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
+
+Registration has been closed.
+
+<!-- and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`. -->
 
 # Registration fees
 
@@ -62,11 +66,13 @@ Due to this informal registration process we can keep the price low. Therefore w
 
 # Registration deadline
 
-For face-to-face attendance: **`r colFmt("30th August 2024 EOB")`**
+Registration has been closed.
 
-For virtual attendance: **`r colFmt("9th September 2024 EOB")`**.
+<!-- For face-to-face attendance: **`r colFmt("30th August 2024 EOB")`** -->
 
-Registration platform will be turned off for the respective option after the deadline.
+<!-- For virtual attendance: **`r colFmt("9th September 2024 EOB")`**. -->
+
+<!-- Registration platform will be turned off for the respective option after the deadline. -->
 
 # Confirmation of registration
 
