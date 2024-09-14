@@ -25,6 +25,18 @@ past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_t
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
+# What aspects have made submissions to the short topic session successful in the past?
+
+- Ask one or more clear questions to panel of regulators.
+- Ask questions that allow for a discussion, which do not invite a yes/no answer or an obvious answer from a regulator.
+- Do your homework!
+  - Have similar questions been dealt with in other related areas, e.g. another therapeutic area or another quantitative field?
+  - Have regulators commented on this in other instances?
+  - etc.
+- Reference to actual regulatory interactions, e.g. with regional differences.
+- Do not ask for recipes along the lines: _If we as sponsor do X will regulators then for sure agree to it?_ 
+- Before submission of a topic ask yourself: What can a regulator meaningfully answer to my questions? 
+
 # Format of the short topic session
 
 To guarantee the success of the session we would like to re-iterate the format:
