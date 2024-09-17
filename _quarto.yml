@@ -14,7 +14,8 @@ project:
     - local.qmd
     - speaker.qmd   
     - updates.qmd  
-    - testimonials.qmd
+    - testimonials2022.qmd
+    - testimonials2024.qmd
     - dialin.qmd
     - dialin_participants.qmd
     - chat.qmd
@@ -42,7 +43,9 @@ website:
     - text: "Testimonials"
       menu:
         - text: "Testimonials from 2022 workshop"  
-          href: testimonials.html
+          href: testimonials2022.html
+        - text: "Linkedin posts reflectin on 2024 workshop"  
+          href: testimonials2024.html
     - text: "Past workshops: programs, slidedecks, recordings"
       href: past.html
     - text: "Committees"
