@@ -54,8 +54,8 @@ website:
           href: local.html
         - text: "Scientific committee"
           href: scicom.html
-    - text: "Updates"
-      href: updates.html
+    # - text: "Updates"
+    #   href: updates.html
           
 format:
   html:

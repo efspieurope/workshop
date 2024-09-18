@@ -20,7 +20,7 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 knitr::opts_chunk$set(echo = TRUE)
 path <- getwd()
 
-sessions <- c("")
+sessions <- c("", ": Fast to market vs. robustness of the data", "", ": Estimands -- Celebrating the 5th anniversary of ICH E9(R1) -- what have we learned and where do we need to go?", ": Regulatory landscape in China", ": Patient preferences", ": Openstatsware - How can we build a scalable ecosystem?", ": Regulatory and HTA updates", ": Opportunities and barriers for innovative methodology in EU HTA")
 
 ## read in data for recordings
 rec <- as.data.frame(read_excel(paste(path, "/recordings2024.xlsx", sep = ""), col_types = NULL))
