@@ -13,6 +13,7 @@ output:
     toc_float: yes
 ---
 
+* 2024/09/30: All slidedecks for which permission for posting has been given are now available [online](https://efspieurope.github.io/workshop/data/2024/slides.html). Recordings will follow.
 * 2024/06/28: Updated [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf), further speakers now confirmed.
 * 2024/06/10: Updated [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf), further speakers now confirmed.
 * 2024/06/05: Updated [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf), further speakers now confirmed.
