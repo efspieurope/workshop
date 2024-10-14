@@ -1,5 +1,5 @@
 ---
-title: "2024 EFSPI regulatory statistics workshop"
+title: "2025 EFSPI regulatory statistics workshop"
 date: last-modified
 output: 
   rmarkdown::html_document:
@@ -30,27 +30,26 @@ last <- 2023
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
-# What's new for the 2024 workshop?
+# What's in stock for the 2025 workshop?
 
-- Not new is that we keep the **`r colFmt("registration fees at the same decent level")`**. This eventhough we extend the workshop by half a day, see next item.
-- We will have a dedicated HTA session on the Friday morning, see [draft program](https://efspieurope.github.io/workshop/data/2024/9th%20EFSPI%20RegStat%20Workshop%20program.pdf). 
-- For the first time we will have a patient talking.
+<!-- - Not new is that we keep the **`r colFmt("registration fees at the same decent level")`**. This eventhough we extend the workshop by half a day, see next item. -->
+This will be the 10th anniversary workshop. The local organizing committee is already working hard to make this yet another special event - stay tuned!
 
-# Date and venue of 2024 workshop
+# Date and venue of 2025 workshop
 
-The workshop will take place 11-13th September 2024 (start morning of 11th and end noon of 13th) again at [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en). 
+The workshop will take place 10-12th September 2025 again at [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en). 
 
 <center>![](biozentrum.jpg)</center>
 
 <br>
 
-`r paste("[Draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
+<!-- `r paste("[Draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`. -->
 
 <!-- `r paste("[Registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` -->
 
-Members of [local organizing committee](local.html).
+<!-- Members of [local organizing committee](local.html). -->
 
-Members of [scientific committee](scicom.html).
+<!-- Members of [scientific committee](scicom.html). -->
 
 <!-- # Call for short topics -->
 
