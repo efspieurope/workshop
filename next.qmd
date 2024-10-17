@@ -35,6 +35,8 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 <!-- - Not new is that we keep the **`r colFmt("registration fees at the same decent level")`**. This eventhough we extend the workshop by half a day, see next item. -->
 This will be the 10th anniversary workshop. The local organizing committee is already working hard to make this yet another special event - stay tuned!
 
+We look back on the 2024 edition in [this video](https://youtu.be/6sjAzRB_gi0) and forward to the anniversary edition in [this video](https://youtu.be/lTBOa1-UGr8). Enjoy!
+
 # Date and venue of 2025 workshop
 
 The workshop will take place 10-12th September 2025 again at [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en). 
@@ -59,5 +61,7 @@ The workshop will take place 10-12th September 2025 again at [Biozentrum](https:
 
 <!-- See [here](updates.html). -->
 
+# 2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop 
 
+The [2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop](https://ww2.amstat.org/meetings/risw/2025/) will take place 24-26th September 2025 in Rockville, MD.
 

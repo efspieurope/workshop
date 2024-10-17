@@ -4,6 +4,7 @@ project:
   render:
     - data/2023
     - data/2024
+    - data/2025
     - feedback.qmd        
     - index.qmd           
     - next.qmd            
@@ -28,7 +29,7 @@ website:
   navbar:
     background: info
     left:
-    - text: "2024 workshop"
+    - text: "2025 workshop"
       menu:
         - text: "Program and registration"  
           href: next.html
