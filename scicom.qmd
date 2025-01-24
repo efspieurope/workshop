@@ -33,6 +33,10 @@ sci24 <- arrange(sci24, desc(Local), desc(SciCom), Gender, Last)
 hta24 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
 hta24 <- filter(hta24, (is.na(HTA_SC) == FALSE) & (HTA_SC == 1))
 hta24 <- arrange(hta24, desc(Local), desc(HTA_SC), Gender, Last)
+
+sci25 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20250910_10th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
+sci25 <- dplyr::filter(sci25, (is.na(SciCom) == FALSE) & (SciCom == 1))
+sci25 <- arrange(sci25, desc(Local), desc(SciCom), Gender, Last)
 ```
 
 # How to get on the scientific committee
@@ -43,9 +47,17 @@ Principles for joining the Scientific Committee have been outlined by EFSPI work
 
 ::: {.panel-tabset .nav-pills}
 
+# 2025
+
+In 2025 the members of the scientific committee are (for regulators countries in parentheses):
+
+```{r, include=TRUE, echo=FALSE}
+kable(select(sci25, First, Last, Gender, Type, Affiliation), align = "llccl", col.names = c("First", "Last", "Gender", "Type", "Affiliation"))
+```
+
 # 2024
 
-In 2024 the members of the scientific committee are (for regulators countries in parentheses):
+In 2024 the members of the scientific committee were (for regulators countries in parentheses):
 
 ```{r, include=TRUE, echo=FALSE}
 kable(select(sci24, First, Last, Gender, Type, Affiliation), align = "llccl", col.names = c("First", "Last", "Gender", "Type", "Affiliation"))

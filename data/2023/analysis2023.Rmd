@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 path <- paste(getwd(), "/", sep = "")
 
-source(paste("C:/rufibach/70_Service/EFSPI/webpages/20_workshop/workshop/functions/colFmt.r", sep = ""))
+source(paste("C:/rufibach/90_github_repos/EFSPI/20_workshop/efspiworkshop/workshop/functions/colFmt.r", sep = ""))
 
 packs <- c("readxl", "dplyr", "rnaturalearth", "rnaturalearthdata", "ggplot2", "RColorBrewer", "filesstrings", "reporttools") 
 for (i in 1:length(packs)){library(packs[i], character.only = TRUE)}
@@ -63,7 +63,7 @@ t2 <- prepTable(t2 = t2, cut = cut)
 
 par(las = 1, mar = c(4.5, 4.5, 3, 1))
 ylim <- c(0, 1.1 * max(t2))
-xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n type of institution", sep = ""), col = 2, ylim = ylim)
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "/n type of institution", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
 
@@ -75,7 +75,7 @@ t2 <- prepTable(t2 = t2, cut = cut)
 
 par(las = 1, mar = c(4.5, 4.5, 3, 1))
 ylim <- c(0, 1.1 * max(t2))
-xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n background", sep = ""), col = 2, ylim = ylim)
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "/n background", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
 
@@ -87,7 +87,7 @@ t2 <- prepTable(t2 = t2, cut = cut)
 
 par(las = 2, mar = c(21, 4.5, 3, 1))
 ylim <- c(0, 1.4 * max(t2))
-xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg2)[1], "\n institution", sep = ""), col = 4, ylim = ylim)
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg2)[1], "/n institution", sep = ""), col = 4, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90)
 ```
  
@@ -104,7 +104,7 @@ t2 <- t2[order(t2$freq), ]
  
 par(las = 1, mar = c(4.5, 13, 3, 1))
 
-xx <- barplot(height = t(as.matrix(t2[, c("face.to.face", "virtual")])), names.arg = t2$ha, xlim = c(0, max(t2$freq) + 1), horiz = TRUE, xlab = "number of registrations", main = paste("Total number of registrations: ", sum(t2$freq), "\n regulatory colleagues", sep = ""), col = c(2, 4), xaxt = "n")
+xx <- barplot(height = t(as.matrix(t2[, c("face.to.face", "virtual")])), names.arg = t2$ha, xlim = c(0, max(t2$freq) + 1), horiz = TRUE, xlab = "number of registrations", main = paste("Total number of registrations: ", sum(t2$freq), "/n regulatory colleagues", sep = ""), col = c(2, 4), xaxt = "n")
 axis(1, at = 0:100, labels = 0:100)
 segments(seq(0, 100, by = 2), 0, seq(0, 100, by = 2), length(t2$ha) + 3, lty = 2, col = grey(0.5))
 legend("bottomright", colnames(t2)[3:4], col = c(2, 4), bty = "n", lty = 1, lwd = 10)
@@ -156,7 +156,7 @@ t2 <- prepTable(t2 = t2, cut = cut)
 
 par(las = 1, mar = c(4.5, 4.5, 3, 1))
 ylim <- c(0, 1.1 * max(t2))
-xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n mode of attendance", sep = ""), col = 2, ylim = ylim)
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "/n mode of attendance", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
 
@@ -179,7 +179,7 @@ colnames(t2) <- c("Day 1: Morning coffee break", "Day 1: Lunch", "Day 1: Wine ta
   
 par(las = 2, mar = c(17, 4.5, 3, 1))
 ylim <- c(0, 1.2 * max(t2))
-xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n meals and wine tasting", sep = ""), col = 2, ylim = ylim)
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "/n meals and wine tasting", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
 
