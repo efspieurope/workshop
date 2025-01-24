@@ -2,5 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+<<<<<<< HEAD
 
 /.quarto/
+=======
+/.quarto/
+secrets
+>>>>>>> 82a0ccb7ca59aef0d0fbdb42522a89b70cc0fb25
