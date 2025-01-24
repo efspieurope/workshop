@@ -21,20 +21,33 @@ knitr::opts_chunk$set(echo = TRUE)
 path <- getwd()
 past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
 sci22 <- as.data.frame(read_excel(paste(path, "/data/2022/scicom2022.xlsx", sep = ""), col_types = NULL))
-sci22 <- arrange(sci22, desc(Type), Gender)
+sci22 <- arrange(sci22, desc(Local), desc(SciCom), Gender, Last)
 
 sci23 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
-sci23 <- arrange(sci23, desc(Type), Gender)
+sci23 <- arrange(sci23, desc(Local), desc(SciCom), Gender, Last)
 
 sci24 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
-sci24 <- arrange(sci24, desc(Type), Gender)
+sci24 <- arrange(sci24, desc(Local), desc(SciCom), Gender, Last)
+
+sci25 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20250910_10th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
+sci25 <- arrange(sci25, desc(Local), desc(SciCom), Gender, Last)
 
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
+# 2025
+
+The members of the local organizing committee in 2025 are:
+
+```{r, include=TRUE, echo=FALSE}
+sci25[, "Name"] <- paste("[", sci25[, "First"], " ", sci25[, "Last"], "](mailto:", sci25[, "email"], ")", sep = "")
+sci25[, "email"] <- paste("[", sci25[, "First"], " ", sci25[, "Last"], "](mailto:", sci25[, "email"], ")", sep = "")
+kable(filter(sci25, Local == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
+```
+
 # 2024
 
-The members of the local organizing committee in 2024 are:
+The members of the local organizing committee in 2024 were:
 
 ```{r, include=TRUE, echo=FALSE}
 sci24[, "Name"] <- paste("[", sci24[, "First"], " ", sci24[, "Last"], "](mailto:", sci24[, "email"], ")", sep = "")
@@ -44,7 +57,7 @@ kable(filter(sci24, Local == 1)[, c("First", "Last", "Type", "Affiliation", "ema
 
 # 2023
 
-The members of the local organizing committee in 2023 are:
+The members of the local organizing committee in 2023 were:
 
 ```{r, include=TRUE, echo=FALSE}
 sci23[, "Name"] <- paste("[", sci23[, "First"], " ", sci23[, "Last"], "](mailto:", sci23[, "email"], ")", sep = "")

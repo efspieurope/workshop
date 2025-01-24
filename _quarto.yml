@@ -23,6 +23,7 @@ project:
     - restaurants.qmd
     - submission.qmd
     - shorttopic.qmd
+    - chairs.qmd
 
 website:
   title: "EFSPI regulatory statistics workshop"
@@ -51,6 +52,8 @@ website:
       href: past.html
     - text: "Committees"
       menu:
+        - text: "Workshop chairs"
+          href: chairs.html
         - text: "Local organizing committee"
           href: local.html
         - text: "Scientific committee"
