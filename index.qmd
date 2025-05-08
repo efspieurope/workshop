@@ -17,15 +17,9 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
 
-## read in data
 path <- getwd()
-past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
-reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
-
-# last issue 
-last <- 2024
-
 source(paste(path, "/functions/colFmt.r", sep = ""))
+source(paste(path, "/functions/inputProg.r", sep = ""))
 ```
 
 
@@ -41,7 +35,7 @@ Each year, a small team of volunteers organizes the [EFSPI Regulatory Statistics
 
 The unique feature of the workshop is an atmosphere of collaboration and open discussion of statistical and regulatory science in general. Over the years the workshop has sharpened its profile and with regular participation of speakers from regulatory agencies such as EMA, many European regulatory agencies, FDA, PMDA, MHRA, and many more has become a voice in the global dialogue on regulatory statistics. Furthermore, with HTA considerations becoming ever more important in Europe and beyond topics pertinent to HTA are also increasingly discussed.
 
-Since its inception in 2016 the workshop has always taken place in Basel, Switzerland. Details about the 2025 issue are available [here](next.html).
+Since its inception in 2016 the workshop has always taken place in Basel, Switzerland. Details about the `r inputProg()["year"]` issue are available [here](next.html).
 
 # Parallel workshop in the US
 

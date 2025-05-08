@@ -34,8 +34,8 @@ website:
       menu:
         - text: "Program and registration"  
           href: next.html
-        # - text: "FAQ registration"  
-        #   href: registration_faq.html
+        - text: "FAQ registration"
+          href: registration_faq.html
         - text: "FAQ speakers"
           href: speaker.html
         - text: "FAQ submissions of contributions"

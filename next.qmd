@@ -20,48 +20,43 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## read in data
 path <- getwd()
-past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
-reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
-prog <- as.data.frame(read_excel(paste(path, "/data/program_update.xlsx", sep = ""), col_types = NULL))
 
-# last issue 
-last <- 2023
-
+source(paste(path, "/functions/inputProg.r", sep = ""))
+res <- inputProg()
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
 # What's in stock for the 2025 workshop?
 
-<!-- - Not new is that we keep the **`r colFmt("registration fees at the same decent level")`**. This eventhough we extend the workshop by half a day, see next item. -->
-This will be the 10th anniversary workshop. The local organizing committee is already working hard to make this yet another special event - stay tuned!
+- Not new is that we keep the **`r colFmt("registration fees at the same decent level")`**. 
 
-We look back on the 2024 edition in [this video](https://youtu.be/6sjAzRB_gi0) and forward to the anniversary edition in [this video](https://youtu.be/lTBOa1-UGr8). Enjoy!
+This will be the 10th anniversary workshop. We look back on the 2024 edition in [this video](https://youtu.be/6sjAzRB_gi0) and forward to the anniversary edition in [this video](https://youtu.be/lTBOa1-UGr8). Enjoy!
 
 # Date and venue of 2025 workshop
 
-The workshop will take place 10-12th September 2025 again at [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en). 
+The workshop will take place `r res["Date"]` again at [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en). 
 
 <center>![](biozentrum.jpg)</center>
 
 <br>
 
-<!-- `r paste("[Draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`. -->
+`r res["program"]`.
 
-<!-- `r paste("[Registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` -->
+`r res["registration"]`.
 
-<!-- Members of [local organizing committee](local.html). -->
+Members of [local organizing committee](local.html).
 
-<!-- Members of [scientific committee](scicom.html). -->
+Members of [scientific committee](scicom.html).
 
-<!-- # Call for short topics -->
+# Call for short topics
 
-<!-- Like previous years, it is possible to submit a short topic for discussion with a panel of regulators. Submit your proposal to the Chair, Helle Lynggaard, by sending an e-mail to hlyn@novonordisk.com. Deadline for submissions is 15th August 2024. -->
+Like previous years, it is possible to submit a short topic for discussion with a panel of regulators. Submit your proposal to the Chair, `r res["chair"]`, by sending an e-mail to `r res["chairmail"]`. Deadline for submissions is `r res["deadline_short"]`.
 
-<!-- # Updates to this page and the draft program -->
+# Updates to this page and the draft program
 
-<!-- See [here](updates.html). -->
+See [here](updates.html).
 
 # 2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop 
 
-The [2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop](https://ww2.amstat.org/meetings/risw/2025/) will take place 24-26th September 2025 in Rockville, MD.
+The `r res["a"]` will take place 24-26th September 2025 in Rockville, MD.
 

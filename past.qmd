@@ -22,7 +22,7 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 
 ## past
 path <- getwd()
-past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+past <- as.data.frame(read_excel(paste(path, "/data/data.xlsx", sep = ""), col_types = NULL))
 past_c <- as.data.frame(read_excel(paste(path, "/data/roster_past.xlsx", sep = ""), col_types = NULL))
 
 ut <- unique(past_c$Type)
@@ -36,7 +36,7 @@ If a recording has been made this can be found on the page with the slidedecks.
 `r colFmt("Any views expressed in any of the slidedecks or recordings are personal and do not necessarily represent the speaker's company or organisation's view.")`
 
 ```{r programs, include=TRUE, echo=FALSE}
-past <- select(past, -Feedbacks, -Registrations)
+past <- select(past, Year, Program, Slidedecks)
 for (i in 2:ncol(past)){past[, i] <- ifelse(past[, i] != "[X](NA)", paste("[X](", past[, i], ")", sep = ""), "")}
 past[is.na(past)] <- ""
 kable(past, align = "ccc")

@@ -20,19 +20,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## read in data
 path <- getwd()
-past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
-reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
-prog <- as.data.frame(read_excel(paste(path, "/data/program_update.xlsx", sep = ""), col_types = NULL))
 
-# last issue 
-last <- 2023
-
+source(paste(path, "/functions/inputProg.r", sep = ""))
+res <- inputProg()
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
 # Introduction
 
-Thanks for your interest in the `r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`! This site provides FAQs around registration. 
+Thanks for your interest in the `r res["program"]`! This site provides FAQs around registration. 
 
 # Is virtual participation possible?
 
@@ -46,11 +42,9 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 # Program and registration
 
-Link to `r paste("[draft program (status: ", prog, ")](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
+`r res["program"]`.
 
-Registration has been closed.
-
-<!-- and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`. -->
+`r res["registration"]`.
 
 # Registration fees
 
@@ -60,7 +54,7 @@ Bank details: European Fed Stat Pharm Ind<br>
 Bank: HSBC<br>
 IBAN: GB53HBUK40127677385084<br>
 BIC: HBUKGB4B<br>
-Reference: Regulatory 23<br>
+Reference: Regulatory 25<br>
 
 Due to this informal registration process we can keep the price low. Therefore we can not accept credit card transfer and we cannot provide you with a formal invoice after the payment. In case you have any question on your payment, please contact [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com).
 
@@ -68,11 +62,11 @@ Due to this informal registration process we can keep the price low. Therefore w
 
 Registration has been closed.
 
-<!-- For face-to-face attendance: **`r colFmt("30th August 2024 EOB")`** -->
+For face-to-face attendance: **`r colFmt(res["deadline_f2f"])`**
 
-<!-- For virtual attendance: **`r colFmt("9th September 2024 EOB")`**. -->
+For virtual attendance: **`r colFmt(res["deadline_virtual"])`**.
 
-<!-- Registration platform will be turned off for the respective option after the deadline. -->
+Registration platform will be turned off for the respective option after the deadline.
 
 # Confirmation of registration
 
@@ -80,19 +74,15 @@ Some time after registration (it may take 1-2 weeks) you will receive calendar i
 
 # Will the event be recorded?
 
-Yes. Recordings will be posted [here](data/2024/slides.html), `r colFmt("pending speaker approval")`.
+Yes. Recordings will be posted [here](data/2025/slides.html), `r colFmt("pending speaker approval")`.
 
 # Will slidedecks be shared after the event?
 
-Yes. Slidedecks will be posted [here](data/2024/slides.html), `r colFmt("pending speaker approval")`.
+Yes. Slidedecks will be posted [here](data/2025/slides.html), `r colFmt("pending speaker approval")`.
 
-<!-- # Dial-in instructions -->
+# Dial-in instructions
 
-<!-- See [here](dialin_participants.html). -->
-
-<!-- # Covid -->
-
-<!-- No measures are in effect in Switzerland. All events (including wine tasting) are planned indoors.  -->
+See [here](dialin_participants.html).
 
 # What block booking options are available for companies?
 
@@ -106,23 +96,23 @@ Please reach out to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com) if
 
 # Which companies have block bookings for face-to-face participation?
 
-For 2024, Roche, Novartis, and Boehringer Ingelheim have a comprehensive block booking agreement with the workshop, i.e. all colleagues working at these companies do not need to pay a registration fee for face-to-face or virtual participation.
+For `r res["Year"]` `r res["block_f2f"]` have a comprehensive block booking agreement with the workshop, i.e. all colleagues working at these companies do not need to pay a registration fee for face-to-face or virtual participation.
 
 # Which companies have block bookings for virtual participation?
 
-For 2024, Novo Nordisk, Bayer, and BMS have a a block booking for virtual participation, i.e. all colleagues working at Novo Nordisk, Bayer, or BMS do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
+For `r res["Year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at Novo Nordisk, Bayer, or BMS do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
 
-# My company (Roche, Novartis, and Boehringer Ingelheim) has a block booking for face-to-face AND virtual participation. How do I register?
+# My company (`r res["block_f2f"]`) has a block booking for face-to-face AND virtual participation. How do I register?
 
-These companies have a block booking for face-to-face and virtual attendance. You simply register via `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
+These companies have a block booking for face-to-face and virtual attendance. You simply register via `r inputProg(regtext = "this form")["registration"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
 
 To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes.
 
-# My company (Novo Nordisk, Bayer, BMS) has a block booking for virtual participation only. How do I register?
+# My company (`r res["block_virtual"]`) has a block booking for virtual participation only. How do I register?
 
-You simply register via `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
+You simply register via `r inputProg(regtext = "this form")["registration"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
 
-# My company (Novo Nordisk, Bayer, BMS) has a block booking for virtual attendance only. I still want to attend face-to-face. How much do I need to pay?
+# My company (`r res["block_virtual"]`) has a block booking for virtual attendance only. I still want to attend face-to-face. How much do I need to pay?
 
 The full registration fee, 280 Euro.
 
@@ -150,9 +140,9 @@ No.
 
 No.
 
-# Feedback
+<!-- # Feedback -->
 
-We would appreciate your feedback on this year's workshop using [this form](https://forms.gle/Gf653NLr3v2U7Fe47).
+<!-- We would appreciate your feedback on this year's workshop using [this form](https://forms.gle/Gf653NLr3v2U7Fe47). -->
 
 # You still have questions after going through this entire document?
 

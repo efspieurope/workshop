@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## read in data
 path <- getwd()
-past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+past <- as.data.frame(read_excel(paste(path, "/data/data.xlsx", sep = ""), col_types = NULL))
 sci22 <- as.data.frame(read_excel(paste(path, "/data/2022/scicom2022.xlsx", sep = ""), col_types = NULL))
 sci22 <- arrange(sci22, desc(Local), desc(SciCom), Gender, Last)
 

@@ -21,13 +21,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## past
 path <- getwd()
-past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+past <- as.data.frame(read_excel(paste(path, "/data/data.xlsx", sep = ""), col_types = NULL))
 ```
 
 # Feedbacks from previous years (on purpose not linked on main site)
 
 ```{r, include=TRUE, echo=FALSE}
-past <- select(past, -Program, -Slidedecks)
+past <- select(past, "Year", "Feedbacks")
 past[, "Feedbacks"] <- ifelse(past[, "Feedbacks"] != "", paste("[", past[, "Year"], "](", past[, "Feedbacks"], ")", sep = ""), "")
 past[is.na(past)] <- ""
 kable(past, align = "cc")

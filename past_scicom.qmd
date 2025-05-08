@@ -20,7 +20,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## past
 path <- getwd()
-past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+past <- as.data.frame(read_excel(paste(path, "/data/data.xlsx", sep = ""), col_types = NULL))
+past <- (past %>% select(Year, Program, Slidedecks, Feedbacks, Registrations))
 ```
 
 # Analyses of registrations and feedbacks

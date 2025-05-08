@@ -20,20 +20,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## read in data
 path <- getwd()
-past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
 source(paste(path, "/functions/colFmt.r", sep = ""))
 
 source(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/30_registrations/p00_initialize.r", sep = ""))
-
-# last issue 
-last <- 2023
 
 dat <- with(filter(reg2, type %in% c("HTA", "Regulator")), table(inst2, mode))
 ```
 
 # Introduction
 
-You have registered for the `r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`. This document provides necessary information for virtual participants to dial in to the zoom meetings at the day of the event. For any further questions please do not hesitate to reach out to one of the [local organizing committee members](local.html).
+You have registered for the EFSPI regulatory statistics workshop. This document provides necessary information for virtual participants to dial in to the zoom meetings at the day of the event. For any further questions please do not hesitate to reach out to one of the [local organizing committee members](local.html).
 
 # Zoom instructions
 
