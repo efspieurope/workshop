@@ -21,8 +21,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## read in data
 path <- getwd()
 
-source(paste(path, "/functions/inputProg.r", sep = ""))
-res <- inputProg()
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
@@ -107,21 +107,21 @@ Please reach out to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com) if
 
 # Which companies have block bookings for face-to-face participation?
 
-For `r res["Year"]` `r res["block_f2f"]` have a comprehensive block booking agreement with the workshop, i.e. all colleagues working at these companies do not need to pay a registration fee for face-to-face or virtual participation.
+For `r res["year"]` `r res["block_f2f"]` have a comprehensive block booking agreement with the workshop, i.e. all colleagues working at these companies do not need to pay a registration fee for face-to-face or virtual participation.
 
 # Which companies have block bookings for virtual participation?
 
-For `r res["Year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at Novo Nordisk, Bayer, or BMS do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
+For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at Novo Nordisk, Bayer, or BMS do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
 
 # My company (`r res["block_f2f"]`) has a block booking for face-to-face AND virtual participation. How do I register?
 
-These companies have a block booking for face-to-face and virtual attendance. You simply register via `r inputProg(regtext = "this form")["registration"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
+These companies have a block booking for face-to-face and virtual attendance. You simply register via `r inputData(regtext = "this form")["registration"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
 
 To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes.
 
 # My company (`r res["block_virtual"]`) has a block booking for virtual participation only. How do I register?
 
-You simply register via `r inputProg(regtext = "this form")["registration"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
+You simply register via `r inputData(regtext = "this form")["registration"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
 
 # My company (`r res["block_virtual"]`) has a block booking for virtual attendance only. I still want to attend face-to-face. How much do I need to pay?
 

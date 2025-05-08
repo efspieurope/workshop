@@ -17,8 +17,8 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 path <- getwd()
 
-source(paste(path, "/functions/inputProg.r", sep = ""))
-res <- inputProg()
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 

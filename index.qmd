@@ -19,7 +19,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 path <- getwd()
 source(paste(path, "/functions/colFmt.r", sep = ""))
-source(paste(path, "/functions/inputProg.r", sep = ""))
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
 ```
 
 
@@ -35,7 +36,7 @@ Each year, a small team of volunteers organizes the [EFSPI Regulatory Statistics
 
 The unique feature of the workshop is an atmosphere of collaboration and open discussion of statistical and regulatory science in general. Over the years the workshop has sharpened its profile and with regular participation of speakers from regulatory agencies such as EMA, many European regulatory agencies, FDA, PMDA, MHRA, and many more has become a voice in the global dialogue on regulatory statistics. Furthermore, with HTA considerations becoming ever more important in Europe and beyond topics pertinent to HTA are also increasingly discussed.
 
-Since its inception in 2016 the workshop has always taken place in Basel, Switzerland. Details about the `r inputProg()["year"]` issue are available [here](next.html).
+Since its inception in 2016 the workshop has always taken place in Basel, Switzerland. Details about the `r res["year"]` issue are available [here](next.html).
 
 # Parallel workshop in the US
 
@@ -43,7 +44,7 @@ The ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop is org
 
 Both these workshops aspire to build a statistical community across regulatory agencies and industry. Both events provide a forum to discuss topics of common interest for industry and regulators and offer many opportunities for everyone to participate in these discussions and impact alignment.
 
-[ASA workshop](https://ww2.amstat.org/meetings/risw/2025/workshopinfo.cfm)
+`r res["asafda"]`
 
 # What you find here
 

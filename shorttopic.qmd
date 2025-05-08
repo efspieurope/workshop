@@ -18,12 +18,9 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
 
-## read in data
-path <- getwd()
-source(paste(path, "/functions/inputProg.r", sep = ""))
-res <- inputProg()
-source(paste(path, "/functions/colFmt.r", sep = ""))
-```
+## read in data path <- getwd() source(paste(path, "/functions/inputData.r", 
+sep = "")) res <- inputData() source(paste(path, "/functions/colFmt.r", sep = 
+"")) ``` 
 
 # What aspects have made submissions to the short topic session successful in the past?
 

@@ -20,10 +20,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## read in data
 path <- getwd()
-past <- as.data.frame(read_excel(paste(path, "/data/data.xlsx", sep = ""), col_types = NULL))
-
-# current issue
-current <- as.numeric(as.data.frame(read_excel(paste(path, "/data/currentyear.xlsx", sep = ""), col_types = NULL)))
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
 
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
@@ -34,11 +32,11 @@ On this page we summarize instructions for industry session chairs and chat obse
 
 # Chat observer
 
-You have registered for face-to-face participation to the `r paste("[EFSPI regulatory statistics workshop ", current, "](", past[past[, "Year"] == current, "Program"], ")", sep = "")` as a Roche or Novartis colleagues with statistics background. 
+You have registered for face-to-face participation to the EFSPI regulatory statistics workshop as a Roche or Novartis colleague with statistics background. 
 
 The [local organizing committee members](local.html) thanks you for agreeing to be a **chat observer**! The ask for this task would be:
 
-- Identify your industry session chair from the `r paste("[program](", past[past[, "Year"] == current, "Program"], ")", sep = "")` and make yourself known to her/him ahead of the session.
+- Identify your industry session chair from the `r res["program"]` and make yourself known to her/him ahead of the session.
 - Sit in the front row, as close as possible to the industry session chair.
 - Bring your laptop, dial in to the zoom TC.
 - Monitor the Q&A part of zoom (that is where virtual attendees are supposed to ask questions) and 

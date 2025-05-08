@@ -21,8 +21,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## read in data
 path <- getwd()
 
-source(paste(path, "/functions/inputProg.r", sep = ""))
-res <- inputProg()
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
@@ -34,7 +34,7 @@ This will be the 10th anniversary workshop. We look back on the 2024 edition in 
 
 # Date and venue of 2025 workshop
 
-The workshop will take place `r res["Date"]` again at [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en). 
+The workshop will take place `r res["date"]` again at [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en). 
 
 <center>![](biozentrum.jpg)</center>
 
@@ -58,5 +58,5 @@ See [here](updates.html).
 
 # 2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop 
 
-The `r res["a"]` will take place 24-26th September 2025 in Rockville, MD.
+The `r res["asafda"]` will take place 24-26th September 2025 in Rockville, MD.
 

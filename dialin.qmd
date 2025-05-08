@@ -23,7 +23,7 @@ path <- getwd()
 
 ## read in data and functions
 source(paste(path, "/functions/colFmt.r", sep = ""))
-source(paste(path, "/functions/inputProg.r", sep = ""))
+source(paste(path, "/functions/inputData.r", sep = ""))
 source(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/30_registrations/p00_initialize.r", sep = ""))
 
 dat <- with(filter(reg2, type %in% c("HTA", "Regulator")), table(inst2, mode))
@@ -39,7 +39,7 @@ This document provides necessary information for virtual contributors to dial in
 
 # Program
 
-`r inputProg()["program"]`.
+`r inputData()["program"]`.
 
 # Dial-in instructions
 
@@ -52,7 +52,7 @@ We would like to inform you about how to join the zoom TC, in case you dial in r
 - We would appreciate if you could dial in about 20min early into the practice session, for us to check that everything works. Attendees can dial in but will not be in the webinar before we let them in. You will not need to log out from this session and can just stay in.
 - Only panelists will have the option to turn on their camera and microphon. Attendees can only speak when we unmute them (which we do not plan for, we will invite them to ask questions through the chat).
 - Status of registrations: Find this [here](https://efspieurope.github.io/workshop/data/2023/analysis2023.html). We have `r nrow(reg2)` registrations from `r length(unique(reg2$country2))` countries as of now, with `r table(reg2$mode)[1]` face-to-face. `r sum(dat)` colleagues from regulatory agencies registered so far.
-- The current version of the program is `r inputProg()["program"]`.
+- The current version of the program is `r inputData()["program"]`.
 
 ## Face-to-face attendance
 
