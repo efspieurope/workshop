@@ -86,9 +86,20 @@ See [here](dialin_participants.html).
 
 # What block booking options are available for companies?
 
-Our offer for a block booking for companies is as follows:
+## Face-to-face block booking
 
-- Block booking for face-to-face attendance: 8400 Euro, i.e. you break-even with 30 face-to-face participants. If you chose this option an arbitrary number of virtual attendees is included as well.
+We have updated our block bocking offerings compared to previous years:
+
+- Block booking for face-to-face attendance: 
+  - 8500 Euro up to 50 participants per company. 
+  - 10500 Euro for 51 to 70 participants.  
+  - 12500 Euro for 71 to 90 participants. 
+  - Beyond 91 face-to-face participants per company we charge 12500 + 100 Euro per each additional participant. 
+
+For all face-to-face block bookings an arbitrary number of virtual attendees is included as well.
+
+## Virtual block-booking
+
 - Block booking for virtual attendance: 2800 Euro, i.e. you reach break-even with this option if at least 40 colleagues from your company register for virtual attendance to the workshop.
 - `r colFmt("The conference organizers reserve the right to cap the number of registered face-to-face attendees for a company with block booking, in order to keep catering costs under control. This never happened so far though.")`
 
