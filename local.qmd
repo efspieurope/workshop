@@ -19,6 +19,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## read in data
 path <- getwd()
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
+
 past <- as.data.frame(read_excel(paste(path, "/data/data.xlsx", sep = ""), col_types = NULL))
 sci22 <- as.data.frame(read_excel(paste(path, "/data/2022/scicom2022.xlsx", sep = ""), col_types = NULL))
 sci22 <- arrange(sci22, desc(Local), desc(SciCom), Gender, Last)
@@ -74,7 +77,7 @@ kable(select(filter(sci22, Local == 1), -Local, -SciCom, -email, -Gender), align
 
 # Questions?
 
-For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+For feedback and questions send an email to `r res["infomail"]`.
 
 
 

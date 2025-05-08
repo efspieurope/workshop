@@ -18,9 +18,12 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
 
-## read in data path <- getwd() source(paste(path, "/functions/inputData.r", 
-sep = "")) res <- inputData() source(paste(path, "/functions/colFmt.r", sep = 
-"")) ``` 
+## read in data 
+path <- getwd() 
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData() 
+source(paste(path, "/functions/colFmt.r", sep = ""))
+``` 
 
 # What aspects have made submissions to the short topic session successful in the past?
 
@@ -52,7 +55,7 @@ Please send us your slides until `r colFmt(res["deadline_short"])`.
 
 # Questions?
 
-For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+For feedback and questions send an email to `r res["infomail"]`.
 
 
 

@@ -13,10 +13,13 @@ inputData <- function(path = getwd(), regtext = "Registration"){
   data["program"] <- paste("[Draft program (status: ", data[, "prog_version"], ")](", data[, "Program"], ")", sep = "")
   
   # link to registration
-  data["registration"] <- paste("[", regtext, "](", data[, "Registration"], ")", sep = "")
+  data["Registration"] <- paste("[", regtext, "](", data[, "Registration"], ")", sep = "")
   
   # ASA FDA workshop
   data["asafda"] <- paste("[2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop](", data[, "asafda"], ")", sep = "")
+  
+  # chair with mail
+  data["chairmail"] <- paste("[", data["chair"], "](mailto:", data["chairmail"], ")", sep = "")
   
   colnames(data) <- tolower(colnames(data))
   

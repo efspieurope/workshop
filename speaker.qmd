@@ -100,7 +100,7 @@ No pre-reservation is possible at Hotel Odelya 3* (9 min walk from venue). Book 
 
 # Posting of presentations on EFSPI webpage
 
-After the workshop, we would like to post presentation slide decks and recordings of the webinars to the EFSPI webpage (see [here](data/2025/slides.html) for last year's issue). Please let us know in case you would prefer NOT to post your slides and/or the recording to the EFSPI webpage by sending an email to [`r res["chair"]`](mailto:`r res["chairmail"]`).
+After the workshop, we would like to post presentation slide decks and recordings of the webinars to the EFSPI webpage (see [here](data/2025/slides.html) for last year's issue). Please let us know in case you would prefer NOT to post your slides and/or the recording to the EFSPI webpage by sending an email to `r res["chairmail"]`.
 
 # Recording
 
@@ -112,7 +112,7 @@ We would be very grateful to receive the final version of your presentation slid
 
 We would also appreciate if you could share with us a short paragraph that the session chairs will use to introduce you during the session.
 
-Please send all these materials to [`r res["chair"]`](mailto:`r res["chairmail"]`) and cc: your respective session chairs.
+Please send all these materials to `r res["chairmail"]` and cc: your respective session chairs.
 
 # Session chairs
 
@@ -126,7 +126,7 @@ In order to meet these goals we therefore propose the following preparatory acti
 - Call for at least one teleconference prior to workshop (early enough as the workshop is rather shortly after typical summer vacation dates).
 - Align talks to avoid duplication.
 - Remind speakers to rather focus on principles and regulatory actions than technical (statistical) details.
-- Remind speakers to send slides to [`r res["chair"]`](mailto:`r res["chairmail"]`) by `r colFmt(res["deadline_slides"])` with cc: the session chairs.
+- Remind speakers to send slides to `r res["chairmail"]` by `r colFmt(res["deadline_slides"])` with cc: the session chairs.
 - Timing: keep allocated time for each presentation and for the session overall. Remind speakers of their allocated time.
 - Clarify with speakers `r colFmt("prior to the workshop")` whether they are ok to post their slides and / or the recording of their session on the workshop webpage.
 - Remind speakers to use a headphone (not speak to their computers).
@@ -159,7 +159,7 @@ Registration fee for poster presenters is not waived.
 
 # Questions?
 
-For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+For feedback and questions send an email to `r res["infomail"]`.
 
 
 

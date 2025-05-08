@@ -24,6 +24,7 @@ path <- getwd()
 ## read in data and functions
 source(paste(path, "/functions/colFmt.r", sep = ""))
 source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
 source(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/30_registrations/p00_initialize.r", sep = ""))
 
 dat <- with(filter(reg2, type %in% c("HTA", "Regulator")), table(inst2, mode))
@@ -62,7 +63,7 @@ We would like to inform you about how to join the zoom TC, in case you dial in r
    
 # Questions?
 
-For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+For feedback and questions send an email to `r res["infomail"]`.
 
 
 

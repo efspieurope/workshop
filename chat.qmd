@@ -53,7 +53,7 @@ As an industry session chair co-moderating the session and the discussion afterw
 
 # Questions?
 
-For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+For feedback and questions send an email to `r res["infomail"]`.
 
 
 

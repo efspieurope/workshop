@@ -48,7 +48,7 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 # Registration fees
 
-280 Euro for face-to-face and 70 Euros for virtual attendance. To register please pay of 280 / 70 Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the 8th EFSPI Regulatory Statistics Workshop. 
+`r res["fee_f"]` Euro for face-to-face and `r res["fee_v"]` Euros for virtual attendance. To register please pay of `r res["fee_f"]` / `r res["fee_v"]` Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the 8th EFSPI Regulatory Statistics Workshop. 
 
 Bank details: European Fed Stat Pharm Ind<br>
 Bank: HSBC<br>
@@ -111,7 +111,7 @@ For `r res["year"]` `r res["block_f2f"]` have a comprehensive block booking agre
 
 # Which companies have block bookings for virtual participation?
 
-For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at Novo Nordisk, Bayer, or BMS do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
+For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
 
 # My company (`r res["block_f2f"]`) has a block booking for face-to-face AND virtual participation. How do I register?
 
@@ -125,7 +125,7 @@ You simply register via `r inputData(regtext = "this form")["registration"]` and
 
 # My company (`r res["block_virtual"]`) has a block booking for virtual attendance only. I still want to attend face-to-face. How much do I need to pay?
 
-The full registration fee, 280 Euro.
+The full registration fee, `r res["fee_f"]` Euro.
 
 # I will not attend the full workshop and/or not all lunches. Do I get a deducation for the face-to-face registration fee?
 
@@ -157,7 +157,7 @@ No.
 
 # You still have questions after going through this entire document?
 
-Send an email to [Helle Lynggaard](mailto:hlyn@novonordisk.com).
+Send an email to `r res["chairmail"]`.
 
 
 

@@ -52,7 +52,7 @@ On this webpage you find links and materials for the yearly EFSPI regulatory sta
 
 The workshop is organized by [EFSPI](http://www.efspi.org).
 
-For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+For feedback and questions send an email to `r res["infomail"]`.
 
 
 

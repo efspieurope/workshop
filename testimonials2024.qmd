@@ -19,6 +19,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## read in data
 path <- getwd()
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
+
 test24 <- as.data.frame(read_excel(paste(path, "/data/2024/testimonials2024.xlsx", sep = ""), col_types = NULL))
 test24[is.na(test24[, 2]), 2] <- ""
 ```
@@ -33,7 +36,7 @@ kable(tab)
 
 # Questions?
 
-For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+For feedback and questions send an email to `r res["infomail"]`.
 
 
 

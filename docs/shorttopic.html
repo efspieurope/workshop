@@ -163,9 +163,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#load-packages" id="toc-load-packages" class="nav-link active" data-scroll-target="#load-packages">load packages</a></li>
-  <li><a href="#read-in-data-path---getwd-sourcepastepath-functionsinputdata.r" id="toc-read-in-data-path---getwd-sourcepastepath-functionsinputdata.r" class="nav-link" data-scroll-target="#read-in-data-path---getwd-sourcepastepath-functionsinputdata.r">read in data path &lt;- getwd() source(paste(path, “/functions/inputData.r”,</a></li>
-  <li><a href="#what-aspects-have-made-submissions-to-the-short-topic-session-successful-in-the-past" id="toc-what-aspects-have-made-submissions-to-the-short-topic-session-successful-in-the-past" class="nav-link" data-scroll-target="#what-aspects-have-made-submissions-to-the-short-topic-session-successful-in-the-past">What aspects have made submissions to the short topic session successful in the past?</a></li>
+  <li><a href="#what-aspects-have-made-submissions-to-the-short-topic-session-successful-in-the-past" id="toc-what-aspects-have-made-submissions-to-the-short-topic-session-successful-in-the-past" class="nav-link active" data-scroll-target="#what-aspects-have-made-submissions-to-the-short-topic-session-successful-in-the-past">What aspects have made submissions to the short topic session successful in the past?</a></li>
   <li><a href="#format-of-the-short-topic-session" id="toc-format-of-the-short-topic-session" class="nav-link" data-scroll-target="#format-of-the-short-topic-session">Format of the short topic session</a></li>
   <li><a href="#deadline" id="toc-deadline" class="nav-link" data-scroll-target="#deadline">Deadline</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions?</a></li>
@@ -198,15 +196,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="load-packages" class="level2">
-<h2 class="anchored" data-anchor-id="load-packages">load packages</h2>
-<p>packs.html &lt;- c(“knitr”, “pander”, “reporttools”, “dplyr”, “readxl”) for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}</p>
-<p>knitr::opts_chunk$set(echo = TRUE)</p>
-</section>
-<section id="read-in-data-path---getwd-sourcepastepath-functionsinputdata.r" class="level2">
-<h2 class="anchored" data-anchor-id="read-in-data-path---getwd-sourcepastepath-functionsinputdata.r">read in data path &lt;- getwd() source(paste(path, “/functions/inputData.r”,</h2>
-<p>sep = ““)) res &lt;- inputData() source(paste(path,”/functions/colFmt.r”, sep = ““)) ```</p>
-</section>
 <section id="what-aspects-have-made-submissions-to-the-short-topic-session-successful-in-the-past" class="level1">
 <h1>What aspects have made submissions to the short topic session successful in the past?</h1>
 <ul>
@@ -229,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>We have six topics distributed over two hours, which leaves each topic with 20min total time.</li>
 <li>You can present for five minutes using maximum two slides.</li>
-<li><code>r colFmt("Presentation must be in person. There will be no virtual presentations in this session.")</code></li>
+<li><font color="red">Presentation must be in person. There will be no virtual presentations in this session.</font></li>
 <li>Please make sure your presentation of the issue is generic enough so that everyone in the room can follow.</li>
 <li>Please ask one or more very explicit questions to the panel of regulators.</li>
 <li>Do not ask regulators for “recipes” in the sense of “if we do that then you guarantee to do that”.</li>
@@ -238,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="deadline" class="level1">
 <h1>Deadline</h1>
-<p>Please send us your slides until <code>r colFmt(res["deadline_short"])</code>.</p>
+<p>Please send us your slides until <font color="red">15th August 2025</font>.</p>
 </section>
 <section id="questions" class="level1">
 <h1>Questions?</h1>
