@@ -43,8 +43,7 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 The members of the local organizing committee in 2025 are:
 
 ```{r, include=TRUE, echo=FALSE}
-sci25[, "Name"] <- paste("[", sci25[, "First"], " ", sci25[, "Last"], "](mailto:", sci25[, "email"], ")", sep = "")
-sci25[, "email"] <- paste("[", sci25[, "First"], " ", sci25[, "Last"], "](mailto:", sci25[, "email"], ")", sep = "")
+sci25[, "email"] <- mailmerge(paste(sci25[, "First"], " ", sci25[, "Last"], sep = ""), sci25[, "email"])
 kable(filter(sci25, Local == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
 ```
 
@@ -53,9 +52,8 @@ kable(filter(sci25, Local == 1)[, c("First", "Last", "Type", "Affiliation", "ema
 The members of the local organizing committee in 2024 were:
 
 ```{r, include=TRUE, echo=FALSE}
-sci24[, "Name"] <- paste("[", sci24[, "First"], " ", sci24[, "Last"], "](mailto:", sci24[, "email"], ")", sep = "")
-sci24[, "email"] <- paste("[", sci24[, "First"], " ", sci24[, "Last"], "](mailto:", sci24[, "email"], ")", sep = "")
-kable(filter(sci24, Local == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
+#sci24[, "email"] <- paste("[", sci24[, "First"], " ", sci24[, "Last"], "](mailto:", sci24[, "email"], ")", sep = "")
+kable(filter(sci24, Local == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
 ```
 
 # 2023
@@ -63,7 +61,6 @@ kable(filter(sci24, Local == 1)[, c("First", "Last", "Type", "Affiliation", "ema
 The members of the local organizing committee in 2023 were:
 
 ```{r, include=TRUE, echo=FALSE}
-sci23[, "Name"] <- paste("[", sci23[, "First"], " ", sci23[, "Last"], "](mailto:", sci23[, "email"], ")", sep = "")
 kable(filter(sci23, Local == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
 ```
 

@@ -56,7 +56,7 @@ IBAN: GB53HBUK40127677385084<br>
 BIC: HBUKGB4B<br>
 Reference: Regulatory 25<br>
 
-Due to this informal registration process we can keep the price low. Therefore we can not accept credit card transfer and we cannot provide you with a formal invoice after the payment. In case you have any question on your payment, please contact [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com).
+Due to this informal registration process we can keep the price low. Therefore we can not accept credit card transfer and we cannot provide you with a formal invoice after the payment. In case you have any question on your payment, please contact `r res["cashiermail"]`.
 
 # Registration deadline
 
@@ -106,7 +106,7 @@ For all face-to-face block bookings unlimited virtual attendees are included as 
 
 ## Interested in a block booking for your company?
 
-Please reach out to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com) if your company is interested in one of these options.
+Please reach out to `r res["cashiermail"]` if your company is interested in one of these options.
 
 # Block booking for face-to-face AND virtual participation: how to register
 
@@ -114,19 +114,22 @@ For `r res["year"]` the following companies have registered for a comprehensive 
 
 ## Roche
 
-All colleagues working at Roche companies do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r inputData(regtext = "this form")["registration"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
+All colleagues working at Roche companies do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r res["reg_form"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
 
 To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes.
 
 ## Novartis
 
-Block booking for face-to-face participation. If you wish to take advantage of this block booking please contact [Julie Jones](mailto:julie.jones@novartis.com).
+Block booking for face-to-face and virtual participation:
+
+- If you wish to attend in person, please contact [Bibi Blatna](mailto:bibiana.blatna@novartis.com).
+- If you wish to attend virtually, please register for virtual attendance using `r res["reg_form"]`.
 
 <!-- # Block booking for virtual participation only: how to register -->
 
 <!-- For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same. -->
 
-<!-- You simply register via `r inputData(regtext = "this form")["registration"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking. -->
+<!-- You simply register via `r res["reg_form"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking. -->
 
 <!-- # My company (`r res["block_virtual"]`) has a block booking for virtual participation only. I still want to attend face-to-face. How much do I need to pay? -->
 
