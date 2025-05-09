@@ -28,7 +28,7 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 
 # Introduction
 
-Thanks for your interest in the `r res["program"]`! This site provides FAQs around registration. 
+Thanks for your interest in the `r res["program_workshop"]`! This site provides FAQs around registration. 
 
 # Is virtual participation possible?
 
@@ -60,7 +60,7 @@ Due to this informal registration process we can keep the price low. Therefore w
 
 # Registration deadline
 
-Registration has been closed.
+<!-- Registration has been closed. -->
 
 For face-to-face attendance: **`r colFmt(res["deadline_f2f"])`**
 
@@ -96,36 +96,41 @@ We have updated our block bocking offerings compared to previous years:
   - 12500 Euro for 71 to 90 participants. 
   - Beyond 91 face-to-face participants per company we charge 12500 + 120 Euro per each additional participant. 
 
-For all face-to-face block bookings an arbitrary number of virtual attendees is included as well.
+For all face-to-face block bookings unlimited virtual attendees are included as well.
+
+`r colFmt("The conference organizers reserve the right to cap the number of registered face-to-face attendees for a company with block booking, in order to keep catering costs under control. This never happened so far though.")`
 
 ## Virtual block-booking
 
 - Block booking for virtual attendance: 2800 Euro, i.e. you reach break-even with this option if at least 40 colleagues from your company register for virtual attendance to the workshop.
-- `r colFmt("The conference organizers reserve the right to cap the number of registered face-to-face attendees for a company with block booking, in order to keep catering costs under control. This never happened so far though.")`
+
+## Interested in a block booking for your company?
 
 Please reach out to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com) if your company is interested in one of these options.
 
-# Which companies have block bookings for face-to-face participation?
+# Block booking for face-to-face AND virtual participation: how to register
 
-For `r res["year"]` `r res["block_f2f"]` have a comprehensive block booking agreement with the workshop, i.e. all colleagues working at these companies do not need to pay a registration fee for face-to-face or virtual participation.
+For `r res["year"]` the following companies have registered for a comprehensive block booking so far:
 
-# Which companies have block bookings for virtual participation?
+## Roche
 
-For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
-
-# My company (`r res["block_f2f"]`) has a block booking for face-to-face AND virtual participation. How do I register?
-
-These companies have a block booking for face-to-face and virtual attendance. You simply register via `r inputData(regtext = "this form")["registration"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
+All colleagues working at Roche companies do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r inputData(regtext = "this form")["registration"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
 
 To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes.
 
-# My company (`r res["block_virtual"]`) has a block booking for virtual participation only. How do I register?
+## Novartis
 
-You simply register via `r inputData(regtext = "this form")["registration"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
+Block booking for face-to-face participation. If you wish to take advantage of this block booking please contact [Julie Jones](mailto:julie.jones@novartis.com).
 
-# My company (`r res["block_virtual"]`) has a block booking for virtual attendance only. I still want to attend face-to-face. How much do I need to pay?
+<!-- # Block booking for virtual participation only: how to register -->
 
-The full registration fee, `r res["fee_f"]` Euro.
+<!-- For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same. -->
+
+<!-- You simply register via `r inputData(regtext = "this form")["registration"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking. -->
+
+<!-- # My company (`r res["block_virtual"]`) has a block booking for virtual participation only. I still want to attend face-to-face. How much do I need to pay? -->
+
+<!-- The full registration fee, `r res["fee_f"]` Euro. -->
 
 # I will not attend the full workshop and/or not all lunches. Do I get a deducation for the face-to-face registration fee?
 
@@ -139,7 +144,7 @@ No. We would still very much appreciate you letting us know, for the planning of
 
 See [here](speaker.html).
 
-# I only want to attend parts of the workshop (e.g. only the HTA session on Friday). Do I get a reduced fee?
+# I only want to attend parts of the workshop. Do I get a reduced fee?
 
 No.
 

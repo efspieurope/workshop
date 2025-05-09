@@ -44,7 +44,7 @@ The primary purpose of the poster session is to give [EFSPI / PSI eSIGs](https:/
 
 # Questions?
 
-For feedback and questions send an email to `r res["infomail"]`.
+For feedback and questions send an email to `r res["chairmail"]`.
 
 
 

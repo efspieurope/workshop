@@ -63,7 +63,7 @@ We would like to inform you about how to join the zoom TC, in case you dial in r
    
 # Questions?
 
-For feedback and questions send an email to `r res["infomail"]`.
+For feedback and questions send an email to `r res["chairmail"]`.
 
 
 

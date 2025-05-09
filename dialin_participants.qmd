@@ -54,7 +54,7 @@ As soon as we get approval from speakers links to slidedecks and recordings will
 
 # Questions?
    
-For feedback and questions send an email to `r res["infomail"]`.
+For feedback and questions send an email to `r res["chairmail"]`.
 
 
 

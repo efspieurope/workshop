@@ -30,7 +30,7 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 
 # Introduction
 
-You have agreed to contribute to the `r res["program"]`. Many thanks for that!
+You have agreed to contribute to the `r res["program_workshop"]`. Many thanks for that!
 
 # Scope and contact
 
@@ -159,7 +159,7 @@ Registration fee for poster presenters is not waived.
 
 # Questions?
 
-For feedback and questions send an email to `r res["infomail"]`.
+For feedback and questions send an email to `r res["chairmail"]`.
 
 
 

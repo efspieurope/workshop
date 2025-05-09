@@ -77,7 +77,7 @@ kable(select(filter(sci22, Local == 1), -Local, -SciCom, -email, -Gender), align
 
 # Questions?
 
-For feedback and questions send an email to `r res["infomail"]`.
+For feedback and questions send an email to `r res["chairmail"]`.
 
 
 

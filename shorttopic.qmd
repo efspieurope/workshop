@@ -55,7 +55,7 @@ Please send us your slides until `r colFmt(res["deadline_short"])`.
 
 # Questions?
 
-For feedback and questions send an email to `r res["infomail"]`.
+For feedback and questions send an email to `r res["chairmail"]`.
 
 
 

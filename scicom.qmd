@@ -94,7 +94,7 @@ See also the `r paste("[program of ", 2022, "](", past[past[, "Year"] == 2022, "
 
 # Questions?
 
-For feedback and questions send an email to `r res["infomail"]`.
+For feedback and questions send an email to `r res["chairmail"]`.
 
 
 
