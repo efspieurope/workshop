@@ -50,11 +50,11 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 `r res["fee_f"]` Euro for face-to-face and `r res["fee_v"]` Euros for virtual attendance. To register please pay of `r res["fee_f"]` / `r res["fee_v"]` Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the 8th EFSPI Regulatory Statistics Workshop. 
 
-Bank details: European Fed Stat Pharm Ind<br>
-Bank: HSBC<br>
-IBAN: GB53HBUK40127677385084<br>
-BIC: HBUKGB4B<br>
-Reference: Regulatory 25<br>
+<!-- Bank details: European Fed Stat Pharm Ind<br> -->
+<!-- Bank: HSBC<br> -->
+<!-- IBAN: GB53HBUK40127677385084<br> -->
+<!-- BIC: HBUKGB4B<br> -->
+<!-- Reference: Regulatory 25<br> -->
 
 Due to this informal registration process we can keep the price low. Therefore we can not accept credit card transfer and we cannot provide you with a formal invoice after the payment. In case you have any question on your payment, please contact `r res["cashiermail"]`.
 
