@@ -110,6 +110,8 @@ If possible we would like to record the session and post it on the EFSPI webpage
 
 We would be very grateful to receive the final version of your presentation slidedeck by `r colFmt(res["deadline_slides"])`. This, in order to be flexible and to potentially run the slides from our end in case of issues with the internet connection.
 
+`r colFmt("Note that we will only accept slidedecks in PDF format.")`
+
 We would also appreciate if you could share with us a short paragraph that the session chairs will use to introduce you during the session.
 
 Please send all these materials to `r res["chairmail"]` and cc: your respective session chairs.
@@ -153,7 +155,7 @@ See [here](dialin.html).
 
 # Poster presentations
 
-Panels for poster presenters will be available. Poster should be the usual standard format (there is no template available or required), portrait format (we can cater up to A0, but no landscape format). Pins will be available. The idea is that at least during the official lunch & poster session (11th September) that you would be near your poster and discuss and answer questions of participants.
+Panels for poster presenters will be available. Poster should be the usual standard format (there is no template available or required), portrait format (we can cater up to A0, but no landscape format). Pins will be available. The idea is that at least during the official lunch & poster session that you would be near your poster and discuss and answer questions of participants.
 
 Registration fee for poster presenters is not waived.
 

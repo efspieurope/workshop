@@ -48,7 +48,7 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 # Registration fees
 
-`r res["fee_f"]` Euro for face-to-face and `r res["fee_v"]` Euros for virtual attendance. To register please pay of `r res["fee_f"]` / `r res["fee_v"]` Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the 8th EFSPI Regulatory Statistics Workshop. 
+`r res["fee_f"]` Euro for face-to-face and `r res["fee_v"]` Euros for virtual attendance. To register please pay `r res["fee_f"]` / `r res["fee_v"]` Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the `r res["issue"]`. 
 
 <!-- Bank details: European Fed Stat Pharm Ind<br> -->
 <!-- Bank: HSBC<br> -->

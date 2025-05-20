@@ -52,10 +52,6 @@ Members of [scientific committee](scicom.html).
 
 Like previous years, it is possible to submit a short topic for discussion with a panel of regulators. Submit your proposal to the Chair, `r res["chair"]`, by sending an e-mail to `r res["chairmail"]`. Deadline for submissions is `r res["deadline_short"]`.
 
-# Updates to this page and the draft program
-
-See [here](updates.html).
-
 # 2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop 
 
 The `r res["asafda"]` will take place 24-26th September 2025 in Rockville, MD.

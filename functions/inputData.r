@@ -12,7 +12,8 @@ inputData <- function(path = getwd()){
   data <- data[data[, "year"] == current, ]
 
   # draft program with date
-  data["program_workshop"] <- paste("10 EFSPI regulatory statistics workshop ([draft program, status: ", data[, "prog_version"], "](", data[, "program"], "))", sep = "")
+  data["issue"] <- "10th EFSPI regulatory statistics workshop"
+  data["program_workshop"] <- paste(data["issue"], " ([draft program, status: ", data[, "prog_version"], "](", data[, "program"], "))", sep = "")
   data["program"] <- paste("[Draft program (status: ", data[, "prog_version"], ")](", data[, "program"], ")", sep = "")
   
   # link to registration
