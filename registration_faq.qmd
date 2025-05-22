@@ -52,9 +52,9 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 <!-- Bank details: European Fed Stat Pharm Ind<br> -->
 <!-- Bank: HSBC<br> -->
-<!-- IBAN: GB53HBUK40127677385084<br> -->
-<!-- BIC: HBUKGB4B<br> -->
-<!-- Reference: Regulatory 25<br> -->
+IBAN EUR: CH60 0077 0250 6852 9200 3
+IBAN CHF: CH87 0077 0250 6852 9200 2
+Reference: Regulatory 25<br>
 
 Due to this informal registration process we can keep the price low. Therefore we can not accept credit card transfer and we cannot provide you with a formal invoice after the payment. In case you have any question on your payment, please contact `r res["cashiermail"]`.
 
