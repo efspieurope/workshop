@@ -54,7 +54,7 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 <!-- Bank: HSBC<br> -->
 IBAN EUR: CH60 0077 0250 6852 9200 3<br>
 IBAN CHF: CH87 0077 0250 6852 9200 2<br>
-Bank institute: Basler Kantonalban<br>
+Bank institute: Basler Kantonalbank<br>
 Swift: BKBBCHBB<br>
 Owner: Basler Biometrische Sektion<br>
 Reference: Regulatory 25<br>
