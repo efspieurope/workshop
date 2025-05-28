@@ -4,7 +4,7 @@ project:
   render:
     - data/2023
     - data/2024
-    - data/2025
+    - data/2025/analysis2025.Rmd
     - feedback.qmd        
     - index.qmd           
     - next.qmd            
