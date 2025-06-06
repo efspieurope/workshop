@@ -68,7 +68,19 @@ xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number o
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90)
 ```
  
-<!-- # Registrations of regulatory colleagues -->
+# Registrations of regulatory colleagues
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10}
+t2 <- with(reg2, filter(reg2, type %in% c("HTA", "Regulator")[2]))
+t2 <- with(t2, table(country2))
+t2 <- prepTable(t2 = t2, cut = 1)
+
+par(las = 2, mar = c(21, 4.5, 3, 1))
+ylim <- c(0, 1.4 * max(t2))
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg2)[1], "\n institution", sep = ""), col = 4, ylim = ylim)
+text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90)
+```
+
 
 <!-- ```{r, echo = FALSE, eval = TRUE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6} -->
 <!-- dat <- with(filter(reg2, type %in% c("HTA", "Regulator")[2]), table(inst2, mode)) -->
@@ -189,17 +201,18 @@ summary(tab1)
 <!-- summary(tab1) -->
 <!-- ``` -->
 
-<!-- # Registration waived yes / no -->
+# Registration waived yes / no
 
-<!-- ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6} -->
-<!-- t2 <- with(reg2, table(waived_reason)) -->
-<!-- t2 <- prepTable(t2 = t2, cut = cut, ord = FALSE) -->
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+t2 <- with(reg2, table(waived_reason))
+t2 <- t2[t2 > 0]
+t2 <- prepTable(t2 = t2, cut = 1, ord = FALSE)
 
-<!-- par(las = 1, mar = c(4.5, 4.5, 3, 1)) -->
-<!-- ylim <- c(0, 1.1 * max(t2)) -->
-<!-- xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n Reason for registrations fee waived", sep = ""), col = 2, ylim = ylim) -->
-<!-- text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1) -->
-<!-- ``` -->
+par(las = 1, mar = c(4.5, 4.5, 3, 1))
+ylim <- c(0, 1.1 * max(t2))
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n Reason for registrations fee waived", sep = ""), col = 2, ylim = ylim)
+text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
+```
 
 # Registrations by meals and wine tasting
 

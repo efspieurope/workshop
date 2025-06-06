@@ -168,11 +168,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#registrations-by-type-of-institution" id="toc-registrations-by-type-of-institution" class="nav-link" data-scroll-target="#registrations-by-type-of-institution">Registrations by type of institution</a></li>
   <li><a href="#registrations-by-background" id="toc-registrations-by-background" class="nav-link" data-scroll-target="#registrations-by-background">Registrations by background</a></li>
   <li><a href="#registrations-by-institution" id="toc-registrations-by-institution" class="nav-link" data-scroll-target="#registrations-by-institution">Registrations by institution</a></li>
+  <li><a href="#registrations-of-regulatory-colleagues" id="toc-registrations-of-regulatory-colleagues" class="nav-link" data-scroll-target="#registrations-of-regulatory-colleagues">Registrations of regulatory colleagues</a></li>
   <li><a href="#registrations-by-countries" id="toc-registrations-by-countries" class="nav-link" data-scroll-target="#registrations-by-countries">Registrations by countries</a></li>
   <li><a href="#registrations-by-countries---map" id="toc-registrations-by-countries---map" class="nav-link" data-scroll-target="#registrations-by-countries---map">Registrations by countries - map</a></li>
   <li><a href="#registrations-by-geographic-region" id="toc-registrations-by-geographic-region" class="nav-link" data-scroll-target="#registrations-by-geographic-region">Registrations by geographic region</a></li>
   <li><a href="#registrations-by-mode-of-attendance" id="toc-registrations-by-mode-of-attendance" class="nav-link" data-scroll-target="#registrations-by-mode-of-attendance">Registrations by mode of attendance</a></li>
   <li><a href="#registrations-by-mode-of-attendance-and-f2f-block-booking-status" id="toc-registrations-by-mode-of-attendance-and-f2f-block-booking-status" class="nav-link" data-scroll-target="#registrations-by-mode-of-attendance-and-f2f-block-booking-status">Registrations by mode of attendance and F2F block booking status</a></li>
+  <li><a href="#registration-waived-yes-no" id="toc-registration-waived-yes-no" class="nav-link" data-scroll-target="#registration-waived-yes-no">Registration waived yes / no</a></li>
   <li><a href="#registrations-by-meals-and-wine-tasting" id="toc-registrations-by-meals-and-wine-tasting" class="nav-link" data-scroll-target="#registrations-by-meals-and-wine-tasting">Registrations by meals and wine tasting</a></li>
   </ul>
 </nav>
@@ -211,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="data-status" class="level1">
 <h1>Data status</h1>
-<p>Data as of 2025-06-06 at 15:16:16.</p>
+<p>Data as of 2025-06-06 at 15:29:23.</p>
 </section>
 <section id="registrations-by-type-of-institution" class="level1">
 <h1>Registrations by type of institution</h1>
@@ -248,7 +250,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<!-- # Registrations of regulatory colleagues -->
+</section>
+<section id="registrations-of-regulatory-colleagues" class="level1">
+<h1>Registrations of regulatory colleagues</h1>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <!-- ```{r, echo = FALSE, eval = TRUE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6} -->
 
 <!-- dat <- with(filter(reg2, type %in% c("HTA", "Regulator")[2]), table(inst2, mode)) -->
@@ -287,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -299,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1440"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1440"></p>
 </figure>
 </div>
 </div>
@@ -311,7 +324,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -323,7 +336,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -373,16 +386,18 @@ ul.task-list li input[type="checkbox"] {
 <!-- tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% virtualblock)) -->
 <!-- summary(tab1) -->
 <!-- ``` -->
-<!-- # Registration waived yes / no -->
-<!-- ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6} -->
-
-<!-- t2 <- with(reg2, table(waived_reason)) -->
-<!-- t2 <- prepTable(t2 = t2, cut = cut, ord = FALSE) -->
-<!-- par(las = 1, mar = c(4.5, 4.5, 3, 1)) -->
-<!-- ylim <- c(0, 1.1 * max(t2)) -->
-<!-- xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n Reason for registrations fee waived", sep = ""), col = 2, ylim = ylim) -->
-<!-- text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1) -->
-<!-- ``` -->
+</section>
+<section id="registration-waived-yes-no" class="level1">
+<h1>Registration waived yes / no</h1>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="registrations-by-meals-and-wine-tasting" class="level1">
 <h1>Registrations by meals and wine tasting</h1>
@@ -390,7 +405,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
