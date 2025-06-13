@@ -70,7 +70,7 @@ kable(waived, align = "llccccc")
 
 However, if the registration fee is waived for you please still register using `r res["reg_form"]`.
 
-For reimbursement please complete [this form](data/2025/20250910_EFSPI_workshop_reimbursement.docx) and send it to `r res["cashiermail"]`.
+Please book all your travel yourself. For reimbursement please complete [this form](data/2025/20250910_EFSPI_workshop_reimbursement.docx) after the event and send it to `r res["cashiermail"]`.
 
 Registration fee is not waived for poster and short topic session presenters.
 
