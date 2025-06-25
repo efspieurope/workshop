@@ -214,6 +214,35 @@ xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number o
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
 
+
+
+# Number of F2F spaces already booked
+
+The room at Biozentrum has about 300 seats.
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+# -------------------------------
+# F2F seats booked in total
+# -------------------------------
+
+# f2f registrations
+a <- as.numeric(with(reg2, table(mode))[1])
+
+# if all companies with f2f block booking fill their seats we need another:
+b <- length(f2fblock) * 50 - nrow(filter(reg2, inst2 %in% f2fblock & mode == "Face-to-face (280 Euro)"))
+
+# contributors who did not register yet
+c <- nrow(contnotreg)
+
+t2 <- c("F2F registrations" = a, "remaining F2F\nblock booking\nseats" = b, "contributors who did\nnot register yet" = c, "total F2F" = a + b + c)
+
+par(las = 1, mar = c(4.5, 4.5, 3, 1))
+ylim <- c(0, 1.1 * max(t2))
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n Total number of booked / reserved F2F spots", sep = ""), col = 2, ylim = ylim)
+text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
+```
+
+
 # Registrations by meals and wine tasting
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10}
