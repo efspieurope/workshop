@@ -38,6 +38,9 @@ Data as of `r now`.
 t2 <- with(reg2, table(type))
 t2 <- prepTable(t2 = t2, cut = cut)
 
+t2["other"] <- t2["Other"] + t2["other"]
+t2 <- t2[names(t2) != "Other"]
+
 par(las = 1, mar = c(4.5, 4.5, 3, 1))
 ylim <- c(0, 1.1 * max(t2))
 xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n type of institution", sep = ""), col = 2, ylim = ylim)
