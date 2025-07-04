@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kaspar Rufibach">
-<meta name="dcterms.date" content="2025-07-02">
+<meta name="dcterms.date" content="2025-07-04">
 
 <title>EFSPI regulatory statistics workshop - EFSPI regulatory statistics workshop 2025: analysis of registrations</title>
 <style>
@@ -169,11 +169,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#registrations-by-background" id="toc-registrations-by-background" class="nav-link" data-scroll-target="#registrations-by-background">Registrations by background</a></li>
   <li><a href="#registrations-by-institution" id="toc-registrations-by-institution" class="nav-link" data-scroll-target="#registrations-by-institution">Registrations by institution</a></li>
   <li><a href="#registrations-of-regulatory-colleagues" id="toc-registrations-of-regulatory-colleagues" class="nav-link" data-scroll-target="#registrations-of-regulatory-colleagues">Registrations of regulatory colleagues</a></li>
+  <li><a href="#registrations-of-hta-colleagues" id="toc-registrations-of-hta-colleagues" class="nav-link" data-scroll-target="#registrations-of-hta-colleagues">Registrations of HTA colleagues</a></li>
   <li><a href="#registrations-by-countries" id="toc-registrations-by-countries" class="nav-link" data-scroll-target="#registrations-by-countries">Registrations by countries</a></li>
   <li><a href="#registrations-by-countries---map" id="toc-registrations-by-countries---map" class="nav-link" data-scroll-target="#registrations-by-countries---map">Registrations by countries - map</a></li>
   <li><a href="#registrations-by-geographic-region" id="toc-registrations-by-geographic-region" class="nav-link" data-scroll-target="#registrations-by-geographic-region">Registrations by geographic region</a></li>
   <li><a href="#registrations-by-mode-of-attendance" id="toc-registrations-by-mode-of-attendance" class="nav-link" data-scroll-target="#registrations-by-mode-of-attendance">Registrations by mode of attendance</a></li>
   <li><a href="#registrations-by-mode-of-attendance-and-f2f-block-booking-status" id="toc-registrations-by-mode-of-attendance-and-f2f-block-booking-status" class="nav-link" data-scroll-target="#registrations-by-mode-of-attendance-and-f2f-block-booking-status">Registrations by mode of attendance and F2F block booking status</a></li>
+  <li><a href="#registrations-by-mode-of-attendance-and-virtual-block-booking-status" id="toc-registrations-by-mode-of-attendance-and-virtual-block-booking-status" class="nav-link" data-scroll-target="#registrations-by-mode-of-attendance-and-virtual-block-booking-status">Registrations by mode of attendance and virtual block booking status</a></li>
   <li><a href="#registration-waived-yes-no" id="toc-registration-waived-yes-no" class="nav-link" data-scroll-target="#registration-waived-yes-no">Registration waived yes / no</a></li>
   <li><a href="#number-of-f2f-spaces-already-booked" id="toc-number-of-f2f-spaces-already-booked" class="nav-link" data-scroll-target="#number-of-f2f-spaces-already-booked">Number of F2F spaces already booked</a></li>
   <li><a href="#registrations-by-meals-and-wine-tasting" id="toc-registrations-by-meals-and-wine-tasting" class="nav-link" data-scroll-target="#registrations-by-meals-and-wine-tasting">Registrations by meals and wine tasting</a></li>
@@ -202,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 2, 2025</p>
+      <p class="date">July 4, 2025</p>
     </div>
   </div>
   
@@ -214,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="data-status" class="level1">
 <h1>Data status</h1>
-<p>Data as of 2025-07-02 at 12:29:22.</p>
+<p>Data as of 2025-07-04 at 14:45:59.</p>
 </section>
 <section id="registrations-by-type-of-institution" class="level1">
 <h1>Registrations by type of institution</h1>
@@ -255,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="registrations-of-regulatory-colleagues" class="level1">
 <h1>Registrations of regulatory colleagues</h1>
 <!-- ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10} -->
-<!-- t2 <- with(reg2, filter(reg2, type %in% c("HTA", "Regulator")[2])) -->
+<!-- t2 <- with(reg2, filter(reg2, type %in% "Regulator")) -->
 
 <!-- t2 <- with(t2, table(country2)) -->
 <!-- t2 <- prepTable(t2 = t2, cut = 1) -->
@@ -273,22 +275,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<!-- # Registrations of HTA colleagues -->
-<!-- ```{r, echo = FALSE, eval = TRUE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6} -->
-
-<!-- dat <- with(filter(reg2, type %in% c("HTA", "Regulator")[1]), table(inst2, mode)) -->
-<!-- ha <- rownames(dat) -->
-<!-- i1 <- (substr(ha, 1, 2) == "HT") -->
-<!-- ha[i1] <- substr(rownames(dat)[i1], 5, 1000) -->
-<!-- ha[!i1] <- substr(rownames(dat)[!i1], 11, 1000) -->
-<!-- t2 <- data.frame("ha" = ha, "freq" = as.vector(dat[, 1] + dat[, 2]), "face-to-face" = dat[, "Face-to-face (280 Euro)"], "virtual" = dat[, "Virtual (70 Euro)"]) -->
-<!-- t2 <- t2[order(t2$freq), ] -->
-<!-- par(las = 1, mar = c(4.5, 13, 3, 1)) -->
-<!-- xx <- barplot(height = t(as.matrix(t2[, c("face.to.face", "virtual")])), names.arg = t2$ha, xlim = c(0, max(t2$freq) + 1), horiz = TRUE, xlab = "number of registrations", main = paste("Total number of registrations: ", sum(t2$freq), "\n HTA colleagues", sep = ""), col = c(2, 4), xaxt = "n") -->
-<!-- axis(1, at = 0:100, labels = 0:100) -->
-<!-- segments(seq(0, 100, by = 2), 0, seq(0, 100, by = 2), length(t2$ha) + 3, lty = 2, col = grey(0.5)) -->
-<!-- legend("bottomright", colnames(t2)[3:4], col = c(2, 4), bty = "n", lty = 1, lwd = 10) -->
-<!-- ``` -->
+</section>
+<section id="registrations-of-hta-colleagues" class="level1">
+<h1>Registrations of HTA colleagues</h1>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="registrations-by-countries" class="level1">
 <h1>Registrations by countries</h1>
@@ -296,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -308,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1440"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="1440"></p>
 </figure>
 </div>
 </div>
@@ -320,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -332,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -351,10 +349,10 @@ ul.task-list li input[type="checkbox"] {
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
-<th style="text-align: center;">Boehringer Ingelheim (N=14)</th>
-<th style="text-align: center;">Novartis (N=49)</th>
+<th style="text-align: center;">Boehringer Ingelheim (N=19)</th>
+<th style="text-align: center;">Novartis (N=50)</th>
 <th style="text-align: center;">Roche (N=40)</th>
-<th style="text-align: center;">Total (N=103)</th>
+<th style="text-align: center;">Total (N=109)</th>
 </tr>
 </thead>
 <tbody>
@@ -367,26 +365,59 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td style="text-align: left;">&nbsp;&nbsp;&nbsp;Face-to-face (280 Euro)</td>
-<td style="text-align: center;">13 (92.9%)</td>
-<td style="text-align: center;">3 (6.1%)</td>
+<td style="text-align: center;">16 (84.2%)</td>
+<td style="text-align: center;">4 (8.0%)</td>
 <td style="text-align: center;">35 (87.5%)</td>
-<td style="text-align: center;">51 (49.5%)</td>
+<td style="text-align: center;">55 (50.5%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">&nbsp;&nbsp;&nbsp;Virtual (70 Euro)</td>
-<td style="text-align: center;">1 (7.1%)</td>
-<td style="text-align: center;">46 (93.9%)</td>
+<td style="text-align: center;">3 (15.8%)</td>
+<td style="text-align: center;">46 (92.0%)</td>
 <td style="text-align: center;">5 (12.5%)</td>
-<td style="text-align: center;">52 (50.5%)</td>
+<td style="text-align: center;">54 (49.5%)</td>
 </tr>
 </tbody>
 </table>
-<!-- # Registrations by mode of attendance and virtual block booking status -->
-<!-- ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE} -->
-
-<!-- tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% virtualblock)) -->
-<!-- summary(tab1) -->
-<!-- ``` -->
+</section>
+<section id="registrations-by-mode-of-attendance-and-virtual-block-booking-status" class="level1">
+<h1>Registrations by mode of attendance and virtual block booking status</h1>
+<table class="table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Bayer (N=29)</th>
+<th style="text-align: center;">Merck KGaA (N=30)</th>
+<th style="text-align: center;">Total (N=59)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>mode</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;Face-to-face (280 Euro)</td>
+<td style="text-align: center;">11 (37.9%)</td>
+<td style="text-align: center;">2 (6.7%)</td>
+<td style="text-align: center;">13 (22.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;Virtual (70 Euro)</td>
+<td style="text-align: center;">18 (62.1%)</td>
+<td style="text-align: center;">28 (93.3%)</td>
+<td style="text-align: center;">46 (78.0%)</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="registration-waived-yes-no" class="level1">
 <h1>Registration waived yes / no</h1>
@@ -394,7 +425,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -407,7 +438,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -419,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2025_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2025_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
