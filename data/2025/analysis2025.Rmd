@@ -183,7 +183,7 @@ xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number o
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
 
-# Registrations by mode of attendance and F2F block booking status
+# Registrations of members of companies with F2F block booking
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 library(arsenal)
@@ -191,7 +191,7 @@ tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, in
 summary(tab1)
 ```
 
-# Registrations by mode of attendance and virtual block booking status
+# Registrations of members of companies with virtual block booking
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% virtualblock))
