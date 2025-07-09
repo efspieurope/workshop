@@ -115,9 +115,9 @@ Please reach out to `r res["cashiermail"]` if your company is interested in one 
 
 For `r res["year"]` the following companies have registered for a comprehensive block booking so far:
 
-## Roche
+## Roche, Boehringer
 
-All colleagues working at Roche companies do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r res["reg_form"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
+All colleagues working at Roche or Boehringer do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r res["reg_form"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
 
 To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes.
 
@@ -128,15 +128,15 @@ Block booking for face-to-face and virtual participation:
 - If you wish to attend in person, please contact [Bibi Blatna](mailto:bibiana.blatna@novartis.com).
 - If you wish to attend virtually, please register for virtual attendance using `r res["reg_form"]`.
 
-<!-- # Block booking for virtual participation only: how to register -->
+# Block booking for virtual participation only: how to register
 
-<!-- For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same. -->
+For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
 
-<!-- You simply register via `r res["reg_form"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking. -->
+You simply register via `r res["reg_form"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
 
-<!-- # My company (`r res["block_virtual"]`) has a block booking for virtual participation only. I still want to attend face-to-face. How much do I need to pay? -->
+# My company (`r res["block_virtual"]`) has a block booking for virtual participation only. I still want to attend face-to-face. How much do I need to pay?
 
-<!-- The full registration fee, `r res["fee_f"]` Euro. -->
+The full registration fee, `r res["fee_f"]` Euro.
 
 # I will not attend the full workshop and/or not all lunches. Do I get a deducation for the face-to-face registration fee?
 
