@@ -30,6 +30,10 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 
 Thanks for your interest in the `r res["program_workshop"]`! This site provides FAQs around registration. 
 
+# Are number of participants limited?
+
+The biozentrum allows for 300 on-site attendees. Registration for face-to-face attendance will be stopped once we reach that number.
+
 # Is virtual participation possible?
 
 Yes, the workshop is hybrid. 
