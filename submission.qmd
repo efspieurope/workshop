@@ -40,7 +40,7 @@ For instructions on how to present in the short topic session if your questions 
 
 # Posters
 
-The primary purpose of the poster session is to give [EFSPI / PSI eSIGs](https://www.efspi.org/EFSPI/SIGS/EFSPI/Special_Interest_Groups/Special_Interest_Groups.aspx) the opportunity to present their progress. As for talks, `r colFmt("there is no option to submit posters")` other than from said eSIGs.
+The primary purpose of the poster session is to give [EFSPI / PSI eSIGs](https://www.efspi.org/sigs/) the opportunity to present their progress. As for talks, `r colFmt("there is no option to submit posters")` other than from said eSIGs.
 
 # Questions?
 
