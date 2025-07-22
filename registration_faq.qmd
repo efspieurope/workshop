@@ -73,7 +73,12 @@ For face-to-face attendance: **`r colFmt(res["deadline_f2f"])`**
 
 For virtual attendance: **`r colFmt(res["deadline_virtual"])`**.
 
-Registration platform will be turned off for the respective option after the deadline.
+Registration platform will be turned off 
+
+- if we have reached maximum capacity of 300 face-to-face participants or 
+- for the respective option after the deadline, 
+
+whatever happens first.
 
 # Confirmation of registration
 
