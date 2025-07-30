@@ -185,6 +185,12 @@ text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", se
 
 # Registrations of members of companies with F2F block booking
 
+Pre-booked numbers are:
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+kable(cbind("Company" = f2fblock, "Pre-booked F2F seats" = f2fblock_n))
+```
+
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 library(arsenal)
 tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% f2fblock))
@@ -226,7 +232,7 @@ The room at Biozentrum has about 300 seats.
 a <- as.numeric(with(reg2, table(mode))[1])
 
 # if all companies with f2f block booking fill their seats we need another:
-b <- length(f2fblock) * 50 - nrow(filter(reg2, inst2 %in% f2fblock & mode == "Face-to-face (280 Euro)"))
+b <- sum(f2fblock_n) - nrow(filter(reg2, inst2 %in% f2fblock & mode == "Face-to-face (280 Euro)"))
 
 # contributors who did not register yet
 c <- nrow(contnotreg)
