@@ -188,7 +188,7 @@ text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", se
 Pre-booked numbers are:
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-kable(cbind("Company" = f2fblock, "Pre-booked F2F seats" = f2fblock_n))
+kable(t(cbind("Company" = f2fblock, "Pre-booked F2F seats" = f2fblock_n)))
 ```
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
