@@ -34,7 +34,7 @@ Wonder how you can get involved with the scientific committee? See [here](scicom
 
 # Short topics
 
-The short topics session is a hallmark of each year's workshop. Anyone can submit proposals for discussion until 15th August to `r res["chairmail"]`. Accepted proposals can be presented in five minutes using two slides to the audience, with the intention to ask `r colFmt("one or more clear questions")` to a panel of regulators. They will then comment on these questions. For past topics that were discussed in this session see [here](past.html#programs-slidedecks-and-recordings).
+The short topics session is a hallmark of each year's workshop. Anyone can submit proposals for discussion until `res["deadline_short"]` to `r res["chairmail"]`. Accepted proposals can be presented in five minutes using two slides to the audience, with the intention to ask `r colFmt("one or more clear questions")` to a panel of regulators. They will then comment on these questions. For past topics that were discussed in this session see [here](past.html#programs-slidedecks-and-recordings).
 
 For instructions on how to present in the short topic session if your questions were accepted see [here](shorttopic.html).
 
