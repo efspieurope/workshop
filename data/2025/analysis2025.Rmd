@@ -8,7 +8,7 @@ output:
     number_sections: yes
     self_contained: yes
     toc: yes
-    toc_depth: 2
+    toc_depth: 3
     toc_float: yes
 ---
 
@@ -32,7 +32,11 @@ now <- paste(substr(now, 1, 10), " at ", substr(now, 12, 19), sep = "")
 
 Data as of `r now`.
 
-# Registrations by type of institution
+# Registrations {.tabset .tabset-fade .tabset-pills}
+
+::: {.panel-tabset .nav-pills}
+
+## By type of institution
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
 t2 <- with(reg2, table(type))
@@ -46,8 +50,7 @@ ylim <- c(0, 1.1 * max(t2))
 xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n type of institution", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
-
-# Registrations by background
+## By background
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
 t2 <- with(reg2, table(background))
@@ -59,7 +62,7 @@ xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number o
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
 
-# Registrations by institution
+## By institution
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10}
 t2 <- with(reg2, table(inst2))
@@ -71,7 +74,7 @@ xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number o
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90)
 ```
  
-# Registrations of regulatory colleagues
+## Regulatory colleagues
 
 <!-- ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10} -->
 <!-- t2 <- with(reg2, filter(reg2, type %in% "Regulator")) -->
@@ -102,7 +105,7 @@ segments(seq(0, 100, by = 2), 0, seq(0, 100, by = 2), length(t2$ha) + 3, lty = 2
 legend("bottomright", colnames(t2)[3:4], col = c(2, 4), bty = "n", lty = 1, lwd = 10)
 ```
 
-# Registrations of HTA colleagues
+## HTA colleagues
 
 ```{r, echo = FALSE, eval = TRUE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
 t2 <- with(filter(reg2, type %in% "HTA"), table(mode))
@@ -115,7 +118,7 @@ text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", se
 ```
 
 
-# Registrations by countries
+## By countries
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10}
 t2 <- with(reg2, table(country2))
@@ -128,7 +131,7 @@ xx <- barplot(t2, ylab = "number of registrations", main = paste(dim(reg2)[1], "
 text(x = xx + 0.2, y = t2 + 2.5, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90)
 ```
 
-# Registrations by countries - map
+## By countries - map
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 15, fig.height = 10}
 world <- ne_countries(scale = "medium", returnclass = "sf")
@@ -153,7 +156,7 @@ worldpopmap <- ggplot() +
 worldpopmap
 ```
 
-# Registrations by geographic region
+## By geographic region
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10}
 df <- data.frame(country = reg2$country2)
@@ -171,7 +174,7 @@ xx <- barplot(t2, ylab = "number of registrations", main = paste(dim(reg2)[1], "
 text(x = xx + 0.2, y = t2 + 2.5, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90)
 ```
 
-# Registrations by mode of attendance
+## By mode of attendance
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
 t2 <- with(reg2, table(mode))
@@ -182,27 +185,8 @@ ylim <- c(0, 1.1 * max(t2))
 xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n mode of attendance", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
+:::
 
-# Registrations of members of companies with F2F block booking
-
-Pre-booked numbers are:
-
-```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-kable(t(cbind("Company" = f2fblock, "Pre-booked F2F seats" = f2fblock_n)))
-```
-
-```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-library(arsenal)
-tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% f2fblock))
-summary(tab1)
-```
-
-# Registrations of members of companies with virtual block booking
-
-```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% virtualblock))
-summary(tab1)
-```
 
 # Registration waived yes / no
 
@@ -218,10 +202,41 @@ text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", se
 ```
 
 
+# Analysis of block booking {.tabset .tabset-fade .tabset-pills}
 
-# Number of F2F spaces already booked
+::: {.panel-tabset .nav-pills}
+
+## Registrations of members of companies with F2F block booking
+
+Pre-booked numbers are:
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+kable(t(cbind("Company" = f2fblock, "Pre-booked F2F seats" = f2fblock_n)))
+```
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+library(arsenal)
+tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% f2fblock))
+summary(tab1)
+```
+
+## Registrations of members of companies with virtual block booking
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% virtualblock))
+summary(tab1)
+```
+
+:::
+
+
+# Analysis of face-to-face attendance and catering {.tabset .tabset-fade .tabset-pills}
 
 The room at Biozentrum has about 300 seats.
+
+::: {.panel-tabset .nav-pills}
+
+## Number of F2F spaces already booked
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
 # -------------------------------
@@ -246,15 +261,48 @@ text(x = xx, y = t2, label = t2, pos = 3, cex = 0.8, col = 1)
 ```
 
 
-# Registrations by meals and wine tasting
+## Meals and wine tasting for those registered for face-to-face attendance
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10}
-t2 <- apply(reg2[, all], 2, sum)
+t1 <- filter(reg2[, all], reg2$mode == "Face-to-face (280 Euro)")
+t2 <- apply(t1, 2, sum)
 par(las = 2, mar = c(20, 4.5, 3, 1))
 ylim <- c(0, 1.2 * max(t2))
-xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of face-to-face registrations: ", table(reg2$mode)[1], "\n meals and wine tasting", sep = ""), col = 2, ylim = ylim)
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of face-to-face registrations: ", nrow(t1), "\n meals and wine tasting", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
+
+
+## Meals and wine tasting for those registered for face-to-face attendance, Novartis and Roche only
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10}
+t1 <- filter(reg2[, all], reg2$inst2 %in% c("Roche", "Novartis") & reg2$mode == "Face-to-face (280 Euro)")
+t2 <- apply(t1, 2, sum)
+par(las = 2, mar = c(20, 4.5, 3, 1))
+ylim <- c(0, 1.2 * max(t2))
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of face-to-face registrations: ", nrow(t1), "\n meals and wine tasting", sep = ""), col = 2, ylim = ylim)
+text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
+```
+
+## Meals and wine tasting for those registered for face-to-face attendance, all except Novartis and Roche
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10}
+t1 <- filter(reg2[, all], (reg2$inst2 %in% c("Roche", "Novartis") == FALSE) & reg2$mode == "Face-to-face (280 Euro)")
+t2 <- apply(t1, 2, sum)
+par(las = 2, mar = c(20, 4.5, 3, 1))
+ylim <- c(0, 1.2 * max(t2))
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of face-to-face registrations: ", nrow(t1), "\n meals and wine tasting", sep = ""), col = 2, ylim = ylim)
+text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
+```
+
+
+:::
+
+
+
+# No shows
+
+Analysis will be provided after the event.
 
 <!-- # No-shows among those who registered for face-to-face participation -->
 
