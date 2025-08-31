@@ -69,16 +69,16 @@ Due to this informal registration process we can keep the price low. Therefore w
 
 <!-- Registration has been closed. -->
 
-For face-to-face attendance: **`r colFmt(res["deadline_f2f"])`**
+<!-- For face-to-face attendance: **`r colFmt(res["deadline_f2f"])`** -->
+
+<!-- Registration platform will be turned off  -->
+
+<!-- - if we have reached maximum capacity of 300 face-to-face participants or  -->
+<!-- - for the respective option after the deadline,  -->
+
+<!-- whatever happens first. -->
 
 For virtual attendance: **`r colFmt(res["deadline_virtual"])`**.
-
-Registration platform will be turned off 
-
-- if we have reached maximum capacity of 300 face-to-face participants or 
-- for the respective option after the deadline, 
-
-whatever happens first.
 
 # Confirmation of registration
 
