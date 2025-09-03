@@ -47,9 +47,9 @@ website:
       menu:
         - text: "Testimonials from 2022 workshop"  
           href: testimonials2022.html
-        - text: "Linkedin posts reflectin on 2024 workshop"  
+        - text: "Linkedin posts reflecting on 2024 workshop"  
           href: testimonials2024.html
-    - text: "Past workshops: programs, slidedecks, recordings"
+    - text: "Past workshops"
       href: past.html
     - text: "Conference statistics"
       href: stats.html
@@ -61,9 +61,7 @@ website:
           href: local.html
         - text: "Scientific committee"
           href: scicom.html
-    # - text: "Updates"
-    #   href: updates.html
-          
+
 format:
   html:
     theme: cosmo
