@@ -14,8 +14,12 @@ output:
 
 ```{r setup, include = FALSE, echo = FALSE}
 ## load packages
-packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl", "countrycode")
-for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+library(knitr)
+library(pander)
+library(reporttools)
+library(dplyr)
+library(readxl)
+library(countrycode)
 
 knitr::opts_chunk$set(echo = TRUE)
 

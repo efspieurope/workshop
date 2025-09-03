@@ -24,6 +24,7 @@ project:
     - submission.qmd
     - shorttopic.qmd
     - chairs.qmd
+    - stats.qmd
 
 website:
   title: "EFSPI regulatory statistics workshop"
@@ -50,6 +51,8 @@ website:
           href: testimonials2024.html
     - text: "Past workshops: programs, slidedecks, recordings"
       href: past.html
+    - text: "Conference statistics"
+      href: stats.html
     - text: "Committees"
       menu:
         - text: "Workshop chairs"

@@ -1,0 +1,52 @@
+---
+title: "EFSPI workshop: conference statistics"
+date: last-modified
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+now <- as.POSIXlt(Sys.time())
+now <- paste(substr(now, 1, 10), " at ", substr(now, 12, 19), sep = "")
+
+path0 <- "C:/rufibach/90_github_repos/EFSPI/20_workshop/efspiworkshop/workshop/data/"
+stats <- as.data.frame(read_excel(paste(path0, "overtheyears.xlsx", sep = ""), col_types = rep("numeric", 5)))
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+par(las = 1, mar = c(4.5, 4.5, 3, 1))
+with(stats, plot(Year, F2F, type = "b", ylim = c(0, 400), ylab = "Number of participants", col = 2, lwd = 3, main = "Number of participants (face-to-face)"))
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+par(las = 1, mar = c(4.5, 4.5, 3, 1))
+with(stats, plot(Year, Virtual, type = "b", ylim = c(0, 1300), ylab = "Number of participants", col = 2, lwd = 3, main = "Number of participants (virtual)"))
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+par(las = 1, mar = c(4.5, 4.5, 3, 1))
+with(stats, plot(Year, F2F + Virtual, type = "b", ylim = c(0, 1400), ylab = "Number of participants", col = 2, lwd = 3, main = "Number of participants (total)"))
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+par(las = 1, mar = c(4.5, 4.5, 3, 1))
+with(stats, plot(Year, Regulators, type = "b", ylim = c(0, 75), ylab = "Number of regulators", col = 2, lwd = 3, main = "Number of regulatory colleagues"))
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
+par(las = 1, mar = c(4.5, 4.5, 3, 1))
+with(stats, plot(Year, Countries, type = "b", ylim = c(0, 50), ylab = "Number of countries", col = 2, lwd = 3, main = "Number of countries"))
+```
+
