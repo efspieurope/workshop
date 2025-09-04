@@ -42,8 +42,8 @@ Data as of `r now`.
 t2 <- with(reg2, table(type))
 t2 <- prepTable(t2 = t2, cut = cut)
 
-t2["other"] <- t2["Other"] + t2["other"]
-t2 <- t2[names(t2) != "Other"]
+#t2["other"] <- t2["Other"] + t2["other"]
+#t2 <- t2[names(t2) != "Other"]
 
 par(las = 1, mar = c(4.5, 4.5, 3, 1))
 ylim <- c(0, 1.1 * max(t2))
