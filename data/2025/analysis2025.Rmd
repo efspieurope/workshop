@@ -50,6 +50,7 @@ ylim <- c(0, 1.1 * max(t2))
 xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n type of institution", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
 ```
+
 ## By background
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6}
