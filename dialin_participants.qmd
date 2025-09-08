@@ -23,10 +23,6 @@ path <- getwd()
 source(paste(path, "/functions/inputData.r", sep = ""))
 res <- inputData()
 source(paste(path, "/functions/colFmt.r", sep = ""))
-
-source(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/30_registrations/p00_initialize.r", sep = ""))
-
-dat <- with(filter(reg2, type %in% c("HTA", "Regulator")), table(inst2, mode))
 ```
 
 # Introduction
@@ -36,11 +32,11 @@ You have registered for the EFSPI regulatory statistics workshop. This document 
 # Zoom instructions
 
 - Every registered participant has received calendar invites for both days. These contain the dial-in details.
-- `r colFmt("Day 1")`: Use this [zoom link](https://roche.zoom.us/j/94966498544) to dial in, with passcode 110924.
-- `r colFmt("Day 2")`: Use this [zoom link](https://roche.zoom.us/j/96638250426) to dial in, with passcode 120924.
-- `r colFmt("Day 3")`: Use this [zoom link](https://roche.zoom.us/j/95407585133) to dial in, with passcode 130924
+- `r colFmt("Day 1")`: Use this [zoom link](`r res["zoom1"]`) to dial in, with passcode `r as.character(res["zoomcode1"])`
+- `r colFmt("Day 2")`: Use this [zoom link](`r res["zoom2"]`) to dial in, with passcode `r as.character(res["zoomcode2"])`
+- `r colFmt("Day 3")`: Use this [zoom link](`r res["zoom3"]`) to dial in, with passcode `r as.character(res["zoomcode3"])`
 - Attendees are invited to ask questions through zoom's Q&A functionality.
-- Status of registrations: Find this [here](https://efspieurope.github.io/workshop/data/2024/analysis2024.html). We have `r nrow(reg2)` registrations from `r length(unique(reg2$country2))` countries as of now, with `r table(reg2$mode)[1]` face-to-face. `r sum(dat)` colleagues from regulatory agencies registered so far.
+- Status of registrations: Find this [here](https://efspieurope.github.io/workshop/data/2025/analysis2025.html). 
 
 # Face-to-face attendance
 
