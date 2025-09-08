@@ -151,6 +151,10 @@ The full registration fee, `r res["fee_f"]` Euro.
 
 No.
 
+# I have registered for face-to-face attendance but have changed my mind and cannot attend, not even virtually. Will my registration fee be reimbursed?
+
+No. We would still very much appreciate you letting us know, for the planning of the catering.
+
 # I have registered for face-to-face attendance but have changed my mind and will attend only virtually. Will my registration fee be reimbursed?
 
 No. We would still very much appreciate you letting us know, for the planning of the catering.
