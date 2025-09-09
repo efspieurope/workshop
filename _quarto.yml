@@ -2,12 +2,14 @@ project:
   type: website
   output-dir: docs
   render:
+    - index.qmd           
+    - testimonials2022.qmd
     - data/2023
     - data/2024
+    - testimonials2024.qmd
+    - 2025.qmd            
     - data/2025/analysis2025.Rmd
     - feedback.qmd        
-    - index.qmd           
-    - 2025.qmd            
     - 2026.qmd            
     - past.qmd            
     - past_scicom.qmd     
@@ -16,8 +18,6 @@ project:
     - local.qmd
     - speaker.qmd   
     - updates.qmd  
-    - testimonials2022.qmd
-    - testimonials2024.qmd
     - dialin.qmd
     - dialin_participants.qmd
     - chat.qmd
