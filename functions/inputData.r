@@ -1,4 +1,4 @@
-inputData <- function(path = getwd()){
+inputData <- function(path = getwd(), y = 2025){
 
   require(readxl)
   require(dplyr)
@@ -8,7 +8,7 @@ inputData <- function(path = getwd()){
   colnames(data) <- tolower(colnames(data))
   
   # current year
-  current <- as.numeric(data %>% filter(current == 1, na.rm = TRUE) %>% select(year))
+  current <- as.numeric(data %>% filter(year == y, na.rm = TRUE) %>% select(year))
   data <- data[data[, "year"] == current, ]
 
   # draft program with date

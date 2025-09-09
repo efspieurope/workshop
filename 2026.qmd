@@ -1,0 +1,52 @@
+---
+title: "2026 EFSPI regulatory statistics workshop"
+date: last-modified
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData(y = 2026)
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# Date and venue of 2026 workshop
+
+The workshop will take place `r res["date"]` again at [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en). 
+
+<center>![](biozentrum.jpg)</center>
+
+<!-- <br> -->
+
+<!-- `r res["program"]`. -->
+
+<!-- `r res["registration"]`. -->
+
+<!-- Members of [local organizing committee](local.html). -->
+
+<!-- Members of [scientific committee](scicom.html). -->
+
+<!-- # Call for short topics -->
+
+<!-- Like previous years, it is possible to submit a short topic for discussion with a panel of regulators. Submit your proposal to the Chair, `r res["chair"]`, by sending an e-mail to `r res["chairmail"]`. Deadline for submissions is `r res["deadline_short"]`. -->
+
+<!-- # 2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop  -->
+
+<!-- The `r res["asafda"]` will take place 24-26th September 2025 in Rockville, MD. -->
+

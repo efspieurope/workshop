@@ -7,7 +7,8 @@ project:
     - data/2025/analysis2025.Rmd
     - feedback.qmd        
     - index.qmd           
-    - next.qmd            
+    - 2025.qmd            
+    - 2026.qmd            
     - past.qmd            
     - past_scicom.qmd     
     - registration_faq.qmd
@@ -31,10 +32,14 @@ website:
   navbar:
     background: info
     left:
+    - text: "2026 workshop"
+      menu:
+        - text: "Save the date"  
+          href: 2026.html
     - text: "2025 workshop"
       menu:
         - text: "Program and registration"  
-          href: next.html
+          href: 2025.html
         - text: "FAQ registration"
           href: registration_faq.html
         - text: "FAQ speakers"
