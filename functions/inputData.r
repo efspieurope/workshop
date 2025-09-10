@@ -19,6 +19,7 @@ inputData <- function(path = getwd(), y = 2025){
   # link to registration
   data["reg_form"] <- paste("[this form](", data[, "registration"], ")", sep = "")
   data["registration"] <- paste("[Registration](", data[, "registration"], ")", sep = "")
+  data["registration"] <- "Registration is closed"
   
   # ASA FDA workshop
   data["asafda"] <- paste("[2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop](", data[, "asafda"], ")", sep = "")

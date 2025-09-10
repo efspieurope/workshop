@@ -78,7 +78,7 @@ Due to this informal registration process we can keep the price low. Therefore w
 
 <!-- whatever happens first. -->
 
-For virtual attendance: **`r colFmt(res["deadline_virtual"])`**.
+<!-- For virtual attendance: **`r colFmt(res["deadline_virtual"])`**. -->
 
 # Confirmation of registration
 
