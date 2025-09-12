@@ -1,0 +1,73 @@
+---
+title: ""
+date: last-modified
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+tbl-colwidths: [5,41,42,12]
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+path <- getwd()
+#path <- paste(path, "/data/2025", sep = "")
+
+sessions <- c("", ": Fast to market vs. robustness of the data", "", ": Estimands -- Celebrating the 5th anniversary of ICH E9(R1) -- what have we learned and where do we need to go?", ": Regulatory landscape in China", ": Patient preferences", ": Openstatsware - How can we build a scalable ecosystem?", ": Regulatory and HTA updates", ": Opportunities and barriers for innovative methodology in EU HTA", "")
+
+## read in data for recordings
+rec <- as.data.frame(read_excel(paste(path, "/recordings2025.xlsx", sep = ""), col_types = NULL))
+
+## read in data for slides
+slid <- as.data.frame(read_excel(paste(path, "/slides2025.xlsx", sep = ""), col_types = NULL))
+```
+
+
+Slidedecks and recordings will be continuously added as soon as we have them and the presenter's consent.
+
+
+<!-- # Recordings -->
+
+<!-- Recordings of those sessions where all presenters have given consent: -->
+
+<!-- ```{r rec1, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE} -->
+<!-- # how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434 -->
+<!-- out1 <- NULL -->
+<!-- out1 <- c(out1, knit_expand(paste(path, "/_rec_display.qmd", sep = ""))) -->
+
+<!-- # the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a -->
+<!-- a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE) -->
+<!-- ``` -->
+
+<!-- ```{r recordings, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"} -->
+<!-- cat(a) -->
+<!-- ``` -->
+
+<!-- # Material -->
+
+<!-- ```{r mat1, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE} -->
+<!-- # how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434 -->
+<!-- out1 <- NULL -->
+<!-- ut <- unique(slid$Session) -->
+
+<!-- for (j in 1:length(ut)){ -->
+<!--     out1 <- c(out1, knit_expand(paste(path, "/_slides_display.qmd", sep = ""))) -->
+<!-- } -->
+
+<!-- # the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a -->
+
+<!-- a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE) -->
+<!-- ``` -->
+
+<!-- ```{r slides, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"} -->
+<!-- cat(a) -->
+<!-- ``` -->
+
