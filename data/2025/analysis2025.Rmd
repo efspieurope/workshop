@@ -307,15 +307,15 @@ text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", se
 
 Analysis will be provided after the event.
 
-<!-- # No-shows among those who registered for face-to-face participation -->
+# No-shows among those who registered for face-to-face participation
 
-<!-- ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE} -->
-<!-- sel <- names(table(filter(reg2, noshow == "no show")$inst2)) -->
-<!-- sel <- c("Roche", "Novartis") -->
-<!-- tab <- tableby(inst2 ~ noshow, total = TRUE, test = FALSE,  -->
-<!--                 data = filter(reg2, (inst %in% sel) & (mode == "Face-to-face (280 Euro)"))) -->
-<!-- summary(tab) -->
-<!-- ``` -->
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+sel <- names(table(filter(reg2, noshow == "no show")$inst2))
+sel <- c("Roche", "Novartis")
+tab <- tableby(inst2 ~ noshow, total = TRUE, test = FALSE,
+                data = filter(reg2, (inst %in% sel) & (mode == "Face-to-face (280 Euro)")))
+summary(tab)
+```
 
 
 
