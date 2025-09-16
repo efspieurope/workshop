@@ -37,18 +37,16 @@ website:
       menu:
         - text: "Save the date"  
           href: 2026.html
-    - text: "2025 workshop"
-      menu:
-        - text: "Program and registration"  
-          href: 2025.html
-        - text: "FAQ registration"
-          href: registration_faq.html
-        - text: "FAQ speakers"
-          href: speaker.html
-        - text: "FAQ submissions of contributions"
-          href: submission.html
-        - text: "Restaurants in Basel"  
-          href: restaurants.html
+        # - text: "Program and registration"  
+        #   href: 2025.html
+        # - text: "FAQ registration"
+        #   href: registration_faq.html
+        # - text: "FAQ speakers"
+        #   href: speaker.html
+        # - text: "FAQ submissions of contributions"
+        #   href: submission.html
+        # - text: "Restaurants in Basel"  
+        #   href: restaurants.html
     - text: "Testimonials"
       menu:
         - text: "Testimonials from 2022 workshop"  
