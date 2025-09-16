@@ -21,7 +21,17 @@ knitr::opts_chunk$set(echo = TRUE)
 path <- getwd()
 #path <- paste(path, "/data/2025", sep = "")
 
-sessions <- c("", ": Fast to market vs. robustness of the data", "", ": Estimands -- Celebrating the 5th anniversary of ICH E9(R1) -- what have we learned and where do we need to go?", ": Regulatory landscape in China", ": Patient preferences", ": Openstatsware - How can we build a scalable ecosystem?", ": Regulatory and HTA updates", ": Opportunities and barriers for innovative methodology in EU HTA", "")
+sessions <- c(": Overture: Strategic Priorities in Pharmaceutical Statistics", 
+              ": ICH E20 Guideline on Adaptive Designs for Clinical Trials -- A Critical Discussion from Different Perspectives", 
+              ": Anniversary session", 
+              ": From Trials to Target Populations: Extending Evidence for Decision-Making", 
+              ": Present a problem on 2-3 slides and receive input from a panel of regulators", 
+              ": From Black Box to Pandora’s Box: Navigating AI in Clinical Trials", 
+              ": Characterizing the Effect of Treatment Using Hierarchical Composite Endpoints – Risks and Benefits of Win Statistics and Beyond",
+              ": Keeping it Real or Losing Control? Adventures in Target Trial Emulation", 
+              ": The Added Value of Bayesian Methods for Pivotal Clinical Trials -- Just a Communication Issue?", 
+              ": How to Deal with Assumptions in Drug Development? What Insights Can We Gain from ICH M15?", 
+              "")
 
 ## read in data for recordings
 rec <- as.data.frame(read_excel(paste(path, "/recordings2025.xlsx", sep = ""), col_types = NULL))
@@ -51,23 +61,23 @@ Slidedecks and recordings will be continuously added as soon as we have them and
 <!-- cat(a) -->
 <!-- ``` -->
 
-<!-- # Material -->
+# Material
 
-<!-- ```{r mat1, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE} -->
-<!-- # how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434 -->
-<!-- out1 <- NULL -->
-<!-- ut <- unique(slid$Session) -->
+```{r mat1, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+ut <- unique(slid$Session)
 
-<!-- for (j in 1:length(ut)){ -->
-<!--     out1 <- c(out1, knit_expand(paste(path, "/_slides_display.qmd", sep = ""))) -->
-<!-- } -->
+for (j in 1:length(ut)){
+    out1 <- c(out1, knit_expand(paste(path, "/_slides_display.qmd", sep = "")))
+}
 
-<!-- # the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a -->
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
 
-<!-- a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE) -->
-<!-- ``` -->
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
 
-<!-- ```{r slides, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"} -->
-<!-- cat(a) -->
-<!-- ``` -->
+```{r slides, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
 
