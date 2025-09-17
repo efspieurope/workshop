@@ -43,6 +43,8 @@ slid <- as.data.frame(read_excel(paste(path, "/slides2025.xlsx", sep = ""), col_
 
 Slidedecks and recordings will be continuously added as soon as we have them and the presenter's consent.
 
+[Download all materials as .zip file](slides.zip)
+
 
 <!-- # Recordings -->
 
