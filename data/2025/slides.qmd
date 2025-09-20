@@ -46,22 +46,25 @@ Slidedecks and recordings will be continuously added as soon as we have them and
 [Download all materials as .zip file](slides.zip)
 
 
-<!-- # Recordings -->
+# Recordings
 
-<!-- Recordings of those sessions where all presenters have given consent: -->
+Recordings of those sessions where all presenters have given consent:
 
-<!-- ```{r rec1, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE} -->
-<!-- # how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434 -->
-<!-- out1 <- NULL -->
-<!-- out1 <- c(out1, knit_expand(paste(path, "/_rec_display.qmd", sep = ""))) -->
+```{r rec1, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+out1 <- NULL
+out1 <- c(out1, knit_expand(paste(path, "/_rec_display.qmd", sep = "")))
 
-<!-- # the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a -->
-<!-- a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE) -->
-<!-- ``` -->
+# the "knit" command somehow produces unwanted output, this is why I assign its output to a and use a separate chunk to display a
+a <- knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE)
+```
 
-<!-- ```{r recordings, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"} -->
-<!-- cat(a) -->
-<!-- ``` -->
+```{r recordings, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+cat(a)
+```
+
+
+
 
 # Material
 
