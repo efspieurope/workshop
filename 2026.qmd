@@ -32,6 +32,28 @@ The workshop will take place `r res["date"]` again at [Biozentrum](https://www.b
 
 <center>![](biozentrum.jpg)</center>
 
+
+# Deadlines
+
+## Call for short topics
+
+Like previous years, it is possible to submit a short topic for discussion with a panel of regulators. Submit your proposal to the Chair, `r res["chair"]`, by sending an e-mail to `r res["chairmail"]`. Deadline for submissions is `r res["deadline_short"]`.
+
+## Registration
+
+For face-to-face attendance: **`r colFmt(res["deadline_f2f"])`**.
+
+Registration platform will be turned off
+
+- if we have reached maximum capacity of 300 face-to-face participants or
+- for the respective option after the deadline,
+
+whatever happens first.
+
+For virtual attendance: **`r colFmt(res["deadline_virtual"])`**.
+
+
+
 <!-- <br> -->
 
 <!-- `r res["program"]`. -->
@@ -42,9 +64,6 @@ The workshop will take place `r res["date"]` again at [Biozentrum](https://www.b
 
 <!-- Members of [scientific committee](scicom.html). -->
 
-<!-- # Call for short topics -->
-
-<!-- Like previous years, it is possible to submit a short topic for discussion with a panel of regulators. Submit your proposal to the Chair, `r res["chair"]`, by sending an e-mail to `r res["chairmail"]`. Deadline for submissions is `r res["deadline_short"]`. -->
 
 <!-- # 2025 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop  -->
 

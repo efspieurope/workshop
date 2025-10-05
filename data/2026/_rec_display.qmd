@@ -1,0 +1,10 @@
+```{r echo = FALSE}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
+tab <- rec
+tab1 <- data.frame(cbind(1:nrow(tab), c(substr(sessions, 3, 1000)[c(1:4, 6:nrow(tab))], "Short Topics"), rep("", nrow(tab)), paste("[x](", tab$Recording, ")", sep = "")))
+tab1[tab$approved == 0, 4] <- ""
+
+kable(tab1, col.names = c("Number", "Session", "", "Link<br>(if available)"))
+```
+
