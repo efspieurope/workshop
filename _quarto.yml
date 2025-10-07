@@ -6,7 +6,7 @@ project:
     - testimonials2022.qmd
     #- data/2023
     #- data/2024
-    #- data/2025
+    - data/2025
     - data/2026
     #- data/2026/analysis2026.Rmd
     - testimonials2024.qmd
