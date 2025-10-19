@@ -28,7 +28,6 @@ project:
     - chairs.qmd
     - stats.qmd
     - chairs_instructions.qmd
-    - spirit.qmd
     - benefits.qmd
 
 website:
@@ -42,10 +41,6 @@ website:
           href: 2026.html
         # - text: "Program and registration"  
         #   href: 2025.html
-    - text: "About the workshop"
-      menu:
-        - text: "Spirit of the workshop"  
-          href: spirit.html
     - text: "FAQs"
       menu:
         # - text: "FAQ registration"
