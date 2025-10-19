@@ -27,6 +27,9 @@ project:
     - shorttopic.qmd
     - chairs.qmd
     - stats.qmd
+    - chairs_instructions.qmd
+    - spirit.qmd
+    - benefits.qmd
 
 website:
   title: "EFSPI regulatory statistics workshop"
@@ -39,14 +42,22 @@ website:
           href: 2026.html
         # - text: "Program and registration"  
         #   href: 2025.html
+    - text: "About the workshop"
+      menu:
+        - text: "Spirit of the workshop"  
+          href: spirit.html
+    - text: "FAQs"
+      menu:
         # - text: "FAQ registration"
         #   href: registration_faq.html
         # - text: "FAQ speakers"
         #   href: speaker.html
         # - text: "FAQ submissions of contributions"
         #   href: submission.html
-        # - text: "Restaurants in Basel"  
-        #   href: restaurants.html
+        # - text: "FAQ session chairs"
+        #   href: chairs_instructions.html
+        - text: "Restaurants in Basel"  
+          href: restaurants.html
     - text: "Testimonials"
       menu:
         - text: "Testimonials from 2022 workshop"  

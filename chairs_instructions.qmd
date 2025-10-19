@@ -1,5 +1,5 @@
 ---
-title: "Frequently asked questions for speakers and panelists"
+title: "Session chairs: instructions"
 date: last-modified
 output: 
   rmarkdown::html_document:
@@ -30,11 +30,11 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 
 # Introduction
 
-You have agreed to contribute to the `r res["program_workshop"]`. Many thanks for that!
+You have agreed to contribute to the `r res["program_workshop"]` as a session chair. Many thanks for that!
 
 # Scope and contact
 
-This document provides necessary information for contributors to the workshop. For any further questions please do not hesitate to reach out to one of the [local organizing committee members](local.html).
+This document provides necessary information for session chairs. For any further questions please do not hesitate to reach out to one of the [local organizing committee members](local.html).
 
 # Program
 
