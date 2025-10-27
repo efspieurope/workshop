@@ -1,0 +1,42 @@
+---
+title: "Linkedin posts reflecting on 2025 workshop"
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
+
+test25 <- as.data.frame(read_excel(paste(path, "/data/2025/testimonials2025.xlsx", sep = ""), col_types = NULL))
+test25[is.na(test25[, 2]), 2] <- ""
+```
+
+To get an idea about the special spirit of the workshop we link a few linkedin posts reflecting on the 2024 issue.
+
+```{r, include=TRUE, echo=FALSE}
+tab <- cbind(test25[, 1:2], paste("[link](", test25[, "Link"], ")", sep = ""))
+colnames(tab) <- c("Author", "Topic", "Link to post")
+kable(tab)
+```
+
+# Questions?
+
+For feedback and questions send an email to `r res["chairmail"]`.
+
+
+
