@@ -12,8 +12,11 @@ output:
 
 ```{r setup, include = FALSE, echo = FALSE}
 ## load packages
-packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
-for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+library("knitr")
+library("pander")
+library("reporttools")
+library("dplyr")
+library("readxl")
 
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -40,6 +43,10 @@ hta24 <- arrange(hta24, desc(Local), desc(HTA_SC), Gender, Last)
 sci25 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20250910_10th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
 sci25 <- dplyr::filter(sci25, (is.na(SciCom) == FALSE) & (SciCom == 1))
 sci25 <- arrange(sci25, desc(Local), desc(SciCom), Gender, Last)
+
+sci26 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20260819_11th_EFSPI_RegStat_Basel/SC_2026.xlsx", sep = ""), col_types = NULL, sheet = "SC"))
+sci26 <- dplyr::filter(sci26, (is.na(Committee) == FALSE) & (Committee %in% c("SC", "SC + OC")))
+sci26 <- arrange(sci26, desc(Committee), Gender, Last)
 ```
 
 # How to get on the scientific committee
@@ -49,6 +56,14 @@ Principles for joining the Scientific Committee have been outlined by EFSPI work
 # Members
 
 ::: {.panel-tabset .nav-pills}
+
+# 2026
+
+In 2026 the members of the scientific committee are (for regulators countries in parentheses):
+
+```{r, include=TRUE, echo=FALSE}
+kable(select(sci26, First, Last, Gender, Type, Affiliation), align = "llccl", col.names = c("First", "Last", "Gender", "Type", "Affiliation"))
+```
 
 # 2025
 
