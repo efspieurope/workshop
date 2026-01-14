@@ -12,8 +12,11 @@ output:
 
 ```{r setup, include = FALSE, echo = FALSE}
 ## load packages
-packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
-for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+library("knitr")
+library("pander")
+library("reporttools")
+library("dplyr")
+library("readxl")
 
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -35,7 +38,20 @@ sci24 <- arrange(sci24, desc(Local), desc(SciCom), Gender, Last)
 sci25 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20250910_10th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
 sci25 <- arrange(sci25, desc(Local), desc(SciCom), Gender, Last)
 
+sci26 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20260819_11th_EFSPI_RegStat_Basel/SC_2026.xlsx", sep = ""), col_types = NULL, sheet = "SC"))
+sci26 <- dplyr::filter(sci26, (is.na(Committee) == FALSE) & (Committee %in% c("SC + OC")))
+sci26 <- arrange(sci26, desc(Committee), Gender, Last)
+
 source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# 2026
+
+The members of the local organizing committee in 2025 are:
+
+```{r, include=TRUE, echo=FALSE}
+sci26[, "email"] <- mailmerge(paste(sci26[, "First"], " ", sci26[, "Last"], sep = ""), sci26[, "E-mail"])
+kable(sci26[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
 ```
 
 # 2025
@@ -43,8 +59,7 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 The members of the local organizing committee in 2025 are:
 
 ```{r, include=TRUE, echo=FALSE}
-sci25[, "email"] <- mailmerge(paste(sci25[, "First"], " ", sci25[, "Last"], sep = ""), sci25[, "email"])
-kable(filter(sci25, Local == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
+kable(filter(sci25, Local == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
 ```
 
 # 2024
