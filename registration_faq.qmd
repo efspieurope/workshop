@@ -50,12 +50,12 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 `r res["registration"]`.
 
-<!-- # Registration fees -->
+# Registration fees
 
-<!-- `r res["fee_f"]` Euro for face-to-face and `r res["fee_v"]` Euros for virtual attendance. To register please pay `r res["fee_f"]` / `r res["fee_v"]` Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the `r res["issue"]`.  -->
+`r res["fee_f"]` Euro for face-to-face and `r res["fee_v"]` Euros for virtual attendance. To register please pay `r res["fee_f"]` / `r res["fee_v"]` Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the `r res["issue"]`.
 
-<!-- <!-- Bank details: European Fed Stat Pharm Ind<br> --> -->
-<!-- <!-- Bank: HSBC<br> --> -->
+<!-- Bank details: European Fed Stat Pharm Ind<br> -->
+<!-- Bank: HSBC<br> -->
 <!-- IBAN EUR: CH60 0077 0250 6852 9200 3<br> -->
 <!-- IBAN CHF: CH87 0077 0250 6852 9200 2<br> -->
 <!-- Bank institute: Basler Kantonalbank<br> -->
@@ -63,7 +63,7 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 <!-- Owner: Basler Biometrische Sektion<br> -->
 <!-- Reference: Regulatory 25<br> -->
 
-<!-- Due to this informal registration process we can keep the price low. Therefore we can not accept credit card transfer and we cannot provide you with a formal invoice after the payment. In case you have any question on your payment, please contact `r res["cashiermail"]`. -->
+Due to this informal registration process we can keep the price low. Therefore we can not accept credit card transfer and we cannot provide you with a formal invoice after the payment. In case you have any question on your payment, please contact `r res["cashiermail"]`.
 
 # Registration deadline
 
@@ -96,39 +96,37 @@ Yes. Slidedecks will be posted [here](data/2026/slides.html), `r colFmt("pending
 
 <!-- See [here](dialin_participants.html). -->
 
-<!-- # What block booking options are available for companies? -->
+# What block booking options are available for companies?
 
-<!-- ## Face-to-face block booking -->
+## Face-to-face block booking
 
-<!-- We have updated our block bocking offerings compared to previous years: -->
+We have updated our block bocking offerings compared to previous years:
 
-<!-- - Block booking for face-to-face attendance:  -->
-<!--   - 8500 Euro up to 50 participants per company.  -->
-<!--   - 10500 Euro for 51 to 70 participants.   -->
-<!--   - 12500 Euro for 71 to 90 participants.  -->
-<!--   - Beyond 91 face-to-face participants per company we charge 12500 + 120 Euro per each additional participant.  -->
+- Block booking for face-to-face attendance:
+  - 8500 Euro up to 35 participants per company, i.e. you reach break even with this option if at least 29 colleagues from your company register for face-to-face attendance to the workshop.
+  - If your company intends to register more than 35 participants for face-to-face attendance please reach out to `r res["chairmail"]`.
 
-<!-- For all face-to-face block bookings unlimited virtual attendees are included as well. -->
+For all face-to-face block bookings unlimited virtual attendees are included as well.
 
-<!-- `r colFmt("The conference organizers reserve the right to cap the number of registered face-to-face attendees for a company with block booking, in order to keep catering costs under control. This never happened so far though.")` -->
+`r colFmt("The conference organizers reserve the right to cap the number of registered face-to-face attendees for a company with block booking, in order to keep catering costs under control. This never happened so far though.")`
 
-<!-- ## Virtual block-booking -->
+## Virtual block-booking
 
-<!-- - Block booking for virtual attendance: 2800 Euro, i.e. you reach break-even with this option if at least 40 colleagues from your company register for virtual attendance to the workshop. -->
+- Block booking for virtual attendance: 3000 Euro, i.e. you reach break-even with this option if at least 30 colleagues from your company register for virtual attendance to the workshop.
 
-<!-- ## Interested in a block booking for your company? -->
+## Interested in a block booking for your company?
 
-<!-- Please reach out to `r res["cashiermail"]` if your company is interested in one of these options. -->
+Please reach out to `r res["cashiermail"]` if your company is interested in one of these options.
 
-<!-- # Block booking for face-to-face AND virtual participation: how to register -->
+# Block booking for face-to-face AND virtual participation: how to register
 
-<!-- For `r res["year"]` the following companies have registered for a comprehensive block booking so far: -->
+For `r res["year"]` the following companies have registered for a comprehensive block booking so far:
 
-<!-- ## Roche, Boehringer -->
+## None yet
 
-<!-- All colleagues working at Roche or Boehringer do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r res["reg_form"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking. -->
+All colleagues working at companies with a block booking do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r res["reg_form"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
 
-<!-- To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes. -->
+To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes.
 
 <!-- ## Novartis -->
 
@@ -137,11 +135,11 @@ Yes. Slidedecks will be posted [here](data/2026/slides.html), `r colFmt("pending
 <!-- - If you wish to attend in person, please contact [Bibi Blatna](mailto:bibiana.blatna@novartis.com). -->
 <!-- - If you wish to attend virtually, please register for virtual attendance using `r res["reg_form"]`. -->
 
-<!-- # Block booking for virtual participation only: how to register -->
+# Block booking for virtual participation only: how to register
 
-<!-- For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same. -->
+For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
 
-<!-- You simply register via `r res["reg_form"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking. -->
+You simply register via `r res["reg_form"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
 
 # My company (`r res["block_virtual"]`) has a block booking for virtual participation only. I still want to attend face-to-face. How much do I need to pay?
 

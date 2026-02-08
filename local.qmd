@@ -39,19 +39,18 @@ sci25 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/2
 sci25 <- arrange(sci25, desc(Local), desc(SciCom), Gender, Last)
 
 sci26 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20260819_11th_EFSPI_RegStat_Basel/SC_2026.xlsx", sep = ""), col_types = NULL, sheet = "SC"))
-sci26 <- dplyr::filter(sci26, (is.na(Committee) == FALSE) & (Committee %in% c("SC + OC")))
-sci26 <- arrange(sci26, desc(Committee), Gender, Last)
+sci26 <- arrange(sci26, Gender, Last)
 
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
 # 2026
 
-The members of the local organizing committee in 2025 are:
+The members of the local organizing committee in 2026 are:
 
 ```{r, include=TRUE, echo=FALSE}
 sci26[, "email"] <- mailmerge(paste(sci26[, "First"], " ", sci26[, "Last"], sep = ""), sci26[, "E-mail"])
-kable(sci26[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
+kable(filter(sci26, LET == 1 | OC == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
 ```
 
 # 2025
