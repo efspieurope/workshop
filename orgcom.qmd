@@ -1,5 +1,5 @@
 ---
-title: "Local organizing Committee"
+title: "Organizing Committee"
 output: 
   rmarkdown::html_document:
     highlight: pygments
@@ -44,48 +44,48 @@ sci26 <- arrange(sci26, Gender, Last)
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
-The local organizing committee takes care of the event organisation on site in Basel.
+The organizing committee strategically leads the workshop, coordinates the Scientific Committee, and works with the [local organizing committee](local.html) for the on-site organization.
 
 # 2026
 
-The members of the local organizing committee in 2026 are:
+The members of the organizing committee in 2026 are:
 
 ```{r, include=TRUE, echo=FALSE}
 sci26[, "email"] <- mailmerge(paste(sci26[, "First"], " ", sci26[, "Last"], sep = ""), sci26[, "E-mail"])
-kable(filter(sci26, LET == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
+kable(filter(sci26, OC == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
 ```
 
 # 2025
 
-The members of the local organizing committee in 2025 were:
+The members of the organizing committee in 2025 are:
 
 ```{r, include=TRUE, echo=FALSE}
-kable(filter(sci25, Local == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
+kable(filter(sci25, OrgCom == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
 ```
 
 # 2024
 
-The members of the local organizing committee in 2024 were:
+The members of the organizing committee in 2024 were:
 
 ```{r, include=TRUE, echo=FALSE}
 #sci24[, "email"] <- paste("[", sci24[, "First"], " ", sci24[, "Last"], "](mailto:", sci24[, "email"], ")", sep = "")
-kable(filter(sci24, Local == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
+kable(filter(sci24, OrgCom == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
 ```
 
 # 2023
 
-The members of the local organizing committee in 2023 were:
+The members of the organizing committee in 2023 were:
 
 ```{r, include=TRUE, echo=FALSE}
-kable(filter(sci23, Local == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
+kable(filter(sci23, OrgCom == 1)[, c("First", "Last", "Type", "Affiliation")], align = "ll")
 ```
 
 # 2022
 
-The members of the local organizing committee in 2022 were:
+The members of the organizing committee in 2022 were:
 
 ```{r, include=TRUE, echo=FALSE}
-kable(select(filter(sci22, Local == 1), -Local, -SciCom, -email, -Gender, -OrgCom), align = "llccl")
+kable(select(filter(sci22, OrgCom == 1), -Local, -SciCom, -email, -Gender), align = "llccl")
 ```
 
 # Questions?

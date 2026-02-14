@@ -29,6 +29,8 @@ project:
     - stats.qmd
     - chairs_instructions.qmd
     - benefits.qmd
+    - orgcom.qmd
+    - whyattend.qmd
 
 website:
   title: "EFSPI regulatory statistics workshop"
@@ -39,6 +41,8 @@ website:
       menu:
         - text: "Save the date"  
           href: 2026.html
+        - text: "Why should I attend the workshop?"  
+          href: whyattend.html
     - text: "FAQs"
       menu:
         - text: "FAQ registration"
@@ -69,6 +73,8 @@ website:
           href: chairs.html
         - text: "Local organizing committee"
           href: local.html
+        - text: "Organizing committee"
+          href: orgcom.html
         - text: "Scientific committee"
           href: scicom.html
 
