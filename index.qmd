@@ -32,11 +32,11 @@ res <- inputData()
 
 # EFSPI regulatory statistics workshop
 
-Each year, a small team of volunteers organizes the [EFSPI Regulatory Statistics Workshop](http://www.efspiworkshop.org) on behalf of [EFSPI](http://www.efspi.org). The goal of the workshop is to bring together statisticians and partner functions from pharmaceutical industry, regulatory agencies, and academia to discuss topics of common interest.
+Each year, a small team of volunteers organizes the _EFSPI Regulatory Statistics Workshop_ on behalf of [EFSPI](http://www.efspi.org). The goal of the workshop is to bring together statisticians and partner functions from pharmaceutical industry, regulatory agencies, and academia to discuss topics of common interest.
 
 The unique feature of the workshop is an atmosphere of collaboration and open discussion of statistical and regulatory science in general. Over the years the workshop has sharpened its profile and with regular participation of speakers from regulatory agencies such as EMA, many European regulatory agencies, FDA, PMDA, MHRA, and many more has become a voice in the global dialogue on regulatory statistics. Furthermore, with HTA considerations becoming ever more important in Europe and beyond topics pertinent to HTA are also increasingly discussed.
 
-Since its inception in 2016 the workshop has always taken place in Basel, Switzerland. Details about the `r res["year"]` issue are available [here](next.html).
+Since its inception in 2016 the workshop has always taken place in Basel, Switzerland. Details about the `r res["year"]` issue are available `r res["current_link"]`.
 
 # Parallel workshop in the US
 

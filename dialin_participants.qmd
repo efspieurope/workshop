@@ -25,28 +25,30 @@ res <- inputData()
 source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
-# Introduction
+Will be added later.
 
-You have registered for the EFSPI regulatory statistics workshop. This document provides necessary information for virtual participants to dial in to the zoom meetings at the day of the event. For any further questions please do not hesitate to reach out to one of the [local organizing committee members](local.html).
+<!-- # Introduction -->
 
-# Zoom instructions
+<!-- You have registered for the EFSPI regulatory statistics workshop. This document provides necessary information for virtual participants to dial in to the zoom meetings at the day of the event. For any further questions please do not hesitate to reach out to one of the [local organizing committee members](local.html). -->
 
-- Every registered participant has received calendar invites for both days. These contain the dial-in details.
-- `r colFmt("Day 1")`: Use this [zoom link](`r res["zoom1"]`) to dial in, with passcode `r as.character(res["zoomcode1"])`
-- `r colFmt("Day 2")`: Use this [zoom link](`r res["zoom2"]`) to dial in, with passcode `r as.character(res["zoomcode2"])`
-- `r colFmt("Day 3")`: Use this [zoom link](`r res["zoom3"]`) to dial in, with passcode `r as.character(res["zoomcode3"])`
-- Attendees are invited to ask questions through zoom's Q&A functionality.
-- Status of registrations: Find this [here](https://efspieurope.github.io/workshop/data/2025/analysis2025.html). 
+<!-- # Zoom instructions -->
 
-# Face-to-face attendance
+<!-- - Every registered participant has received calendar invites for both days. These contain the dial-in details. -->
+<!-- - `r colFmt("Day 1")`: Use this [zoom link](`r res["zoom1"]`) to dial in, with passcode `r as.character(res["zoomcode1"])` -->
+<!-- - `r colFmt("Day 2")`: Use this [zoom link](`r res["zoom2"]`) to dial in, with passcode `r as.character(res["zoomcode2"])` -->
+<!-- - `r colFmt("Day 3")`: Use this [zoom link](`r res["zoom3"]`) to dial in, with passcode `r as.character(res["zoomcode3"])` -->
+<!-- - Attendees are invited to ask questions through zoom's Q&A functionality. -->
+<!-- - Status of registrations: Find this [here](https://efspieurope.github.io/workshop/data/2025/analysis2025.html).  -->
 
-- **Venue**: The event takes place in the Biozentrum in Basel ([directions](next.html)), in the Maurice Müller Lecture hall in the basement.
-- **WLAN in the Biozentrum**: Connect to Unibas visitor. It will ask for your mobile phone number for confirmation.
-- Upon arrival we ask you to register at the conference desk and to pick up your badge.
+<!-- # Face-to-face attendance -->
 
-# Posting of slides and recordings
+<!-- - **Venue**: The event takes place in the Biozentrum in Basel ([directions](next.html)), in the Maurice Müller Lecture hall in the basement. -->
+<!-- - **WLAN in the Biozentrum**: Connect to Unibas visitor. It will ask for your mobile phone number for confirmation. -->
+<!-- - Upon arrival we ask you to register at the conference desk and to pick up your badge. -->
 
-As soon as we get approval from speakers links to slidedecks and recordings will be posted [here](past.html). This may take a few days or even weeks, depending on the responsiveness of contributors. `r colFmt("Please do not send emails to us asking about postings. They will happen for those contributors who agree.")`
+<!-- # Posting of slides and recordings -->
+
+<!-- As soon as we get approval from speakers links to slidedecks and recordings will be posted [here](past.html). This may take a few days or even weeks, depending on the responsiveness of contributors. `r colFmt("Please do not send emails to us asking about postings. They will happen for those contributors who agree.")` -->
 
 # Questions?
    

@@ -1,5 +1,5 @@
 ---
-title: "Frequently asked questions for speakers and panelists"
+title: "Frequently asked questions for contributors (Speakers, Panelists, Chairs)"
 date: last-modified
 output: 
   rmarkdown::html_document:
@@ -39,11 +39,11 @@ This document provides necessary information for contributors to the workshop. F
 
 # Registration
 
-Please register yourself using `r res["registration"]`.
+Even if you have been invited, all speakers, panelists and chairs are kindly requested to register themselves. For registration, please `r res["registration"]`.
 
-# Benefits
+# Reimbursement
 
-See [here](benefits.html).
+See [here](reimbursement.html).
 
 # Regulatory dinner
 

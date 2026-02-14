@@ -7,7 +7,7 @@ project:
     - data/2023
     - data/2024
     - data/2025
-    #- data/2026
+    - data/2026/slides.qmd
     #- data/2026/analysis2026.Rmd
     - testimonials2024.qmd
     - feedback.qmd        
@@ -47,7 +47,7 @@ website:
       menu:
         - text: "FAQ registration"
           href: registration_faq.html
-        - text: "FAQ speakers"
+        - text: "FAQ contributors (Speakers, Panelists, Chairs)"
           href: speaker.html
         # - text: "FAQ submissions of contributions"
         #   href: submission.html

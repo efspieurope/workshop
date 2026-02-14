@@ -42,11 +42,11 @@ This document provides necessary information for session chairs. For any further
 
 # Registration
 
-Please register yourself using `r res["registration"]`.
+Even if you have been invited, all speakers, panelists and chairs are kindly requested to register themselves. For registration, please `r res["registration"]`.
 
-# Benefits
+# Reimbursement
 
-See [here](benefits.html).
+See [here](reimbursement.html).
 
 # Regulatory dinner
 

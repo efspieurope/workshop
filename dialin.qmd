@@ -30,36 +30,40 @@ source(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_B
 dat <- with(filter(reg2, type %in% c("HTA", "Regulator")), table(inst2, mode))
 ```
 
-# Introduction
+Will be added later.
 
-You have agreed to contribute to the EFSPI regulatory statistics workshop. Many thanks for that!
 
-# Scope and contact
 
-This document provides necessary information for virtual contributors to dial in to the zoom meetings at the day of the event. For any further questions please do not hesitate to reach out to one of the [local organizing committee members](local.html).
+<!-- # Introduction -->
 
-# Program
+<!-- You have agreed to contribute to the EFSPI regulatory statistics workshop. Many thanks for that! -->
 
-`r inputData()["program"]`.
+<!-- # Scope and contact -->
 
-# Dial-in instructions
+<!-- This document provides necessary information for virtual contributors to dial in to the zoom meetings at the day of the event. For any further questions please do not hesitate to reach out to one of the [local organizing committee members](local.html). -->
 
-We would like to inform you about how to join the zoom TC, in case you dial in remotely.
+<!-- # Program -->
 
-## Zoom
+<!-- `r inputData()["program"]`. -->
 
-- All of you have been set up as **Zoom Panelist** for both days. You should have received a personal email with your own personalized link to join the webinar. The email is from Laurence Guillier from the email address <no-reply@zoom.us> with subject line _Webinar host invited you to be panelist for 9th EFSPI Regulatory Statistics Workshop_Day 1/2_.
-- `r colFmt("Please exclusively use the link in the above email and do not join as an attendee - otherwise you will not be in the practice session prior to the TC")`. 
-- We would appreciate if you could dial in about 20min early into the practice session, for us to check that everything works. Attendees can dial in but will not be in the webinar before we let them in. You will not need to log out from this session and can just stay in.
-- Only panelists will have the option to turn on their camera and microphon. Attendees can only speak when we unmute them (which we do not plan for, we will invite them to ask questions through the chat).
-- Status of registrations: Find this [here](https://efspieurope.github.io/workshop/data/2023/analysis2023.html). We have `r nrow(reg2)` registrations from `r length(unique(reg2$country2))` countries as of now, with `r table(reg2$mode)[1]` face-to-face. `r sum(dat)` colleagues from regulatory agencies registered so far.
-- The current version of the program is `r inputData()["program"]`.
+<!-- # Dial-in instructions -->
 
-## Face-to-face attendance
+<!-- We would like to inform you about how to join the zoom TC, in case you dial in remotely. -->
 
-- **Venue**: The event takes place in the Biozentrum in Basel ([directions](next.html)), in the Maurice Müller Lecture hall in the basement.
-- **WLAN in the Biozentrum**: Connect to Unibas visitor. It will ask for your mobile phone number for confirmation.
-- Upon arrival we ask you to register at the conference desk and to pick up your badge.
+<!-- ## Zoom -->
+
+<!-- - All of you have been set up as **Zoom Panelist** for both days. You should have received a personal email with your own personalized link to join the webinar. The email is from Laurence Guillier from the email address <no-reply@zoom.us> with subject line _Webinar host invited you to be panelist for 9th EFSPI Regulatory Statistics Workshop_Day 1/2_. -->
+<!-- - `r colFmt("Please exclusively use the link in the above email and do not join as an attendee - otherwise you will not be in the practice session prior to the TC")`.  -->
+<!-- - We would appreciate if you could dial in about 20min early into the practice session, for us to check that everything works. Attendees can dial in but will not be in the webinar before we let them in. You will not need to log out from this session and can just stay in. -->
+<!-- - Only panelists will have the option to turn on their camera and microphon. Attendees can only speak when we unmute them (which we do not plan for, we will invite them to ask questions through the chat). -->
+<!-- - Status of registrations: Find this [here](https://efspieurope.github.io/workshop/data/2023/analysis2023.html). We have `r nrow(reg2)` registrations from `r length(unique(reg2$country2))` countries as of now, with `r table(reg2$mode)[1]` face-to-face. `r sum(dat)` colleagues from regulatory agencies registered so far. -->
+<!-- - The current version of the program is `r inputData()["program"]`. -->
+
+<!-- ## Face-to-face attendance -->
+
+<!-- - **Venue**: The event takes place in the Biozentrum in Basel ([directions](next.html)), in the Maurice Müller Lecture hall in the basement. -->
+<!-- - **WLAN in the Biozentrum**: Connect to Unibas visitor. It will ask for your mobile phone number for confirmation. -->
+<!-- - Upon arrival we ask you to register at the conference desk and to pick up your badge. -->
    
 # Questions?
 

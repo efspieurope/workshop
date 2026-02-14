@@ -1,0 +1,51 @@
+---
+title: "Benefits for contributors"
+date: last-modified
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+sci22 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
+reimbursement <- as.data.frame(read_excel(paste(path, "/data/reimbursement.xlsx", sep = ""), col_types = NULL))
+
+source(paste(path, "/functions/inputData.r", sep = ""))
+res <- inputData()
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+As a premise note that [EFSPI](https://efspi.org/) is non-profit making and as a principle does not pay an honorarium.
+
+# Registration
+
+See [here](registration_faq.html#registration-fee-waived).
+
+# Reimbursement
+
+We are able to offer reimbursement for travel (2nd class / economy) and accommodation for:
+
+```{r, include=TRUE, echo=FALSE}
+reimbursement[is.na(reimbursement)] <- ""
+kable(reimbursement, align = "ll", row.names = FALSE, col.names = "")
+```
+
+# Questions?
+
+For feedback and questions send an email to `r res["chairmail"]`.
+
+
+

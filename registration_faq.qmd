@@ -20,6 +20,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## read in data
 path <- getwd()
+sci22 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
+waived <- as.data.frame(read_excel(paste(path, "/data/waived.xlsx", sep = ""), col_types = NULL))
+waived_who <- as.data.frame(read_excel(paste(path, "/data/waived_who.xlsx", sep = ""), col_types = NULL))
 
 source(paste(path, "/functions/inputData.r", sep = ""))
 res <- inputData()
@@ -52,7 +55,7 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 # Registration fees
 
-`r res["fee_f"]` Euro for face-to-face and `r res["fee_v"]` Euros for virtual attendance. To register please pay `r res["fee_f"]` / `r res["fee_v"]` Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the `r res["issue"]`.
+`r res["fee_f"]` Euro for face-to-face and `r res["fee_v"]` Euro for virtual attendance. To register please pay `r res["fee_f"]` / `r res["fee_v"]` Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the `r res["issue"]`.
 
 <!-- Bank details: European Fed Stat Pharm Ind<br> -->
 <!-- Bank: HSBC<br> -->
@@ -64,6 +67,26 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 <!-- Reference: Regulatory 25<br> -->
 
 Due to this informal registration process we can keep the price low. Therefore we can not accept credit card transfer and we cannot provide you with a formal invoice after the payment. In case you have any question on your payment, please contact `r res["cashiermail"]`.
+
+# Registration fee waived
+
+The registration fee is waived for:
+
+```{r, include=TRUE, echo=FALSE}
+waived_who[is.na(waived_who)] <- ""
+kable(waived_who[waived_who$waived == 1, "who"], align = "ll", row.names = FALSE, col.names = "")
+```
+
+When registering simply chose the virtual or face-to-face option in `r res["reg_form"]` but do not pay the registration fee.
+
+The registration fee is **NOT** waived for
+
+
+```{r, include=TRUE, echo=FALSE}
+waived_who[is.na(waived_who)] <- ""
+kable(waived_who[waived_who$waived == 0, "who"], align = "ll", row.names = FALSE, col.names = "")
+```
+
 
 # Registration deadline
 
@@ -82,7 +105,7 @@ For virtual attendance: **`r colFmt(res["deadline_virtual"])`**.
 
 # Confirmation of registration
 
-Some time after registration (it may take 1-2 weeks) you will receive calendar invites for the two and a half days. Please watch out for these invites, this is your confirmation of registration. If you did not receive them there is a high probability you entered your email address with a typo. If that is the case please re-register with the correct email address.
+Some time after registration (it may take 1-2 weeks) you will receive calendar invites for the two days. Please watch out for these invites, this is your confirmation of registration. If you did not receive them there is a high probability you entered your email address with a typo. If that is the case please re-register with the correct email address.
 
 # Will the event be recorded?
 
@@ -112,7 +135,7 @@ For all face-to-face block bookings unlimited virtual attendees are included as 
 
 ## Virtual block-booking
 
-- Block booking for virtual attendance: 3000 Euro, i.e. you reach break-even with this option if at least 30 colleagues from your company register for virtual attendance to the workshop.
+- Block booking for virtual attendance: 3000 Euro for an unlimited number of participants per company, i.e. you reach break-even with this option if at least 30 colleagues from your company register for virtual attendance to the workshop.
 
 ## Interested in a block booking for your company?
 
@@ -126,7 +149,7 @@ For `r res["year"]` the following companies have registered for a comprehensive 
 
 All colleagues working at companies with a block booking do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r res["reg_form"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
 
-To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes.
+Please indicate your expected participation in the meals / get‑together as accurately as possible. This information will help us plan the logistics effectively.
 
 <!-- ## Novartis -->
 
