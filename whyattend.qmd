@@ -38,16 +38,18 @@ res <- inputData()
 
 On top of the above the registration fee pays for:
 
-## Face-to-face or virtual attendance
+## If either you register for face-to-face or virtual attendance
 
 - Travel and accommodation for invited speakers for academic institutions and regulatory agencies (industry is self-paying, even if invited).
 - Live broadcast of all sessions.
 - Access to slidedecks and recordings after the entire event.
 
-## Face-to-face attendance only
+## For face-to-face registration only
 
 - The very nice venue: [Biozentrum](https://www.biozentrum.unibas.ch/) in beautiful [Basel](https://www.basel.com/en).
 - Coffee, tea, snacks, meals for two days.
+- Informal networking with peers from regulatory agencies, academia and industry, and eSIG members during the poster session.
+ 
 
 # What do I not pay for with my registration fee?
 
