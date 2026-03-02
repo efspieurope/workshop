@@ -32,6 +32,11 @@ The workshop will take place `r res["date"]` again at [Biozentrum](https://www.b
 
 <center>![](biozentrum.jpg)</center>
 
+# Program and registration
+
+`r res["program"]`.
+
+`r res["registration"]`.
 
 # Deadlines
 
