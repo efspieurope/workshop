@@ -28,8 +28,8 @@ inputData <- function(path = getwd(), y = 2026){
 
   # intermezzo
   data["program_workshop"] <- data["issue"]
-  data["program"] <- "Program is not available yet"
-  data["registration"] <- "Registration is not open yet"
+  #data["program"] <- "Program is not available yet"
+  #data["registration"] <- "Registration is not open yet"
     
   return(data)
 }
