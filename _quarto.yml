@@ -10,6 +10,8 @@ project:
     - data/2026/slides.qmd
     #- data/2026/analysis2026.Rmd
     - testimonials2024.qmd
+    - testimonials2025.qmd
+    - testimonials2026.qmd
     - feedback.qmd        
     - 2026.qmd            
     - past.qmd            

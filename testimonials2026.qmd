@@ -22,8 +22,8 @@ path <- getwd()
 source(paste(path, "/functions/inputData.r", sep = ""))
 res <- inputData()
 
-test25 <- as.data.frame(read_excel(paste(path, "/data/2026/testimonials2026.xlsx", sep = ""), col_types = NULL))
-test25[is.na(test26[, 2]), 2] <- ""
+test26 <- as.data.frame(read_excel(paste(path, "/data/2026/testimonials2026.xlsx", sep = ""), col_types = NULL))
+test26[is.na(test26[, 2]), 2] <- ""
 ```
 
 To get an idea about the special spirit of the workshop we link a few linkedin posts reflecting on the 2024 issue.
