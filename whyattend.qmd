@@ -26,7 +26,7 @@ res <- inputData()
 
 # Why should I attend the EFSPI regulatory statistics workshop at all?
 
-- Each year, a [scientific committee](scicom.html) of statistical key opinion leaders from regulatory agencies and industry alike spend lots of time and energy to craft a program that allows exposition and discussion of key drug development topics of mutual interest. 
+- Each year, a [scientific committee](scicom.html) of statistical key opinion leaders from regulatory agencies and industry alike spend lots of time and energy to craft a program that allows exposition and discussion of key drug development topics of mutual interest. `r res["program"]`.
 - Different from most other scientific conferences, all presentations and discussions are by invitation only, what allows to offer tailored and coherent sessions.
 - The focus of the workshop is less on presentation of scientific results and statistical methods. Rather, the format and style is such that it fosters discussions among presenters and attendees in an open, engaging, and informal way. This, during the sessions and also during the breaks and the social event.
 - Each year, several hundred drug developers from Europe, and often beyond, attend the workshop. The venue, together with extended breaks between sessions offer ample opportunity to interact, discuss, and drink coffee together with industry peers and regulatory colleagues (who are very accessible during the workshop).
