@@ -143,7 +143,7 @@ Please reach out to `r res["cashiermail"]` if your company is interested in one 
 
 For `r res["year"]` the following companies have registered for a comprehensive block booking so far:
 
-## None yet
+## `r res["block_f2f"]`
 
 All colleagues working at companies with a block booking do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r res["reg_form"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
 
@@ -158,7 +158,7 @@ Please indicate your expected participation in the meals / get‑together as acc
 
 # Block booking for virtual participation only: how to register
 
-For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
+For `r res["year"]`, `r res["block_virtual"]` have a a block booking for virtual participation, i.e. all colleagues working at these companies do not need to pay a registration fee for virtual participation. Face-to-face registration fee remains the same.
 
 You simply register via `r res["reg_form"]` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
 
