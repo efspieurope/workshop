@@ -230,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="data-status" class="level1">
 <h1>Data status</h1>
-<p>Data as of 2026-03-06 at 14:48:24.</p>
+<p>Data as of 2026-03-18 at 14:54:17.</p>
 </section>
 <section id="registrations" class="level1 tabset tabset-fade tabset-pills">
 <h1 class="tabset tabset-fade tabset-pills">Registrations</h1>
@@ -271,16 +271,15 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<!-- ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10} -->
-<!-- t2 <- with(reg2, filter(reg2, type %in% "Regulator")) -->
-
-<!-- t2 <- with(t2, table(country2)) -->
-<!-- t2 <- prepTable(t2 = t2, cut = 1) -->
-<!-- par(las = 2, mar = c(21, 4.5, 3, 1)) -->
-<!-- ylim <- c(0, 1.4 * max(t2)) -->
-<!-- xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg2)[1], "\n institution", sep = ""), col = 4, ylim = ylim) -->
-<!-- text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90) -->
-<!-- ``` -->
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <!-- ```{r, echo = FALSE, eval = TRUE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6} -->
 
 <!-- dat <- with(filter(reg2, type %in% c("HTA", "Regulator")[2]), table(inst2, mode)) -->
@@ -312,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2026_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -323,7 +322,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2026_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1440"></p>
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1440"></p>
 </figure>
 </div>
 </div>
@@ -334,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2026_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -345,7 +344,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2026_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -360,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2026_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -378,21 +377,53 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Company</td>
+<td style="text-align: left;">Roche</td>
 <td style="text-align: left;">Novartis</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Pre-booked F2F seats</td>
-<td style="text-align: left;">30</td>
+<td style="text-align: left;">35</td>
+<td style="text-align: left;">35</td>
 </tr>
 </tbody>
 </table>
 </div>
-<!-- ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE} -->
-<!-- library(arsenal) -->
-
-<!-- tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% f2fblock)) -->
-<!-- summary(tab1) -->
-<!-- ``` -->
+<table class="table">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 18%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Novartis (N=4)</th>
+<th style="text-align: center;">Roche (N=29)</th>
+<th style="text-align: center;">Total (N=33)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>mode</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;Face-to-face (300 Euro)</td>
+<td style="text-align: center;">0 (0.0%)</td>
+<td style="text-align: center;">27 (93.1%)</td>
+<td style="text-align: center;">27 (81.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;Virtual (100 Euro)</td>
+<td style="text-align: center;">4 (100.0%)</td>
+<td style="text-align: center;">2 (6.9%)</td>
+<td style="text-align: center;">6 (18.2%)</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <table class="table">
@@ -405,9 +436,9 @@ ul.task-list li input[type="checkbox"] {
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
-<th style="text-align: center;">Bayer (N=1)</th>
-<th style="text-align: center;">Merck KGaA (N=17)</th>
-<th style="text-align: center;">Total (N=18)</th>
+<th style="text-align: center;">Bayer (N=3)</th>
+<th style="text-align: center;">Merck KGaA (N=33)</th>
+<th style="text-align: center;">Total (N=36)</th>
 </tr>
 </thead>
 <tbody>
@@ -419,15 +450,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td style="text-align: left;">&nbsp;&nbsp;&nbsp;Face-to-face (300 Euro)</td>
-<td style="text-align: center;">1 (100.0%)</td>
-<td style="text-align: center;">1 (5.9%)</td>
-<td style="text-align: center;">2 (11.1%)</td>
+<td style="text-align: center;">3 (100.0%)</td>
+<td style="text-align: center;">1 (3.0%)</td>
+<td style="text-align: center;">4 (11.1%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">&nbsp;&nbsp;&nbsp;Virtual (100 Euro)</td>
 <td style="text-align: center;">0 (0.0%)</td>
-<td style="text-align: center;">16 (94.1%)</td>
-<td style="text-align: center;">16 (88.9%)</td>
+<td style="text-align: center;">32 (97.0%)</td>
+<td style="text-align: center;">32 (88.9%)</td>
 </tr>
 </tbody>
 </table>
@@ -446,7 +477,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2026_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -457,7 +488,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2026_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -468,7 +499,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2026_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -479,7 +510,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="analysis2026_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis2026_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -498,8 +529,8 @@ ul.task-list li input[type="checkbox"] {
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
-<th style="text-align: center;">Roche (N=17)</th>
-<th style="text-align: center;">Total (N=17)</th>
+<th style="text-align: center;">Roche (N=27)</th>
+<th style="text-align: center;">Total (N=27)</th>
 </tr>
 </thead>
 <tbody>
@@ -510,13 +541,13 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td style="text-align: left;">&nbsp;&nbsp;&nbsp;show</td>
-<td style="text-align: center;">16 (94.1%)</td>
-<td style="text-align: center;">16 (94.1%)</td>
+<td style="text-align: center;">26 (96.3%)</td>
+<td style="text-align: center;">26 (96.3%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">&nbsp;&nbsp;&nbsp;no show</td>
-<td style="text-align: center;">1 (5.9%)</td>
-<td style="text-align: center;">1 (5.9%)</td>
+<td style="text-align: center;">1 (3.7%)</td>
+<td style="text-align: center;">1 (3.7%)</td>
 </tr>
 </tbody>
 </table>

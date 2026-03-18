@@ -77,16 +77,16 @@ text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", se
  
 ## Regulatory colleagues
 
-<!-- ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10} -->
-<!-- t2 <- with(reg2, filter(reg2, type %in% "Regulator")) -->
-<!-- t2 <- with(t2, table(country2)) -->
-<!-- t2 <- prepTable(t2 = t2, cut = 1) -->
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 10}
+t2 <- with(reg2, filter(reg2, type %in% "Regulator"))
+t2 <- with(t2, table(country2))
+t2 <- prepTable(t2 = t2, cut = 1)
 
-<!-- par(las = 2, mar = c(21, 4.5, 3, 1)) -->
-<!-- ylim <- c(0, 1.4 * max(t2)) -->
-<!-- xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg2)[1], "\n institution", sep = ""), col = 4, ylim = ylim) -->
-<!-- text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90) -->
-<!-- ``` -->
+par(las = 2, mar = c(21, 4.5, 3, 1))
+ylim <- c(0, 1.4 * max(t2))
+xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg2)[1], "\n institution", sep = ""), col = 4, ylim = ylim)
+text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, offset = 2, cex = 0.8, col = 1, srt = 90)
+```
 
 
 <!-- ```{r, echo = FALSE, eval = TRUE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 6} -->
@@ -217,11 +217,11 @@ kable(t(cbind("Company" = f2fblock, "Pre-booked F2F seats" = f2fblock_n)))
 
 
 
-<!-- ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE} -->
-<!-- library(arsenal) -->
-<!-- tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% f2fblock)) -->
-<!-- summary(tab1) -->
-<!-- ``` -->
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+library(arsenal)
+tab1 <- tableby(inst2 ~ mode, total = TRUE, test = FALSE, data = filter(reg2, inst2 %in% f2fblock))
+summary(tab1)
+```
 
 ## Registrations of members of companies with virtual block booking
 
