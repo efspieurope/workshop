@@ -57,7 +57,8 @@ The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your 
 
 `r res["fee_f"]` Euro for face-to-face and `r res["fee_v"]` Euro for virtual attendance. To register please pay `r res["fee_f"]` / `r res["fee_v"]` Euro (depending on whether you attend in-person or virtually) to EFSPI as contribution to the `r res["issue"]`.
 
-IBAN: DK4170450001632890<br><br>
+Swift/BIC: SYBKDK22<br>
+IBAN: DK4170450001632890<br>
 EFSPI c/o Thor Schütt Svane Nielsen<br>
 Peberlyk 4<br>
 DK-6200 Aabenraa<br>
