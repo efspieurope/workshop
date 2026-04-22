@@ -33,6 +33,7 @@ project:
     - benefits.qmd
     - orgcom.qmd
     - whyattend.qmd
+    - reimbursement.qmd
 
 website:
   title: "EFSPI regulatory statistics workshop"
