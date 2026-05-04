@@ -43,6 +43,8 @@ reimbursement[is.na(reimbursement)] <- ""
 kable(reimbursement, align = "ll", row.names = FALSE, col.names = "")
 ```
 
+Participation on panels or the short topic sessions do not qualify for reimbursement.
+
 # Questions?
 
 For feedback and questions send an email to `r res["chairmail"]`.
