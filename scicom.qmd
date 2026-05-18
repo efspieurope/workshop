@@ -20,32 +20,6 @@ library("readxl")
 
 knitr::opts_chunk$set(echo = TRUE)
 
-## read in data
-path <- getwd()
-source(paste(path, "/functions/inputData.r", sep = ""))
-res <- inputData()
-
-past <- as.data.frame(read_excel(paste(path, "/data/data.xlsx", sep = ""), col_types = NULL))
-sci22 <- as.data.frame(read_excel(paste(path, "/data/2022/scicom2022.xlsx", sep = ""), col_types = NULL))
-sci22 <- arrange(sci22, desc(Type), Gender)
-
-sci23 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
-sci23 <- arrange(sci23, desc(Type), Gender)
-
-sci24 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
-sci24 <- dplyr::filter(sci24, (is.na(SciCom) == FALSE) & (SciCom == 1))
-sci24 <- arrange(sci24, desc(Local), desc(SciCom), Gender, Last)
-
-hta24 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20240911_9th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
-hta24 <- filter(hta24, (is.na(HTA_SC) == FALSE) & (HTA_SC == 1))
-hta24 <- arrange(hta24, desc(Local), desc(HTA_SC), Gender, Last)
-
-sci25 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20250910_10th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
-sci25 <- dplyr::filter(sci25, (is.na(SciCom) == FALSE) & (SciCom == 1))
-sci25 <- arrange(sci25, desc(Local), desc(SciCom), Gender, Last)
-
-sci26 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20260819_11th_EFSPI_RegStat_Basel/SC_2026.xlsx", sep = ""), col_types = NULL, sheet = "SC"))
-sci26 <- arrange(sci26, Gender, Last)
 ```
 
 # How to get on the scientific committee

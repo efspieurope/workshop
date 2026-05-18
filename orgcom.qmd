@@ -38,7 +38,7 @@ sci24 <- arrange(sci24, desc(Local), desc(SciCom), Gender, Last)
 sci25 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20250910_10th_EFSPI_RegStat_Basel/roster.xlsx", sep = ""), col_types = NULL))
 sci25 <- arrange(sci25, desc(Local), desc(SciCom), Gender, Last)
 
-sci26 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20260819_11th_EFSPI_RegStat_Basel/SC_2026.xlsx", sep = ""), col_types = NULL, sheet = "SC"))
+sci26 <- as.data.frame(read_excel(paste("C:/rufibach/70_Service/EFSPI/workshop/20260819_11th_EFSPI_RegStat_Basel/SC_2026_prepped.xlsx", sep = ""), col_types = NULL))
 sci26 <- arrange(sci26, Gender, Last)
 
 source(paste(path, "/functions/colFmt.r", sep = ""))
