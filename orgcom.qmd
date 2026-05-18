@@ -26,6 +26,7 @@ source(paste(path, "/functions/inputData.r", sep = ""))
 res <- inputData()
 
 past <- as.data.frame(read_excel(paste(path, "/data/data.xlsx", sep = ""), col_types = NULL))
+
 sci22 <- as.data.frame(read_excel(paste(path, "/data/2022/scicom2022.xlsx", sep = ""), col_types = NULL))
 sci22 <- arrange(sci22, desc(Local), desc(SciCom), Gender, Last)
 
