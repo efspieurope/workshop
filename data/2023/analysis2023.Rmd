@@ -1,7 +1,7 @@
 ---
 title: "EFSPI regulatory statistics workshop 2023: analysis of registrations"
 author: "Kaspar Rufibach"
-date: "Last change: `r format(Sys.time(), '%d %B, %Y')`"
+date: last-modified
 execute:   
   freeze: auto  # re-render only when source changes
 output: 
