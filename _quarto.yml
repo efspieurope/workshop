@@ -61,7 +61,7 @@ website:
         - text: "Restaurants in Basel"  
           href: restaurants.html
         - text: "Childcare in Basel"  
-          href: restaurants.html
+          href: childcare.html
     - text: "Testimonials"
       menu:
         - text: "Testimonials from 2022 workshop"  
