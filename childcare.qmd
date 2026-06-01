@@ -1,0 +1,19 @@
+---
+title: "Childcare in Basel"
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+format: html
+tbl-colwidths: [15, 15, 70]
+---
+
+There are no childcare facilities on site, however, there are external providers in Basel that can be contacted:
+
+- <a href="https://www.kindernaescht.ch" target="_blank">kindernaescht.ch</a> at Marktplatz (15 minutes from the conference venue at Biozentrum by foot) can host kids from 18 months to 12 years on an hourly to daily basis by prior arrangement.
+- <a href="https://www.familea.ch" target="_blank">familea.ch</a> at Freie Strasse (15 minutes from the conference venue at Biozentrum by foot): Call +41 61 260 82 82 to check availability. 
+ 

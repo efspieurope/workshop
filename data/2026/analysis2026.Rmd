@@ -251,7 +251,7 @@ The room at Biozentrum has about 300 seats.
 a <- as.numeric(with(reg2, table(mode))[1])
 
 # if all companies with f2f block booking fill their seats we need another:
-b <- sum(f2fblock_n) - nrow(filter(reg2, inst2 %in% f2fblock & mode == "Face-to-face (300 Euro)"))
+b <- sum(f2fblock_n) - sum(pmin(table(filter(reg2, inst2 %in% f2fblock & mode == "Face-to-face (300 Euro)")$inst2), min(f2fblock_n)))
 
 # contributors who did not register yet
 c <- nrow(contnotreg)

@@ -35,6 +35,7 @@ project:
     - orgcom.qmd
     - whyattend.qmd
     - reimbursement.qmd
+    - childcare.qmd
 
 website:
   title: "EFSPI regulatory statistics workshop"
@@ -53,11 +54,13 @@ website:
           href: registration_faq.html
         - text: "FAQ contributors (Speakers, Panelists, Chairs)"
           href: speaker.html
-        # - text: "FAQ submissions of contributions"
-        #   href: submission.html
+        - text: "FAQ submissions of contributions"
+          href: submission.html
         # - text: "FAQ session chairs"
         #   href: chairs_instructions.html
         - text: "Restaurants in Basel"  
+          href: restaurants.html
+        - text: "Childcare in Basel"  
           href: restaurants.html
     - text: "Testimonials"
       menu:
