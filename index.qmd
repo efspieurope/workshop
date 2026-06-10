@@ -48,9 +48,7 @@ Both these workshops aspire to build a statistical community across regulatory a
 
 # What you find here
 
-On this webpage you find links and materials for the yearly EFSPI regulatory statistics workshop in Basel. 
-
-The program will be posted here once a draft is available.
+On this webpage you find links and materials for the yearly EFSPI regulatory statistics workshop in Basel. Program and registration for the 2026 workshop are [here](2026.html).
 
 The workshop is organized by [EFSPI](http://www.efspi.org).
 

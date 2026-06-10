@@ -10,6 +10,10 @@ output:
     toc: yes
     toc_depth: 3
     toc_float: yes
+    grid:
+      sidebar-width: 400px
+      body-width: 1100px
+      margin-width: 100px
 ---
 
 ```{r setup, include = FALSE, echo = FALSE}
@@ -45,7 +49,7 @@ t2 <- prepTable(t2 = t2, cut = cut)
 #t2["other"] <- t2["Other"] + t2["other"]
 #t2 <- t2[names(t2) != "Other"]
 
-par(las = 1, mar = c(4.5, 4.5, 3, 1))
+par(las = 1, mar = c(4.5, 4.5, 3, 1), cex = 0.85)
 ylim <- c(0, 1.1 * max(t2))
 xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n type of institution", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
@@ -197,7 +201,7 @@ t2 <- with(reg2, table(waived_reason))
 t2 <- t2[t2 > 0]
 t2 <- prepTable(t2 = t2, cut = 1, ord = FALSE)
 
-par(las = 1, mar = c(4.5, 4.5, 3, 1))
+par(las = 1, mar = c(4.5, 4.5, 3, 1), cex = 0.9)
 ylim <- c(0, 1.1 * max(t2))
 xx <- barplot(t2, ylab = "number of registrations", main = paste("Total number of registrations: ", dim(reg)[1], "\n Reason for registration fee waived", sep = ""), col = 2, ylim = ylim)
 text(x = xx, y = t2, label = paste(t2, " (", round(100 * t2 / sum(t2)), "%)", sep = ""), pos = 3, cex = 0.8, col = 1)
