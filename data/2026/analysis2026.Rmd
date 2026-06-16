@@ -258,7 +258,7 @@ a <- as.numeric(with(reg2, table(mode))[1])
 b <- sum(f2fblock_n) - sum(pmin(table(filter(reg2, inst2 %in% f2fblock & mode == "Face-to-face (300 Euro)")$inst2), min(f2fblock_n)))
 
 # contributors who did not register yet
-c <- nrow(contnotreg)
+c <- nrow(filter(contnotreg, is.na(noshow_sc)))
 
 t2 <- c("F2F registrations" = a, "remaining F2F\nblock booking\nseats" = b, "contributors who did\nnot register yet" = c, "total F2F" = a + b + c)
 
