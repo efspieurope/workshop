@@ -89,16 +89,16 @@ kable(waived_who[waived_who$waived == 0, "who"], align = "ll", row.names = FALSE
 
 # Registration deadline
 
-<!-- Registration has been closed. -->
+Registration for face-to-face attendance has been closed.
 
-For face-to-face attendance: **`r colFmt(res["deadline_f2f"])`**
+<!-- For face-to-face attendance: **`r colFmt(res["deadline_f2f"])`** -->
 
-Registration platform will be turned off
+<!-- Registration platform will be turned off -->
 
-- if we have reached maximum capacity of 300 face-to-face participants or
-- for the respective option after the deadline,
+<!-- - if we have reached maximum capacity of 300 face-to-face participants or -->
+<!-- - for the respective option after the deadline, -->
 
-whatever happens first.
+<!-- whatever happens first. -->
 
 For virtual attendance: **`r colFmt(res["deadline_virtual"])`**.
 
@@ -120,17 +120,17 @@ Yes. Slidedecks will be posted [here](data/2026/slides.html), `r colFmt("pending
 
 # What block booking options are available for companies?
 
-## Face-to-face block booking
+<!-- ## Face-to-face block booking -->
 
-We have updated our block bocking offerings compared to previous years:
+<!-- We have updated our block bocking offerings compared to previous years: -->
 
-- Block booking for face-to-face attendance:
-  - 8500 Euro up to 35 participants per company, i.e. you reach break even with this option if at least 29 colleagues from your company register for face-to-face attendance to the workshop.
-  - If your company intends to register more than 35 participants for face-to-face attendance please reach out to `r res["chairmail"]`.
+<!-- - Block booking for face-to-face attendance: -->
+<!--   - 8500 Euro up to 35 participants per company, i.e. you reach break even with this option if at least 29 colleagues from your company register for face-to-face attendance to the workshop. -->
+<!--   - If your company intends to register more than 35 participants for face-to-face attendance please reach out to `r res["chairmail"]`. -->
 
-For all face-to-face block bookings unlimited virtual attendees are included as well.
+<!-- For all face-to-face block bookings unlimited virtual attendees are included as well. -->
 
-`r colFmt("The conference organizers reserve the right to cap the number of registered face-to-face attendees for a company with block booking, in order to keep catering costs under control. This never happened so far though.")`
+<!-- `r colFmt("The conference organizers reserve the right to cap the number of registered face-to-face attendees for a company with block booking, in order to keep catering costs under control. This never happened so far though.")` -->
 
 ## Virtual block-booking
 
@@ -140,15 +140,15 @@ For all face-to-face block bookings unlimited virtual attendees are included as 
 
 Please reach out to `r res["cashiermail"]` if your company is interested in one of these options.
 
-# Block booking for face-to-face AND virtual participation: how to register
+<!-- # Block booking for face-to-face AND virtual participation: how to register -->
 
-For `r res["year"]` the following companies have registered for a comprehensive block booking so far:
+<!-- For `r res["year"]` the following companies have registered for a comprehensive block booking so far: -->
 
-## `r res["block_f2f"]`
+<!-- ## `r res["block_f2f"]` -->
 
-All colleagues working at companies with a block booking do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r res["reg_form"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
+<!-- All colleagues working at companies with a block booking do not need to pay a registration fee for face-to-face or virtual participation. You simply register via `r res["reg_form"]` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking. -->
 
-Please indicate your expected participation in the meals / get‑together as accurately as possible. This information will help us plan the logistics effectively.
+<!-- Please indicate your expected participation in the meals / get‑together as accurately as possible. This information will help us plan the logistics effectively. -->
 
 <!-- ## Novartis -->
 
