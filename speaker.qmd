@@ -37,9 +37,9 @@ This document provides necessary information for contributors to the workshop. F
 
 `r res["program"]`.
 
-# Registration
+<!-- # Registration -->
 
-Even if you have been invited, all speakers, panelists and chairs are kindly requested to register themselves. For registration, please `r res["registration"]`.
+<!-- Even if you have been invited, all speakers, panelists and chairs are kindly requested to register themselves. For registration, please `r res["registration"]`. -->
 
 # Reimbursement
 

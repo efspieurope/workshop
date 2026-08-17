@@ -47,11 +47,11 @@ The event will take place at the [Biozentrum Basel](https://www.biozentrum.uniba
 
 The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your mobile phone number for confirmation.
 
-# Program and registration
+# Program
 
 `r res["program"]`.
 
-`r res["registration"]`.
+<!-- `r res["registration"]`. -->
 
 # Registration fees
 

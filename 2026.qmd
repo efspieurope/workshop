@@ -36,7 +36,9 @@ The workshop will take place `r res["date"]` again at [Biozentrum](https://www.b
 
 `r res["program"]`.
 
-`r res["registration"]`.
+Registration has been closed.
+
+<!-- `r res["registration"]`. -->
 
 # Deadlines
 
@@ -45,6 +47,8 @@ The workshop will take place `r res["date"]` again at [Biozentrum](https://www.b
 Like previous years, it is possible to submit a short topic for discussion with a panel of regulators. Submit your proposal to the Chair, `r res["chair"]`, by sending an e-mail to `r res["chairmail"]`. Deadline for submissions is `r res["deadline_short"]`.
 
 ## Registration
+
+Registration has been closed.
 
 <!-- For face-to-face attendance: **`r colFmt(res["deadline_f2f"])`**. -->
 
@@ -55,7 +59,7 @@ Like previous years, it is possible to submit a short topic for discussion with 
 
 <!-- whatever happens first. -->
 
-For virtual attendance: **`r colFmt(res["deadline_virtual"])`**.
+<!-- For virtual attendance: **`r colFmt(res["deadline_virtual"])`**. -->
 
 
 
