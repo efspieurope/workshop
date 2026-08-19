@@ -16,7 +16,7 @@ inputData <- function(path = getwd(), y = 2026){
   data["program"] <- paste("[Draft program (status: ", data[, "prog_version"], ")](", data[, "program"], ")", sep = "")
   
   # link to registration
-  data["reg_form"] <- paste("[this form](", data[, "registration"], ")", sep = "")
+  data["reg_form"] <- "Registration is closed"     # paste("[this form](", data[, "registration"], ")", sep = "")
   data["registration"] <- paste("[Registration](", data[, "registration"], ")", sep = "")
   
   # ASA FDA workshop
