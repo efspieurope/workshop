@@ -45,6 +45,10 @@ kable(reimbursement, align = "ll", row.names = FALSE, col.names = "")
 
 Participation on panels or the short topic sessions do not qualify for reimbursement.
 
+# Claim your expenses
+
+Please complete [this form](data/2026/20260819_EFSPI_workshop_reimbursement.docx) and send it, together with all receipts, to `r res["cashiermail"]`.
+
 # Questions?
 
 For feedback and questions send an email to `r res["chairmail"]`.
