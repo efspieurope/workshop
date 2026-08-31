@@ -8,13 +8,12 @@ project:
     - data/2023
     - data/2024
     - data/2025
-    - data/2026/slides.qmd
-    - data/2026/analysis2026.Rmd
+    - data/2026
     - testimonials2024.qmd
     - testimonials2025.qmd
     - testimonials2026.qmd
     - feedback.qmd        
-    - 2026.qmd            
+    - 2027.qmd            
     - past.qmd            
     - past_scicom.qmd     
     - registration_faq.qmd
@@ -42,18 +41,18 @@ website:
   navbar:
     background: info
     left:
-    - text: "2026 workshop"
+    - text: "2027 workshop"
       menu:
         - text: "Save the date"  
-          href: 2026.html
+          href: 2027.html
         - text: "Why should I attend the workshop?"  
           href: whyattend.html
     - text: "FAQs"
       menu:
-        - text: "FAQ registration"
-          href: registration_faq.html
-        - text: "FAQ contributors (Speakers, Panelists, Chairs)"
-          href: speaker.html
+        # - text: "FAQ registration"
+        #   href: registration_faq.html
+        # - text: "FAQ contributors (Speakers, Panelists, Chairs)"
+        #   href: speaker.html
         - text: "FAQ submissions of contributions"
           href: submission.html
         # - text: "FAQ session chairs"

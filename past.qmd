@@ -24,7 +24,7 @@ source(paste(path, "/functions/colFmt.r", sep = ""))
 path <- getwd()
 past <- as.data.frame(read_excel(paste(path, "/data/data.xlsx", sep = ""), col_types = NULL))
 
-past <- past[past$Year <= 2025, ]
+past <- past[past$Year <= 2026, ]
 
 past_c <- as.data.frame(read_excel(paste(path, "/data/roster_past.xlsx", sep = ""), col_types = NULL))
 
